@@ -47,16 +47,17 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
+        // EasyMaths brand colors
+        "easy-green": "hsl(var(--easy-green))",
+        "easy-green-light": "hsl(var(--easy-green-light))",
+        "easy-red": "hsl(var(--easy-red))",
+        "easy-red-hover": "hsl(var(--easy-red-hover))",
+        "easy-dark": "hsl(var(--easy-dark))",
+        "easy-white": "hsl(var(--easy-white))",
+      },
+      fontFamily: {
+        sans: ["var(--font-body)", "Montserrat", "sans-serif"],
+        heading: ["var(--font-heading)", "Montserrat", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
