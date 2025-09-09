@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import logoImage from "@/assets/easymaths-logo.png";
 
 export const Header = () => {
   return (
@@ -8,9 +7,9 @@ export const Header = () => {
         <div className="flex justify-between items-center py-4">
           <Link to="/" className="flex items-center">
             <img 
-              src={logoImage} 
+              src="/lovable-uploads/f4684f6c-d4a0-4cfa-89d0-da5bc655af9a.png" 
               alt="EasyMaths.ie - Leaving Cert Maths Tutoring" 
-              className="h-10 w-auto"
+              className="h-12 w-auto"
             />
           </Link>
           <nav className="hidden md:flex space-x-8">
