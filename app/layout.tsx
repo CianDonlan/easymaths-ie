@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ??
-      "https://north-dublin-maths-challenge.cianisainmdom.chatgpt.site",
+      "https://easymaths.ie",
   ),
   title: "20 Second Maths Challenge | North Dublin Maths",
   description:
