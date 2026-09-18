@@ -19,7 +19,7 @@ Recorded: 18 September 2026. This checkpoint is on the local `work/poster-guided
 
 ## Work before campaign publication
 
-1. Agree and build the journey after the worked solution: real grind formats, price and availability information, parent or guardian handoff, and the desired booking or enquiry action.
+1. Review and build the conversation-first journey after the worked solution, including parent sharing and contact. Format, location and price can be agreed with each family rather than fixed now. See `NEXT_STEP_POST_SOLUTION.md`.
 2. Make enquiries deliver reliably, with a clear confirmation and appropriate privacy and consent text, before treating the form as a live lead channel.
 3. Replace `public/og.png`, which still advertises the old orange 20-second challenge, with a 60-second card that matches the selected poster.
 4. Carry `poster_id` through to the eventual enquiry or booking record and decide how campaign outcomes will be measured.

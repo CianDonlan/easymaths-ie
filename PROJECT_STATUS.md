@@ -34,7 +34,7 @@ Updated: 18 September 2026
 
 ## Next steps
 
-1. Work with the owner on the post-solution offer, parent or guardian handoff, and booking or enquiry path.
+1. Review `NEXT_STEP_POST_SOLUTION.md` with the owner, then prototype the conversation-first contact path and parent sharing.
 2. Choose and implement enquiry delivery, validation, confirmation, and tutor follow-up.
 3. Add suitable privacy and consent information before live data collection.
 4. Replace the stale social preview image and the placeholder grind details with current campaign material.
