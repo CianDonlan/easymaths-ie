@@ -1,6 +1,19 @@
 # Project status
 
-Updated: 13 September 2026
+Updated: 18 September 2026
+
+## Local prototype (not published)
+
+- Matched the opening challenge to the selected yellow poster and its 60-second theme.
+- Made guided hints the main route, with a direct numeric answer field alongside it.
+- Added three guided algebra steps; every choice receives an explanation and can continue.
+- Replaced slash-form algebra in the challenge, guide and worked solution with stacked MathML fractions and a bundled STIX Two Math font for the variable shapes.
+- Changed the guided route to a growing chain: the given equation and target stay visible, each choice completes the current line, and the final answer remains on the same page. The exact copy and decision points are still subject to owner review.
+- Moved the grind offer directly after the worked solution. The existing sample diagnostic is no longer linked from that path.
+- The enquiry confirmation now says clearly that a local preview request was not sent.
+- The local build, rendered HTML test, and lint pass. Interaction and mobile visual checks still need a browser review.
+- The social preview image still shows the earlier orange 20-second design and needs updating when the campaign copy is settled.
+- This local checkpoint and the remaining publication work are recorded in `RELEASE_PREP.md`.
 
 ## Completed
 
@@ -21,10 +34,10 @@ Updated: 13 September 2026
 
 ## Next steps
 
-1. Set up Firebase Firestore and a Cloud Function to receive and validate enquiries.
-2. Choose an email provider, booking link, and preferred alert method for rapid follow-up.
-3. Send an immediate confirmation to the parent or guardian, notify the tutor, and record contact attempts and lead status.
-4. Add a privacy notice, retention policy, spam protection, and clear consent handling.
-5. Replace the sample diagnostic with question sets tailored to LC/JC and Higher/Ordinary levels.
-6. Add poster attribution analytics and consider separate URLs for shareable funnel stages.
-7. Replace the remaining placeholder grind details with real formats, prices, locations, availability, and contact information.
+1. Work with the owner on the post-solution offer, parent or guardian handoff, and booking or enquiry path.
+2. Choose and implement enquiry delivery, validation, confirmation, and tutor follow-up.
+3. Add suitable privacy and consent information before live data collection.
+4. Replace the stale social preview image and the placeholder grind details with current campaign material.
+5. Preserve poster attribution through enquiry or booking and measure campaign outcomes.
+6. Check the full flow on mobile and decide whether stages need shareable URLs or refresh persistence.
+7. Revisit the optional diagnostic later with question sets tailored to LC/JC and Higher/Ordinary levels.

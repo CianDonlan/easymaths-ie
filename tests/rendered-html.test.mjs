@@ -22,10 +22,14 @@ test("server-renders the poster challenge", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>20 Second Maths Challenge/);
-  assert.match(html, /You’re already being timed\./);
-  assert.match(html, /Lock in your answer/);
-  assert.match(html, /North Dublin maths challenge/);
+  assert.match(html, /<title>60 Second Maths Challenge/);
+  assert.match(html, /Get the first hint/);
+  assert.match(html, /Check answer/);
+  assert.match(html.replace(/<!-- -->/g, ""), /01:00/);
+  assert.match(html, /60 seconds\. No calculator\./);
+  assert.match(html, /<mfrac><mn>1<\/mn><mi>𝑥<\/mi><\/mfrac>/);
+  assert.doesNotMatch(html, /1\/x/);
+  assert.doesNotMatch(html, /Come and see|A little light for the next step/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/);
 });
 
@@ -36,10 +40,11 @@ test("ships final metadata and removes the disposable starter", async () => {
     readFile(new URL("../package.json", import.meta.url), "utf8"),
   ]);
 
-  assert.match(page, /diagnosticQuestions/);
+  assert.match(page, /guideSteps/);
   assert.match(page, /Request a grind/);
-  assert.match(layout, /20 Second Maths Challenge/);
+  assert.match(layout, /60 Second Maths Challenge/);
   assert.match(layout, /\/og\.png/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
+  await access(new URL("../public/fonts/STIXTwoMath-Regular.woff2", import.meta.url));
   await assert.rejects(access(new URL("app/_sites-preview", projectRoot)));
 });

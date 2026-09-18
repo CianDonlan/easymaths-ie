@@ -6,19 +6,19 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL ??
       "https://easymaths.ie",
   ),
-  title: "20 Second Maths Challenge | North Dublin Maths",
+  title: "60 Second Maths Challenge | Easy Maths",
   description:
-    "Take the 20 second maths challenge, check the worked answer, and find the first topics worth revisiting.",
+    "Try the 60 second maths challenge, check your answer, or solve it step by step with a little help.",
   openGraph: {
-    title: "20 Second Maths Challenge",
-    description: "Can you get it without a calculator?",
+    title: "60 Second Maths Challenge",
+    description: "Check your answer or solve it step by step.",
     type: "website",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "20 Second Maths Challenge" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Maths challenge" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "20 Second Maths Challenge",
-    description: "Can you get it without a calculator?",
+    title: "60 Second Maths Challenge",
+    description: "Check your answer or solve it step by step.",
     images: ["/og.png"],
   },
 };

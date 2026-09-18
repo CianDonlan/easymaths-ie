@@ -1,9 +1,10 @@
 "use client";
 
-import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
+import { FormEvent, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 
 type Stage =
   | "challenge"
+  | "guide"
   | "result"
   | "checkup-intro"
   | "checkup"
@@ -20,7 +21,48 @@ type DiagnosticQuestion = {
   skill: string;
 };
 
-const challengeAnswers = ["5", "7", "9", "11"];
+type MathKind =
+  | "given"
+  | "target"
+  | "square"
+  | "squareResolved"
+  | "expanded"
+  | "simplified"
+  | "final"
+  | "threeSquared"
+  | "product"
+  | "nineMinusTwo"
+  | "xSquared";
+
+const guideSteps = [
+  {
+    move: "Square both sides.",
+    moveMath: "square",
+    resolvedMath: "squareResolved",
+    questionMath: "threeSquared",
+    options: ["6", "9", "12"],
+    correct: "9",
+    explanation: "3 × 3 is 9. Now the equation has the squared expression we need.",
+  },
+  {
+    move: "Open the brackets. The squared terms appear.",
+    moveMath: "expanded",
+    resolvedMath: "simplified",
+    questionMath: "product",
+    options: ["0", "1", "x²"],
+    correct: "1",
+    explanation: "A value times its reciprocal is 1, so the middle term becomes 2.",
+  },
+  {
+    move: "The expression we want is here. Remove the extra 2.",
+    moveMath: "simplified",
+    resolvedMath: "final",
+    questionMath: "nineMinusTwo",
+    options: ["7", "9", "11"],
+    correct: "7",
+    explanation: "9 − 2 is 7. That's the value of the expression we were looking for.",
+  },
+] satisfies { move: string; moveMath: MathKind; resolvedMath: MathKind; questionMath: MathKind; options: readonly string[]; correct: string; explanation: string }[];
 
 const diagnosticQuestions: DiagnosticQuestion[] = [
   {
@@ -60,28 +102,85 @@ const diagnosticQuestions: DiagnosticQuestion[] = [
   },
 ];
 
+function MathX() {
+  return <mi>𝑥</mi>;
+}
+
+function XSquared({ className = "" }: { className?: string }) {
+  return <msup className={className || undefined}><MathX /><mn>2</mn></msup>;
+}
+
+function Reciprocal({ squared = false, className = "" }: { squared?: boolean; className?: string }) {
+  return <mfrac className={className || undefined}><mn>1</mn>{squared ? <XSquared /> : <MathX />}</mfrac>;
+}
+
+const mathLabels: Record<MathKind, string> = {
+  given: "x plus one over x equals three",
+  target: "x squared plus one over x squared equals what",
+  square: "the quantity x plus one over x, squared, equals three squared",
+  squareResolved: "the quantity x plus one over x, squared, equals nine",
+  expanded: "x squared plus two times x times one over x plus one over x squared equals nine",
+  simplified: "nine equals x squared plus two plus one over x squared",
+  final: "x squared plus one over x squared equals seven",
+  threeSquared: "three squared",
+  product: "x times one over x",
+  nineMinusTwo: "nine minus two",
+  xSquared: "x squared",
+};
+
+function MathExpression({ kind, className = "" }: { kind: MathKind; className?: string }) {
+  return (
+    <math className={`math-expression ${className}`} aria-label={mathLabels[kind]}>
+      {kind === "given" && <><MathX /><mo>+</mo><Reciprocal /><mo>=</mo><mn>3</mn></>}
+      {kind === "target" && <><XSquared className="goal-term" /><mo>+</mo><Reciprocal squared className="goal-term" /><mo>=</mo><mo>?</mo></>}
+      {(kind === "square" || kind === "squareResolved") && <>
+        <msup className="goal-term"><mrow><mo>(</mo><MathX /><mo>+</mo><Reciprocal /><mo>)</mo></mrow><mn>2</mn></msup>
+        <mo>=</mo>{kind === "square" ? <msup><mn>3</mn><mn>2</mn></msup> : <mn>9</mn>}
+      </>}
+      {kind === "expanded" && <>
+        <XSquared className="goal-term" /><mo>+</mo><mn>2</mn><mo>·</mo><MathX /><mo>·</mo><mo>(</mo><Reciprocal /><mo>)</mo>
+        <mo>+</mo><Reciprocal squared className="goal-term" /><mo>=</mo><mn>9</mn>
+      </>}
+      {kind === "simplified" && <><mn>9</mn><mo>=</mo><XSquared className="goal-term" /><mo>+</mo><mn>2</mn><mo>+</mo><Reciprocal squared className="goal-term" /></>}
+      {kind === "final" && <><XSquared className="goal-term" /><mo>+</mo><Reciprocal squared className="goal-term" /><mo>=</mo><mn>7</mn></>}
+      {kind === "threeSquared" && <msup><mn>3</mn><mn>2</mn></msup>}
+      {kind === "product" && <><MathX /><mo>·</mo><Reciprocal /></>}
+      {kind === "nineMinusTwo" && <><mn>9</mn><mo>−</mo><mn>2</mn></>}
+      {kind === "xSquared" && <XSquared />}
+    </math>
+  );
+}
+
 function PosterEquation() {
   return (
-    <div className="problem" aria-label="If x plus one over x equals three, what is x squared plus one over x squared?">
-      <div className="equation">
-        <i>x</i><span>+</span>
-        <span className="fraction"><span>1</span><span><i>x</i></span></span>
-        <span>=</span><span>3</span>
-      </div>
-      <div className="equation equation-question">
-        <span><i>x</i><sup>2</sup></span><span>+</span>
-        <span className="fraction"><span>1</span><span><i>x</i><sup>2</sup></span></span>
-        <span>=</span><span>?</span>
-      </div>
+    <div className="problem">
+      <MathExpression kind="given" className="poster-equation" />
+      <MathExpression kind="target" className="poster-equation equation-question" />
     </div>
   );
 }
 
+function subscribeToUrl(onChange: () => void) {
+  window.addEventListener("popstate", onChange);
+  return () => window.removeEventListener("popstate", onChange);
+}
+
+function getPosterLabel() {
+  const params = new URLSearchParams(window.location.search);
+  const rawPoster = params.get("poster_id") || params.get("creative") || "";
+  const safePoster = rawPoster.replace(/[^a-zA-Z0-9_-]/g, "").slice(0, 32);
+  return safePoster ? safePoster.replace(/[-_]/g, " ") : "Poster scan";
+}
+
 export default function Home() {
   const [stage, setStage] = useState<Stage>("challenge");
-  const [seconds, setSeconds] = useState(20);
-  const [answer, setAnswer] = useState<string | null>(null);
-  const [posterLabel, setPosterLabel] = useState("Poster scan");
+  const [seconds, setSeconds] = useState(60);
+  const [directAnswer, setDirectAnswer] = useState("");
+  const [solutionPath, setSolutionPath] = useState<"direct" | "guided">("guided");
+  const [solutionSeen, setSolutionSeen] = useState(false);
+  const [guideIndex, setGuideIndex] = useState(0);
+  const [guideChoice, setGuideChoice] = useState<string | null>(null);
+  const posterLabel = useSyncExternalStore(subscribeToUrl, getPosterLabel, () => "Poster scan");
   const [course, setCourse] = useState("Leaving Cert");
   const [level, setLevel] = useState("Higher Level");
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -89,25 +188,26 @@ export default function Home() {
   const [diagnosticAnswers, setDiagnosticAnswers] = useState<Record<string, string>>({});
   const [shareState, setShareState] = useState("");
   const [contactMethod, setContactMethod] = useState<"email" | "phone">("email");
-  const startedAt = useRef(Date.now());
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const rawPoster = params.get("poster_id") || params.get("creative");
-    if (rawPoster) {
-      const safePoster = rawPoster.replace(/[^a-zA-Z0-9_-]/g, "").slice(0, 32);
-      if (safePoster) setPosterLabel(safePoster.replace(/[-_]/g, " "));
-    }
-  }, []);
+  const startedAt = useRef<number | null>(null);
+  const activeGuideStep = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     if (stage !== "challenge") return;
+    if (startedAt.current === null) startedAt.current = Date.now();
     const interval = window.setInterval(() => {
-      const elapsed = Math.floor((Date.now() - startedAt.current) / 1000);
-      setSeconds(Math.max(20 - elapsed, 0));
+      const elapsed = Math.floor((Date.now() - (startedAt.current ?? Date.now())) / 1000);
+      setSeconds(Math.max(60 - elapsed, 0));
     }, 250);
     return () => window.clearInterval(interval);
   }, [stage]);
+
+  useEffect(() => {
+    if (stage !== "guide" || guideIndex === 0) return;
+    const target = activeGuideStep.current;
+    if (!target) return;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    target.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
+  }, [stage, guideIndex]);
 
   const prioritySkills = useMemo(() => {
     const missed = diagnosticQuestions
@@ -126,8 +226,32 @@ export default function Home() {
     window.scrollTo(0, 0);
   }
 
-  function lockChallengeAnswer() {
-    if (answer) goTo("result");
+  function startGuide() {
+    setSolutionPath("guided");
+    setGuideIndex(0);
+    setGuideChoice(null);
+    goTo("guide");
+  }
+
+  function checkDirectAnswer(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (!directAnswer.trim()) return;
+    if (Number(directAnswer.trim()) === 7) {
+      setSolutionPath("direct");
+      setSolutionSeen(true);
+      goTo("result");
+      return;
+    }
+    startGuide();
+  }
+
+  function continueGuide() {
+    if (!guideChoice) return;
+    if (guideIndex === guideSteps.length - 1) {
+      setSolutionSeen(true);
+    }
+    setGuideIndex((current) => current + 1);
+    setGuideChoice(null);
   }
 
   function startCheckup() {
@@ -182,53 +306,127 @@ export default function Home() {
       <main className="challenge-shell">
         <div className="paper-noise" aria-hidden="true" />
         <header className="challenge-kicker">
-          <span>North Dublin maths challenge</span>
+          <span>60 seconds. No calculator.</span>
           <span>{posterLabel}</span>
         </header>
 
         <section className="challenge-card" aria-labelledby="challenge-title">
-          <p className="eyebrow">You’re already being timed.</p>
           <h1 id="challenge-title" className="timer" aria-label={`${seconds} seconds remaining`}>
-            00:{String(seconds).padStart(2, "0")}
+            {String(Math.floor(seconds / 60)).padStart(2, "0")}:{String(seconds % 60).padStart(2, "0")}
           </h1>
           <div className="rule" />
           <PosterEquation />
 
-          <fieldset className="answers">
-            <legend>Choose your answer</legend>
-            <div className="answer-grid">
-              {challengeAnswers.map((option) => (
-                <label key={option} className={`answer-option ${answer === option ? "selected" : ""}`}>
-                  <input
-                    type="radio"
-                    name="challenge-answer"
-                    value={option}
-                    checked={answer === option}
-                    onChange={() => setAnswer(option)}
-                  />
-                  <span>{option}</span>
-                </label>
-              ))}
-            </div>
-          </fieldset>
-
-          <button className="lock-button" type="button" onClick={lockChallengeAnswer} disabled={!answer}>
-            <span>Lock in your answer</span><span aria-hidden="true">→</span>
+          <button className="lock-button" type="button" onClick={startGuide}>
+            <span>Get the first hint</span><span aria-hidden="true">→</span>
           </button>
+          <form className="direct-answer" onSubmit={checkDirectAnswer}>
+            <label htmlFor="direct-answer">Already got an answer? Type it here.</label>
+            <div className="direct-answer-row">
+              <input
+                id="direct-answer"
+                name="answer"
+                type="text"
+                inputMode="decimal"
+                autoComplete="off"
+                value={directAnswer}
+                onChange={(event) => setDirectAnswer(event.target.value)}
+                aria-label="Your numerical answer"
+              />
+              <button type="submit" disabled={!directAnswer.trim()}>Check answer</button>
+            </div>
+          </form>
         </section>
 
         <footer className="challenge-footer">
-          <p>No calculator. No sign-up. Just have a go.</p>
+          <p>No sign-up. Help at your pace.</p>
           <button className="text-link" type="button" onClick={() => goTo("grinds")}>
-            Already looking for grinds? <span>See availability</span>
+            Already looking for grinds? <span>See options</span>
           </button>
         </footer>
       </main>
     );
   }
 
+  if (stage === "guide") {
+    return (
+      <main className="guide-page">
+        <header className="guide-topline">
+          <button className="text-link" type="button" onClick={() => goTo("challenge")}>← The question</button>
+          <span>{guideIndex === guideSteps.length ? "Solution complete" : `Move ${guideIndex + 1} of ${guideSteps.length}`}</span>
+        </header>
+        <section className="guide-goal" aria-label="The question we are solving">
+          <div className="guide-goal-inner">
+            <div className="guide-goal-item">
+              <span>Given</span>
+              <MathExpression kind="given" className="goal-math" />
+            </div>
+            <div className="guide-goal-item">
+              <span>Find</span>
+              <MathExpression kind="target" className="goal-math" />
+            </div>
+          </div>
+        </section>
+
+        <section className="guide-content" aria-labelledby="guide-title">
+          <h1 id="guide-title">Make it look like the question.</h1>
+          <div className="guide-chain">
+            {guideSteps.map((step, index) => {
+              if (index > guideIndex) return null;
+              const current = index === guideIndex;
+              const resolved = !current || guideChoice !== null;
+              return (
+                <section key={index} ref={current ? activeGuideStep : undefined} className={`chain-step ${current ? "active" : "complete"}`}>
+                  <p className="chain-cue"><span aria-hidden="true">0{index + 1}</span>{step.move}</p>
+                  <div className="math-line">
+                    <MathExpression kind={resolved ? step.resolvedMath : step.moveMath} className="chain-math" />
+                  </div>
+                  {current && (
+                    <fieldset className="guide-options">
+                      <legend>What is <MathExpression kind={step.questionMath} className="question-math" />?</legend>
+                      <div className="guide-option-grid">
+                        {step.options.map((option) => (
+                          <label key={option} className={guideChoice === option ? "selected" : ""}>
+                            <input type="radio" name={`guide-step-${index}`} value={option} checked={guideChoice === option} onChange={() => setGuideChoice(option)} />
+                            <span>{option === "x²" ? <MathExpression kind="xSquared" className="choice-math" /> : option}</span>
+                          </label>
+                        ))}
+                      </div>
+                    </fieldset>
+                  )}
+                  {current && guideChoice && (
+                    <div className="guide-feedback" role="status">
+                      <p><strong>{guideChoice === step.correct ? "That fits." : "Here’s the useful bit:"}</strong> {step.explanation}</p>
+                      <button className="lock-button" type="button" onClick={continueGuide}>
+                        <span>{index === guideSteps.length - 1 ? "See the finished chain" : "Next move"}</span><span aria-hidden="true">→</span>
+                      </button>
+                    </div>
+                  )}
+                </section>
+              );
+            })}
+          </div>
+          {guideIndex === guideSteps.length && (
+            <section ref={activeGuideStep} className="chain-complete">
+              <p className="guide-eyebrow">You reached the answer</p>
+              <h2>That’s 7.</h2>
+              <p>Squaring made the equation look like the question. The only extra part was 2, so the answer is 9 − 2.</p>
+              <div className="action-stack">
+                <button className="primary-button" type="button" onClick={() => goTo("grinds")}>See maths grind options <span>→</span></button>
+                <button className="secondary-button" type="button" onClick={() => goTo("challenge")}>Try the question again</button>
+              </div>
+            </section>
+          )}
+        </section>
+        <footer className="challenge-footer">
+          <p>Take your time. Every step counts.</p>
+          <button className="text-link" type="button" onClick={() => goTo("grinds")}>Looking for grinds? <span>See options</span></button>
+        </footer>
+      </main>
+    );
+  }
+
   if (stage === "result") {
-    const correct = answer === "7";
     return (
       <main className="light-page result-page">
         <header className="brand-bar">
@@ -236,10 +434,10 @@ export default function Home() {
           <span>North Dublin maths</span>
         </header>
         <section className="result-hero">
-          <p className="section-label">Your result</p>
-          <h1>{correct ? "Correct — the answer is 7." : "The answer is 7."}</h1>
+          <p className="section-label">The solution</p>
+          <h1>The answer is 7.</h1>
           <p className="result-note">
-            {correct ? "Nicely spotted. Here’s the cleanest way through it." : "Easy trap. The missing step is the middle +2 term."}
+            {solutionPath === "direct" ? "Nicely spotted. Here’s the short explanation." : "One clear move at a time. Here’s how it all fits together."}
           </p>
         </section>
         <section className="worked-solution" aria-labelledby="solution-title">
@@ -248,20 +446,20 @@ export default function Home() {
             <h2 id="solution-title">Square the whole expression.</h2>
           </div>
           <ol>
-            <li><span>(x + 1/x)²</span><strong>= 9</strong></li>
-            <li><span>x² + 2 + 1/x²</span><strong>= 9</strong></li>
-            <li><span>x² + 1/x²</span><strong>= 7</strong></li>
+            <li><MathExpression kind="squareResolved" className="solution-math" /></li>
+            <li><MathExpression kind="simplified" className="solution-math" /></li>
+            <li><MathExpression kind="final" className="solution-math" /></li>
           </ol>
         </section>
         <section className="next-step-panel">
           <div>
-            <p className="section-label">One question down</p>
-            <h2>Which topics are worth revisiting next?</h2>
-            <p>Try five quick questions. No email, no predicted grade, no judgement.</p>
+            <p className="section-label">Keep the clarity going</p>
+            <h2>Want more maths to feel this clear?</h2>
+            <p>See how maths grinds can help with the steps that get in your way.</p>
           </div>
           <div className="action-stack">
-            <button className="primary-button" type="button" onClick={() => goTo("checkup-intro")}>Find my priority topics <span>5 mins →</span></button>
-            <button className="secondary-button" type="button" onClick={() => goTo("grinds")}>See maths grind availability</button>
+            <button className="primary-button" type="button" onClick={() => goTo("grinds")}>See maths grind options <span>→</span></button>
+            <button className="secondary-button" type="button" onClick={() => goTo("challenge")}>Try the question again</button>
           </div>
         </section>
       </main>
@@ -360,7 +558,7 @@ export default function Home() {
   if (stage === "grinds") {
     return (
       <main className="light-page grinds-page" id="grinds">
-        <header className="brand-bar"><button type="button" onClick={() => goTo(answer ? "result" : "challenge")}>← Back</button><span>North Dublin maths</span></header>
+        <header className="brand-bar"><button type="button" onClick={() => goTo(solutionSeen ? solutionPath === "guided" ? "guide" : "result" : "challenge")}>← Back</button><span>North Dublin maths</span></header>
         <section className="grinds-hero">
           <p className="section-label">Leaving Cert + Junior Cycle</p>
           <h1>Maths grinds that find the step you’re missing.</h1>
@@ -425,9 +623,9 @@ export default function Home() {
     <main className="thanks-page">
       <div className="paper-noise" aria-hidden="true" />
       <section>
-        <p className="section-label">Request received</p>
-        <h1>Thanks.<br />That’s the hard bit done.</h1>
-        <p>The next step is a quick reply with the available options. Nothing is booked until you choose one.</p>
+        <p className="section-label">Local preview only</p>
+        <h1>Form preview.</h1>
+        <p>This request wasn’t sent. Enquiries will work after the contact service is connected.</p>
         <button className="dark-button" type="button" onClick={() => goTo("challenge")}>Back to the challenge <span>↗</span></button>
       </section>
     </main>
