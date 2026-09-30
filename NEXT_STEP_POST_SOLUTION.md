@@ -1,6 +1,39 @@
 # Next step: the post-solution contact funnel
 
-Recorded: 18 September 2026. These are discussion notes for the owner to review and tweak on return. No prototype or production change is authorised by this note.
+Recorded: 18 September 2026. Updated: 20 September 2026. These notes guided the first local prototype; production remains unchanged.
+
+## Local first version — 20 September 2026
+
+The conversation-first path is now prototyped locally. The completed solution offers `Ask about maths grinds` and `Send this to a parent`; `/grinds` is a stable shareable page; and the page explains online, in-person and practical home-visit options, the tutor's confirmed mathematical background, and how an enquiry becomes an agreed booking.
+
+The enquiry form currently prepares a reviewable email message. When `NEXT_PUBLIC_ENQUIRY_EMAIL` is not configured it copies the preview and explicitly says that nothing was sent. No database or phone number is required for this version. The owner still needs to review the page, define the offer and pricing, supply contact details and decide permanent delivery before publication.
+
+## Owner checkpoint — 20 September 2026
+
+The owner reviewed the first local version and considers it good enough to pause here. Preserve the current structure and copy as the working baseline rather than redesigning it from scratch on return.
+
+Completed in this checkpoint:
+
+- The challenge and worked solution now lead directly to a real `/grinds` route.
+- Students can share a purpose-written message and stable grinds link with a parent or guardian.
+- The grinds page explains online, in-person and possible home-visit arrangements without claiming that any particular slot or location is confirmed.
+- The page uses the owner's confirmed background: quantitative analyst at a large financial consulting firm, Master's in Financial Mathematics, and Bachelor's in Mathematical Sciences.
+- The enquiry journey asks for enough context to begin a conversation and clearly states that submitting an enquiry is not a confirmed booking.
+- Poster attribution is retained in the grinds URL and added to the prepared enquiry.
+- With no contact service configured, the local form copies a reviewable message and truthfully says that nothing was sent.
+- The production-style static build, route prerendering, rendered-page tests and lint pass.
+
+Resume later with:
+
+1. Develop the actual grind offer and pricing after the owner's offer research.
+2. Add a business email and, when ready, a separate business mobile number.
+3. Add the owner's name, photograph, fuller professional/academic background and any relevant tutoring evidence.
+4. Define the practical home-visit service area and an honest expected response time.
+5. Connect permanent enquiry delivery and add final privacy/consent wording and confirmation behaviour.
+6. Review the complete experience on mobile, including student sharing and the enquiry interaction.
+7. Update the stale social preview image before publishing.
+
+Current publication status: local branch only. Do not publish or merge this checkpoint without explicit approval.
 
 ## Goal for the first campaign
 

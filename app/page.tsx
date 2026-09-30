@@ -8,10 +8,7 @@ type Stage =
   | "result"
   | "checkup-intro"
   | "checkup"
-  | "checkup-result"
-  | "grinds"
-  | "enquire"
-  | "thanks";
+  | "checkup-result";
 
 type DiagnosticQuestion = {
   id: string;
@@ -172,22 +169,47 @@ function getPosterLabel() {
   return safePoster ? safePoster.replace(/[-_]/g, " ") : "Poster scan";
 }
 
+const attributionKeys = [
+  "source",
+  "poster_id",
+  "location",
+  "creative",
+  "utm_source",
+  "utm_medium",
+  "utm_campaign",
+  "utm_content",
+  "utm_term",
+] as const;
+
+function getGrindsHref() {
+  const current = new URLSearchParams(window.location.search);
+  const carried = new URLSearchParams();
+
+  attributionKeys.forEach((key) => {
+    const value = current.get(key)?.trim().slice(0, 100);
+    if (value) carried.set(key, value);
+  });
+
+  const query = carried.toString();
+  return `/grinds${query ? `?${query}` : ""}`;
+}
+
 export default function Home() {
   const [stage, setStage] = useState<Stage>("challenge");
   const [seconds, setSeconds] = useState(60);
   const [directAnswer, setDirectAnswer] = useState("");
   const [solutionPath, setSolutionPath] = useState<"direct" | "guided">("guided");
-  const [solutionSeen, setSolutionSeen] = useState(false);
   const [guideIndex, setGuideIndex] = useState(0);
   const [guideChoice, setGuideChoice] = useState<string | null>(null);
   const posterLabel = useSyncExternalStore(subscribeToUrl, getPosterLabel, () => "Poster scan");
+  const grindsHref = useSyncExternalStore(subscribeToUrl, getGrindsHref, () => "/grinds");
   const [course, setCourse] = useState("Leaving Cert");
   const [level, setLevel] = useState("Higher Level");
   const [questionIndex, setQuestionIndex] = useState(0);
   const [questionChoice, setQuestionChoice] = useState<string | null>(null);
   const [diagnosticAnswers, setDiagnosticAnswers] = useState<Record<string, string>>({});
   const [shareState, setShareState] = useState("");
-  const [contactMethod, setContactMethod] = useState<"email" | "phone">("email");
+  const [parentShareState, setParentShareState] = useState("");
   const startedAt = useRef<number | null>(null);
   const activeGuideStep = useRef<HTMLElement | null>(null);
 
@@ -238,7 +260,6 @@ export default function Home() {
     if (!directAnswer.trim()) return;
     if (Number(directAnswer.trim()) === 7) {
       setSolutionPath("direct");
-      setSolutionSeen(true);
       goTo("result");
       return;
     }
@@ -247,9 +268,6 @@ export default function Home() {
 
   function continueGuide() {
     if (!guideChoice) return;
-    if (guideIndex === guideSteps.length - 1) {
-      setSolutionSeen(true);
-    }
     setGuideIndex((current) => current + 1);
     setGuideChoice(null);
   }
@@ -282,13 +300,15 @@ export default function Home() {
       ? prioritySkills.join(", ")
       : "a strong start across the sample topics";
     const text = `I tried a short maths check-up and got ${score}/5. It suggested: ${topicCopy}. Could we look at the available grinds?`;
+    const url = new URL(grindsHref, window.location.origin);
+    url.searchParams.set("shared", "student");
 
     try {
       if (navigator.share) {
-        await navigator.share({ title: "My maths check-up", text, url: window.location.href });
+        await navigator.share({ title: "My maths check-up", text, url: url.href });
         setShareState("Shared");
       } else {
-        await navigator.clipboard.writeText(`${text} ${window.location.href}`);
+        await navigator.clipboard.writeText(`${text} ${url.href}`);
         setShareState("Link copied");
       }
     } catch {
@@ -296,9 +316,23 @@ export default function Home() {
     }
   }
 
-  function submitEnquiry(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    goTo("thanks");
+  async function shareWithParent() {
+    const url = new URL(grindsHref, window.location.origin);
+    url.searchParams.set("shared", "student");
+    const text = "I tried this Easy Maths challenge and liked how it explained the problem. Could we ask about grinds?";
+
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: "Easy Maths grinds", text, url: url.href });
+        setParentShareState("Shared");
+      } else {
+        await navigator.clipboard.writeText(`${text} ${url.href}`);
+        setParentShareState("Message and link copied");
+      }
+    } catch (error) {
+      if (error instanceof DOMException && error.name === "AbortError") return;
+      setParentShareState("Sharing wasn’t available. You can copy the grinds-page link from your browser.");
+    }
   }
 
   if (stage === "challenge") {
@@ -340,9 +374,9 @@ export default function Home() {
 
         <footer className="challenge-footer">
           <p>No sign-up. Help at your pace.</p>
-          <button className="text-link" type="button" onClick={() => goTo("grinds")}>
+          <a className="text-link" href={grindsHref}>
             Already looking for grinds? <span>See options</span>
-          </button>
+          </a>
         </footer>
       </main>
     );
@@ -412,15 +446,17 @@ export default function Home() {
               <h2>That’s 7.</h2>
               <p>Squaring made the equation look like the question. The only extra part was 2, so the answer is 9 − 2.</p>
               <div className="action-stack">
-                <button className="primary-button" type="button" onClick={() => goTo("grinds")}>See maths grind options <span>→</span></button>
+                <a className="primary-button" href={grindsHref}>Ask about maths grinds <span>→</span></a>
+                <button className="secondary-button" type="button" onClick={shareWithParent}>Send this to a parent</button>
                 <button className="secondary-button" type="button" onClick={() => goTo("challenge")}>Try the question again</button>
+                {parentShareState && <p className="share-state compact-share-state" role="status">{parentShareState}</p>}
               </div>
             </section>
           )}
         </section>
         <footer className="challenge-footer">
           <p>Take your time. Every step counts.</p>
-          <button className="text-link" type="button" onClick={() => goTo("grinds")}>Looking for grinds? <span>See options</span></button>
+          <a className="text-link" href={grindsHref}>Looking for grinds? <span>See options</span></a>
         </footer>
       </main>
     );
@@ -458,8 +494,10 @@ export default function Home() {
             <p>See how maths grinds can help with the steps that get in your way.</p>
           </div>
           <div className="action-stack">
-            <button className="primary-button" type="button" onClick={() => goTo("grinds")}>See maths grind options <span>→</span></button>
+            <a className="primary-button" href={grindsHref}>Ask about maths grinds <span>→</span></a>
+            <button className="secondary-button" type="button" onClick={shareWithParent}>Send this to a parent</button>
             <button className="secondary-button" type="button" onClick={() => goTo("challenge")}>Try the question again</button>
+            {parentShareState && <p className="share-state compact-share-state" role="status">{parentShareState}</p>}
           </div>
         </section>
       </main>
@@ -547,7 +585,7 @@ export default function Home() {
         </section>
 
         <section className="result-actions">
-          <button className="primary-button" type="button" onClick={() => goTo("grinds")}>See grind options <span>→</span></button>
+          <a className="primary-button" href={grindsHref}>Ask about maths grinds <span>→</span></a>
           <button className="secondary-button" type="button" onClick={shareResult}>Send this to a parent</button>
           {shareState && <p className="share-state" role="status">{shareState}</p>}
         </section>
@@ -555,79 +593,5 @@ export default function Home() {
     );
   }
 
-  if (stage === "grinds") {
-    return (
-      <main className="light-page grinds-page" id="grinds">
-        <header className="brand-bar"><button type="button" onClick={() => goTo(solutionSeen ? solutionPath === "guided" ? "guide" : "result" : "challenge")}>← Back</button><span>North Dublin maths</span></header>
-        <section className="grinds-hero">
-          <p className="section-label">Leaving Cert + Junior Cycle</p>
-          <h1>Maths grinds that find the step you’re missing.</h1>
-          <p>Clear explanations, focused practice and a practical plan for what to work on next.</p>
-          <button className="primary-button" type="button" onClick={() => goTo("enquire")}>Request a grind <span>→</span></button>
-        </section>
-
-        <section className="approach-grid">
-          <article><span>01</span><h2>Start with the evidence</h2><p>Bring a recent test, a problem topic or your check-up result. We begin where the marks are being lost.</p></article>
-          <article><span>02</span><h2>Make the method click</h2><p>Work through the exact step clearly, then practise it until it feels repeatable.</p></article>
-          <article><span>03</span><h2>Leave with a plan</h2><p>Finish knowing what to revise, what to practise and what to ask about next time.</p></article>
-        </section>
-
-        <section className="setup-panel">
-          <p className="section-label dark-label">Before the QR goes live</p>
-          <h2>Add your real formats, prices, locations and current slots here.</h2>
-          <p>The page deliberately does not invent qualifications, availability or testimonials.</p>
-        </section>
-
-        <section className="bottom-cta">
-          <div><p className="section-label">No commitment</p><h2>Ask about the right option.</h2></div>
-          <button className="primary-button" type="button" onClick={() => goTo("enquire")}>Request a grind <span>→</span></button>
-        </section>
-      </main>
-    );
-  }
-
-  if (stage === "enquire") {
-    return (
-      <main className="light-page enquiry-page">
-        <header className="brand-bar"><button type="button" onClick={() => goTo("grinds")}>← Grind options</button><span>Enquiry</span></header>
-        <section className="form-heading">
-          <p className="section-label">Parent or guardian</p>
-          <h1>Tell me what would help.</h1>
-          <p>This is a request, not a confirmed booking. You’ll receive the available options before deciding.</p>
-        </section>
-
-        <form className="enquiry-form" onSubmit={submitEnquiry}>
-          <label><span>Your name</span><input type="text" name="guardianName" autoComplete="name" required placeholder="Parent or guardian name" /></label>
-          <fieldset>
-            <legend>Preferred contact</legend>
-            <div className="contact-tabs">
-              <button type="button" className={contactMethod === "email" ? "active" : ""} onClick={() => setContactMethod("email")}>Email</button>
-              <button type="button" className={contactMethod === "phone" ? "active" : ""} onClick={() => setContactMethod("phone")}>Phone</button>
-            </div>
-          </fieldset>
-          <label>
-            <span>{contactMethod === "email" ? "Email address" : "Phone number"}</span>
-            <input type={contactMethod === "email" ? "email" : "tel"} name="contact" autoComplete={contactMethod === "email" ? "email" : "tel"} required placeholder={contactMethod === "email" ? "you@example.com" : "08x xxx xxxx"} />
-          </label>
-          <label><span>Student stage</span><select name="studentStage" defaultValue={course}><option>Leaving Cert</option><option>Junior Cycle</option></select></label>
-          <label><span>What would you like help with? <em>Optional</em></span><textarea name="message" rows={4} placeholder="A topic, upcoming exam, or suitable days…" /></label>
-          <label className="privacy-check"><input type="checkbox" required /><span>I understand these details will be used to respond to this grind enquiry.</span></label>
-          <button className="primary-button wide-button" type="submit">Send request <span>→</span></button>
-          <p className="form-note">Demo note: connect this form to your email and database before publishing the QR.</p>
-        </form>
-      </main>
-    );
-  }
-
-  return (
-    <main className="thanks-page">
-      <div className="paper-noise" aria-hidden="true" />
-      <section>
-        <p className="section-label">Local preview only</p>
-        <h1>Form preview.</h1>
-        <p>This request wasn’t sent. Enquiries will work after the contact service is connected.</p>
-        <button className="dark-button" type="button" onClick={() => goTo("challenge")}>Back to the challenge <span>↗</span></button>
-      </section>
-    </main>
-  );
+  return null;
 }

@@ -4,13 +4,13 @@ import test from "node:test";
 
 const projectRoot = new URL("../", import.meta.url);
 
-async function render() {
+async function render(pathname = "/") {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
   const { default: worker } = await import(workerUrl.href);
 
   return worker.fetch(
-    new Request("http://localhost/", { headers: { accept: "text/html" } }),
+    new Request(`http://localhost${pathname}`, { headers: { accept: "text/html" } }),
     { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } },
     { waitUntil() {}, passThroughOnException() {} },
   );
@@ -33,6 +33,20 @@ test("server-renders the poster challenge", async () => {
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/);
 });
 
+test("server-renders the shareable grinds and enquiry page", async () => {
+  const response = await render("/grinds");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /<title>Maths Grinds \| Easy Maths/);
+  assert.match(html, /Make the difficult step feel clear\./);
+  assert.match(html, /quantitative analyst/);
+  assert.match(html, /Financial Mathematics/);
+  assert.match(html, /Home visits are welcome/);
+  assert.match(html, /Copy preview enquiry/);
+  assert.doesNotMatch(html, /request wasn’t sent|Add your real formats/);
+});
+
 test("ships final metadata and removes the disposable starter", async () => {
   const [page, layout, packageJson] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
@@ -41,7 +55,8 @@ test("ships final metadata and removes the disposable starter", async () => {
   ]);
 
   assert.match(page, /guideSteps/);
-  assert.match(page, /Request a grind/);
+  assert.match(page, /Ask about maths grinds/);
+  assert.match(page, /Send this to a parent/);
   assert.match(layout, /60 Second Maths Challenge/);
   assert.match(layout, /\/og\.png/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
