@@ -1,0 +1,6 @@
+[build]
+  command = "npm run build -- --prerender-all && mkdir -p _site && cp -a dist/client/. _site/ && cp -a dist/server/prerendered-routes/. _site/"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "22.13.0"
