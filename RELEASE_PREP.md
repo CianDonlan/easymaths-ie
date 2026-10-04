@@ -6,6 +6,8 @@ Updated 20 September 2026: the branch now also contains a first local version of
 
 Owner checkpoint: the first post-solution/grinds version was reviewed on 20 September and accepted as good enough to preserve for the next work session. Remaining launch inputs and tasks are recorded in `NEXT_STEP_POST_SOLUTION.md`.
 
+Publication approval — 4 October 2026: the owner approved the current funnel and €25 Clarity Session offer for release. The page now includes the tutor photograph and credentials, a Leaving Cert Higher Level focus, transparent introductory and continuation pricing, student-to-parent sharing, and a shorter enquiry journey. The known launch limitation is explicit: enquiry delivery is not connected yet, so the form prepares a copyable message rather than claiming to send it.
+
 ## What is ready for review
 
 - The first scan opens on the poster's yellow and black 60-second challenge, with the original equation, a prominent first hint, and optional direct answer entry.

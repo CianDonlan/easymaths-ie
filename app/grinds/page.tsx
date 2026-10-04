@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { FormEvent, useState, useSyncExternalStore } from "react";
+import tutorPhoto from "../../pic_of_me.png";
 
 const enquiryEmail = process.env.NEXT_PUBLIC_ENQUIRY_EMAIL?.trim() ?? "";
 
@@ -46,11 +48,11 @@ export default function GrindsPage() {
   async function shareWithParent() {
     const url = new URL(window.location.href);
     url.searchParams.set("shared", "student");
-    const text = "I tried this Easy Maths challenge and liked how it explained the problem. Could we ask about grinds?";
+    const text = "I tried this Easy Maths challenge and liked how it explained the problem. Could we look at the €25 Clarity Session?";
 
     try {
       if (navigator.share) {
-        await navigator.share({ title: "Easy Maths grinds", text, url: url.href });
+        await navigator.share({ title: "Easy Maths Clarity Session", text, url: url.href });
         setShareState("Shared");
       } else {
         await navigator.clipboard.writeText(`${text} ${url.href}`);
@@ -70,25 +72,23 @@ export default function GrindsPage() {
       ? `\n\nHow this enquiry reached Easy Maths:\n${attribution.map(([key, value]) => `${key}: ${value}`).join("\n")}`
       : "";
     const body = [
-      "Hello, I’d like to ask about maths grinds.",
+      "Hello, I’d like to ask about the €25 Maths Clarity Session.",
       "",
       `Name: ${cleanValue(data.get("name"))}`,
       `I am: ${cleanValue(data.get("role"))}`,
-      `Reply email: ${cleanValue(data.get("replyEmail"))}`,
+      `Email: ${cleanValue(data.get("replyEmail"))}`,
+      `Mobile: ${cleanValue(data.get("mobile")) || "Not provided"}`,
       `Student stage: ${cleanValue(data.get("studentStage"))}`,
-      `Level: ${cleanValue(data.get("level"))}`,
       `Preferred format: ${cleanValue(data.get("lessonFormat"))}`,
-      `General location: ${cleanValue(data.get("location")) || "Not provided"}`,
-      `Help wanted: ${cleanValue(data.get("helpWanted")) || "Not provided"}`,
-      `Suitable days or times: ${cleanValue(data.get("availability")) || "Not provided"}`,
+      `Topic or difficulty: ${cleanValue(data.get("helpWanted")) || "Not provided"}`,
       "",
-      "I understand this is an enquiry and that no lesson is booked until we have spoken and agreed the details.",
+      "I understand this is an enquiry. A session is only arranged after the time, format and payment details have been confirmed.",
     ].join("\n") + sourceLines;
 
     setPreparedEnquiry(body);
 
     if (enquiryEmail) {
-      const subject = encodeURIComponent(`Maths grind enquiry — ${cleanValue(data.get("studentStage"))}`);
+      const subject = encodeURIComponent(`€25 Maths Clarity Session enquiry — ${cleanValue(data.get("studentStage"))}`);
       window.location.href = `mailto:${enquiryEmail}?subject=${subject}&body=${encodeURIComponent(body)}`;
       setFormState("Your email app should open with the enquiry ready. Review it, then press send there.");
       return;
@@ -96,9 +96,9 @@ export default function GrindsPage() {
 
     try {
       await navigator.clipboard.writeText(body);
-      setFormState("Preview enquiry copied. The business email address still needs to be connected before launch.");
+      setFormState("Preview enquiry copied. The business contact address still needs to be connected before launch.");
     } catch {
-      setFormState("Your preview enquiry is ready below. The business email address still needs to be connected before launch.");
+      setFormState("Your preview enquiry is ready below. The business contact address still needs to be connected before launch.");
     }
   }
 
@@ -107,111 +107,130 @@ export default function GrindsPage() {
       <header className="grinds-nav">
         <Link href="/">← Maths challenge</Link>
         <span>Easy Maths</span>
-        <a href="#enquiry">Ask about a grind</a>
+        <a href="#enquiry">Ask about a session</a>
       </header>
 
       {sharedByStudent && (
         <aside className="shared-intro" aria-label="Shared by a student">
           <span>Sent from the maths challenge</span>
-          <p>A student shared this page with you because they would like to talk about maths grinds.</p>
+          <p>A student shared this page because they would like to talk about one-to-one maths help.</p>
         </aside>
       )}
 
       <section className="grinds-v1-hero">
         <div>
-          <p className="section-label">Junior Cycle + Leaving Cert maths</p>
-          <h1>Make the difficult step feel clear.</h1>
+          <p className="section-label">Leaving Cert Higher Level focus</p>
+          <h1>Maths, made clear one step at a time.</h1>
         </div>
         <div className="grinds-hero-copy">
           <p>
-            Focused maths grinds built around the questions, topics and exam steps that are getting in the student’s way.
+            Bring the topic, test or exam question that is causing difficulty. We’ll find the sticking point,
+            work through it clearly and decide what to tackle next.
           </p>
+          <div className="intro-price" aria-label="Introductory price">
+            <strong>€25</strong>
+            <span>60-minute Clarity Session<br />First five students</span>
+          </div>
           <div className="grinds-hero-actions">
-            <a className="primary-button" href="#enquiry">Ask about a grind <span>↓</span></a>
+            <a className="primary-button" href="#enquiry">Ask about a €25 session <span>↓</span></a>
             <button className="secondary-button" type="button" onClick={shareWithParent}>Send this to a parent</button>
             {shareState && <p className="share-state" role="status">{shareState}</p>}
           </div>
+          <p className="hero-minor-note">No commitment to continue. No payment is taken until a time and format are agreed.</p>
         </div>
       </section>
 
-      <section className="lesson-options" aria-labelledby="lesson-options-title">
+      <section className="lesson-options" aria-labelledby="session-includes-title">
         <div className="lesson-options-heading">
-          <p className="section-label dark-label">Flexible by design</p>
-          <h2 id="lesson-options-title">Start with what would work for the student.</h2>
+          <p className="section-label dark-label">The Clarity Session</p>
+          <h2 id="session-includes-title">One useful session. A clear next step.</h2>
         </div>
         <div className="lesson-option-list">
           <article>
-            <span>01</span>
-            <h3>Online</h3>
-            <p>Work through questions and methods together from wherever suits.</p>
+            <span>01 · Before</span>
+            <h3>Bring the real problem</h3>
+            <p>Share a difficult topic, recent test or exam question so the session begins with what matters now.</p>
           </article>
           <article>
-            <span>02</span>
-            <h3>In person</h3>
-            <p>Ask about an in-person arrangement at a practical local location.</p>
+            <span>02 · During</span>
+            <h3>Work until it clicks</h3>
+            <p>We identify the sticking point, explain the method clearly and use a similar question to check understanding.</p>
           </article>
           <article>
-            <span>03</span>
-            <h3>At home</h3>
-            <p>Home visits are welcome where the location and timing make them practical.</p>
+            <span>03 · After</span>
+            <h3>Know what comes next</h3>
+            <p>Leave with priority areas, a seven-day direction and relevant practice—not another vague instruction to study more.</p>
           </article>
         </div>
-        <p className="lesson-options-note">Format, location, timing and cost are discussed before anyone commits.</p>
+        <p className="lesson-options-note">
+          Each session includes a concise personalised Maths Clarity Map: priority areas, a seven-day direction and relevant practice.
+        </p>
       </section>
 
       <section className="tutor-profile" aria-labelledby="tutor-title">
-        <div>
+        <div className="tutor-profile-intro">
           <p className="section-label">Your tutor</p>
-          <h2 id="tutor-title">Maths is not just something I studied. It’s my day job.</h2>
+          <h2 id="tutor-title">Complex maths should not need a complicated explanation.</h2>
+          <Image
+            className="tutor-photo"
+            src={tutorPhoto}
+            alt="Easy Maths tutor"
+            sizes="(max-width: 760px) 100vw, 48vw"
+            unoptimized
+          />
         </div>
         <div className="tutor-profile-copy">
           <p>
-            I work as a quantitative analyst at a large financial consulting firm, using mathematics to solve problems for major financial companies.
+            I’m Cian. I help students turn difficult questions into clear steps they can use again. The goal isn’t to watch me do maths—it’s to leave knowing how to make the next move yourself.
           </p>
           <dl className="credentials-list">
-            <div><dt>Master’s</dt><dd>Financial Mathematics</dd></div>
-            <div><dt>Bachelor’s</dt><dd>Mathematical Sciences</dd></div>
-            <div><dt>Current work</dt><dd>Quantitative analysis</dd></div>
+            <div><dt>Master’s</dt><dd><span>Financial Mathematics</span><span className="credential-place">UCD</span></dd></div>
+            <div><dt>Bachelor’s</dt><dd><span>Mathematical Sciences</span><span className="credential-place">TUD</span></dd></div>
+            <div><dt>Current work</dt><dd><span>Quantitative Analyst</span><span className="credential-place">Forvis Mazars</span></dd></div>
           </dl>
-          <p className="profile-note">
-            My aim is to turn a difficult-looking problem into a sequence of steps the student can understand and use again.
-          </p>
         </div>
       </section>
 
       <section className="conversation-steps" aria-labelledby="conversation-title">
-        <p className="section-label">How it works</p>
-        <h2 id="conversation-title">A conversation first. A booking when the details are right.</h2>
+        <p className="section-label">Booking without the back-and-forth</p>
+        <h2 id="conversation-title">Enquire now. Pay only when the session is agreed.</h2>
         <ol>
-          <li><span>01</span><div><h3>Send a short enquiry</h3><p>Tell me the student’s stage, what is proving difficult and which format might suit.</p></div></li>
-          <li><span>02</span><div><h3>Talk through the options</h3><p>We discuss goals, location, availability, lesson format and cost.</p></div></li>
-          <li><span>03</span><div><h3>Agree the arrangement</h3><p>A lesson is only booked when we have spoken and both agreed the details.</p></div></li>
+          <li><span>01</span><div><h3>Send the short form</h3><p>Tell me who the session is for, their stage and the topic that is causing difficulty.</p></div></li>
+          <li><span>02</span><div><h3>I contact you</h3><p>We agree a suitable time and whether the session will be online or in person around North Fingal.</p></div></li>
+          <li><span>03</span><div><h3>Confirm and pay</h3><p>Once the details are right, payment confirms the session. Sending the form alone does not commit you.</p></div></li>
         </ol>
       </section>
 
-      <section className="offer-foundation">
+      <section className="offer-foundation" aria-labelledby="continuing-title">
         <div>
-          <p className="section-label dark-label">The starting point</p>
-          <h2>Bring the problem that matters now.</h2>
+          <p className="section-label dark-label">If it is a good fit</p>
+          <h2 id="continuing-title">The first session can become week one.</h2>
         </div>
-        <p>
-          It could be a recent test, a topic that will not click, an upcoming exam or a wider loss of confidence. The first conversation is used to work out what kind of help would be genuinely useful. A more specific lesson offer and pricing will be added once they are finalised.
-        </p>
+        <div className="continuing-offer">
+          <p>
+            There is no hard sell after the Clarity Session. If weekly tuition would help, the session can become the first week of a four-week plan and the €25 already paid counts toward the total.
+          </p>
+          <dl className="price-options">
+            <div><dt>Online</dt><dd>€195 for four weeks</dd></div>
+            <div><dt>In person</dt><dd>€230 for four weeks</dd></div>
+          </dl>
+          <p className="service-area">Online throughout Ireland. Limited in-person availability in Donabate and selected North Fingal areas.</p>
+        </div>
       </section>
 
       <section className="enquiry-section" id="enquiry" aria-labelledby="enquiry-title">
         <div className="enquiry-heading">
-          <p className="section-label">Start the conversation</p>
-          <h2 id="enquiry-title">What would help?</h2>
+          <p className="section-label">First five students · €25</p>
+          <h2 id="enquiry-title">Ask about a session.</h2>
           <p>
-            This is an enquiry, not a confirmed booking. Complete the details below and you can review the message before sending it.
+            Send the essentials now. I’ll contact you to agree the time, format and payment details. This form does not make a booking or take payment.
           </p>
         </div>
 
         <form className="enquiry-form enquiry-form-v1" onSubmit={prepareEnquiry}>
           {!enquiryEmail && (
             <p className="preview-notice">
-              Local preview: the business email has not been connected yet. Submitting will copy a ready-to-send enquiry for review; it will not contact anyone.
+              Local preview: enquiry delivery has not been connected yet. Submitting will copy a ready-to-send message for review; it will not contact anyone.
             </p>
           )}
 
@@ -228,23 +247,21 @@ export default function GrindsPage() {
             </select>
           </label>
           <label>
-            <span>Your email</span>
+            <span>Email</span>
             <input type="email" name="replyEmail" autoComplete="email" required />
           </label>
           <label>
-            <span>Student stage</span>
-            <select name="studentStage" defaultValue="Leaving Cert" required>
-              <option>Leaving Cert</option>
-              <option>Junior Cycle</option>
-              <option>Other / not sure</option>
-            </select>
+            <span>Mobile <em>Optional</em></span>
+            <input type="tel" name="mobile" autoComplete="tel" />
           </label>
           <label>
-            <span>Level</span>
-            <select name="level" defaultValue="Not sure yet" required>
-              <option>Higher Level</option>
-              <option>Ordinary Level</option>
-              <option>Not sure yet</option>
+            <span>Student stage</span>
+            <select name="studentStage" defaultValue="6th Year — Higher Level" required>
+              <option>6th Year — Higher Level</option>
+              <option>5th Year — Higher Level</option>
+              <option>Leaving Cert — Ordinary Level</option>
+              <option>Junior Cycle</option>
+              <option>Other / not sure</option>
             </select>
           </label>
           <label>
@@ -253,28 +270,19 @@ export default function GrindsPage() {
               <option>Open to either</option>
               <option>Online</option>
               <option>In person</option>
-              <option>Home visit, if possible</option>
             </select>
           </label>
-          <label>
-            <span>General location <em>Optional</em></span>
-            <input type="text" name="location" autoComplete="address-level2" placeholder="Town or area is enough" />
-          </label>
-          <label>
-            <span>Suitable days or times <em>Optional</em></span>
-            <input type="text" name="availability" placeholder="For example, weekday evenings" />
-          </label>
           <label className="enquiry-wide">
-            <span>What would you like help with? <em>Optional</em></span>
-            <textarea name="helpWanted" rows={5} placeholder="A difficult topic, recent test, upcoming exam or anything else useful…" />
+            <span>What is causing difficulty? <em>Optional</em></span>
+            <textarea name="helpWanted" rows={4} placeholder="A topic, recent test, exam question or anything else useful…" />
           </label>
-          <p className="minor-note enquiry-wide">For a student under 18, a parent or guardian will be involved before any lessons are arranged.</p>
+          <p className="minor-note enquiry-wide">For a student under 18, a parent or guardian will be involved before a session is arranged.</p>
           <label className="privacy-check enquiry-wide">
             <input type="checkbox" required />
-            <span>I understand that these details are only being prepared for a grind enquiry and that no lesson is booked yet.</span>
+            <span>I understand that this is an enquiry and that the session is only booked after the details and payment are confirmed.</span>
           </label>
           <button className="primary-button wide-button enquiry-wide" type="submit">
-            {enquiryEmail ? "Prepare enquiry email" : "Copy preview enquiry"}<span>→</span>
+            {enquiryEmail ? "Prepare session enquiry" : "Copy preview enquiry"}<span>→</span>
           </button>
           {formState && <p className="form-status enquiry-wide" role="status">{formState}</p>}
           {preparedEnquiry && !enquiryEmail && (

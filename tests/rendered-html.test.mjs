@@ -38,11 +38,19 @@ test("server-renders the shareable grinds and enquiry page", async () => {
   assert.equal(response.status, 200);
 
   const html = await response.text();
-  assert.match(html, /<title>Maths Grinds \| Easy Maths/);
-  assert.match(html, /Make the difficult step feel clear\./);
-  assert.match(html, /quantitative analyst/);
+  assert.match(html, /<title>€25 Maths Clarity Session \| Easy Maths/);
+  assert.match(html, /Maths, made clear one step at a time\./);
+  assert.match(html, /60-minute Clarity Session/);
+  assert.match(html, /First five students/);
+  assert.match(html, /I’m Cian/);
+  assert.match(html, /Quantitative Analyst/);
   assert.match(html, /Financial Mathematics/);
-  assert.match(html, /Home visits are welcome/);
+  assert.match(html, /Forvis Mazars/);
+  assert.match(html, /\/_next\/static\/media\/pic_of_me\.[a-f0-9]+\.png/);
+  assert.doesNotMatch(html, /\/_next\/image\?/);
+  assert.doesNotMatch(html, /The main focus is Leaving Cert Higher Level/);
+  assert.match(html, /Donabate and selected North Fingal areas/);
+  assert.match(html, /No payment is taken until a time and format are agreed/);
   assert.match(html, /Copy preview enquiry/);
   assert.doesNotMatch(html, /request wasn’t sent|Add your real formats/);
 });

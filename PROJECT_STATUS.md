@@ -1,6 +1,14 @@
 # Project status
 
-Updated: 20 September 2026
+Updated: 4 October 2026
+
+## Publication decision — 4 October 2026
+
+- The owner approved the current funnel for publication as a shippable first campaign version.
+- The `/grinds` page now leads with a €25 introductory Maths Clarity Session for the first five students, with Leaving Cert Higher Level as the main focus.
+- The offer explains what happens before, during and after the session, how the first session can become week one of a four-week plan, and the online and in-person continuation prices.
+- The tutor section now includes Cian’s photograph, UCD and TUD qualifications, and current Quantitative Analyst role at Forvis Mazars.
+- The enquiry form is shorter and explains the manual confirmation and payment process. Direct enquiry delivery remains a follow-up item; until connected, the interface truthfully prepares a copyable preview.
 
 ## Session close — 20 September 2026
 

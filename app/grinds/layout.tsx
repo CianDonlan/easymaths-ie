@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Maths Grinds | Easy Maths",
+  title: "€25 Maths Clarity Session | Easy Maths",
   description:
-    "Ask about clear, focused Junior Cycle and Leaving Cert maths grinds, available online or in person.",
+    "A focused 60-minute Leaving Cert Maths Clarity Session. Bring the topic, test or exam question that is causing difficulty.",
   openGraph: {
-    title: "Maths Grinds | Easy Maths",
-    description: "Clear maths grinds, one useful step at a time. Ask about online or in-person options.",
+    title: "€25 Maths Clarity Session | Easy Maths",
+    description: "One useful maths session and a clear next step. Online or in person around North Fingal.",
     type: "website",
     images: [],
   },
   twitter: {
     card: "summary",
-    title: "Maths Grinds | Easy Maths",
-    description: "Clear maths grinds, one useful step at a time. Ask about online or in-person options.",
+    title: "€25 Maths Clarity Session | Easy Maths",
+    description: "One useful maths session and a clear next step. Online or in person around North Fingal.",
     images: [],
   },
 };
