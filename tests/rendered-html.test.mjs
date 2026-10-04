@@ -51,7 +51,12 @@ test("server-renders the shareable grinds and enquiry page", async () => {
   assert.doesNotMatch(html, /The main focus is Leaving Cert Higher Level/);
   assert.match(html, /Donabate and selected North Fingal areas/);
   assert.match(html, /No payment is taken until a time and format are agreed/);
-  assert.match(html, /Copy preview enquiry/);
+  assert.match(html, /Send session enquiry/);
+  assert.match(html, /name="session-enquiry"/);
+  assert.match(html, /data-netlify="true"/);
+  assert.match(html, /name="form-name" value="session-enquiry"/);
+  assert.match(html, /name="email"/);
+  assert.doesNotMatch(html, /Local preview: enquiry delivery has not been connected/);
   assert.doesNotMatch(html, /request wasn’t sent|Add your real formats/);
 });
 

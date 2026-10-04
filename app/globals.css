@@ -869,6 +869,7 @@ textarea:focus-visible {
 
 .enquiry-form-v1 { width: 100%; margin: 0; background: rgba(255,255,255,.18); }
 .enquiry-form-v1 .preview-notice { grid-column: 1 / -1; margin: 0; padding: 15px 17px; border-left: 5px solid var(--red); background: var(--paper-deep); font-size: 13px; line-height: 1.5; }
+.netlify-honeypot { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 .enquiry-form.enquiry-form-v1 > label { grid-column: auto; }
 .enquiry-form.enquiry-form-v1 > .enquiry-wide { grid-column: 1 / -1; }
 .minor-note { margin: -6px 0 0; color: var(--muted); font-size: 12px; line-height: 1.5; }

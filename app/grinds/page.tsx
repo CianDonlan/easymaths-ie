@@ -5,8 +5,6 @@ import Link from "next/link";
 import { FormEvent, useState, useSyncExternalStore } from "react";
 import tutorPhoto from "../../pic_of_me.png";
 
-const enquiryEmail = process.env.NEXT_PUBLIC_ENQUIRY_EMAIL?.trim() ?? "";
-
 const attributionKeys = [
   "source",
   "poster_id",
@@ -18,10 +16,6 @@ const attributionKeys = [
   "utm_content",
   "utm_term",
 ] as const;
-
-function cleanValue(value: FormDataEntryValue | null) {
-  return typeof value === "string" ? value.trim().slice(0, 500) : "";
-}
 
 function getAttribution() {
   const current = new URLSearchParams(window.location.search);
@@ -43,7 +37,7 @@ export default function GrindsPage() {
   const sharedByStudent = useSyncExternalStore(subscribeToUrl, getSharedByStudent, () => false);
   const [shareState, setShareState] = useState("");
   const [formState, setFormState] = useState("");
-  const [preparedEnquiry, setPreparedEnquiry] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   async function shareWithParent() {
     const url = new URL(window.location.href);
@@ -64,41 +58,40 @@ export default function GrindsPage() {
     }
   }
 
-  async function prepareEnquiry(event: FormEvent<HTMLFormElement>) {
+  async function submitEnquiry(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const data = new FormData(form);
     const attribution = getAttribution();
-    const sourceLines = attribution.length
-      ? `\n\nHow this enquiry reached Easy Maths:\n${attribution.map(([key, value]) => `${key}: ${value}`).join("\n")}`
-      : "";
-    const body = [
-      "Hello, I’d like to ask about the €25 Maths Clarity Session.",
-      "",
-      `Name: ${cleanValue(data.get("name"))}`,
-      `I am: ${cleanValue(data.get("role"))}`,
-      `Email: ${cleanValue(data.get("replyEmail"))}`,
-      `Mobile: ${cleanValue(data.get("mobile")) || "Not provided"}`,
-      `Student stage: ${cleanValue(data.get("studentStage"))}`,
-      `Preferred format: ${cleanValue(data.get("lessonFormat"))}`,
-      `Topic or difficulty: ${cleanValue(data.get("helpWanted")) || "Not provided"}`,
-      "",
-      "I understand this is an enquiry. A session is only arranged after the time, format and payment details have been confirmed.",
-    ].join("\n") + sourceLines;
+    data.set(
+      "attribution",
+      attribution.length
+        ? attribution.map(([key, value]) => `${key}: ${value}`).join(" | ")
+        : "Direct / not recorded",
+    );
 
-    setPreparedEnquiry(body);
-
-    if (enquiryEmail) {
-      const subject = encodeURIComponent(`€25 Maths Clarity Session enquiry — ${cleanValue(data.get("studentStage"))}`);
-      window.location.href = `mailto:${enquiryEmail}?subject=${subject}&body=${encodeURIComponent(body)}`;
-      setFormState("Your email app should open with the enquiry ready. Review it, then press send there.");
-      return;
+    const encoded = new URLSearchParams();
+    for (const [key, value] of data.entries()) {
+      if (typeof value === "string") encoded.append(key, value);
     }
 
+    setIsSubmitting(true);
+    setFormState("Sending your enquiry…");
     try {
-      await navigator.clipboard.writeText(body);
-      setFormState("Preview enquiry copied. The business contact address still needs to be connected before launch.");
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encoded.toString(),
+      });
+
+      if (!response.ok) throw new Error(`Form submission failed: ${response.status}`);
+
+      form.reset();
+      setFormState("Thanks — your enquiry has been sent. I’ll contact you shortly.");
     } catch {
-      setFormState("Your preview enquiry is ready below. The business contact address still needs to be connected before launch.");
+      setFormState("That didn’t send. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   }
 
@@ -227,12 +220,20 @@ export default function GrindsPage() {
           </p>
         </div>
 
-        <form className="enquiry-form enquiry-form-v1" onSubmit={prepareEnquiry}>
-          {!enquiryEmail && (
-            <p className="preview-notice">
-              Local preview: enquiry delivery has not been connected yet. Submitting will copy a ready-to-send message for review; it will not contact anyone.
-            </p>
-          )}
+        <form
+          className="enquiry-form enquiry-form-v1"
+          name="session-enquiry"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          onSubmit={submitEnquiry}
+        >
+          <input type="hidden" name="form-name" value="session-enquiry" />
+          <input type="hidden" name="subject" value="New €25 Maths Clarity Session enquiry" />
+          <input type="hidden" name="attribution" value="" />
+          <div className="netlify-honeypot" aria-hidden="true">
+            <label>Leave this field empty <input name="bot-field" tabIndex={-1} autoComplete="off" /></label>
+          </div>
 
           <label>
             <span>Your name</span>
@@ -248,7 +249,7 @@ export default function GrindsPage() {
           </label>
           <label>
             <span>Email</span>
-            <input type="email" name="replyEmail" autoComplete="email" required />
+            <input type="email" name="email" autoComplete="email" required />
           </label>
           <label>
             <span>Mobile <em>Optional</em></span>
@@ -278,19 +279,13 @@ export default function GrindsPage() {
           </label>
           <p className="minor-note enquiry-wide">For a student under 18, a parent or guardian will be involved before a session is arranged.</p>
           <label className="privacy-check enquiry-wide">
-            <input type="checkbox" required />
+            <input type="checkbox" name="consent" value="Confirmed" required />
             <span>I understand that this is an enquiry and that the session is only booked after the details and payment are confirmed.</span>
           </label>
-          <button className="primary-button wide-button enquiry-wide" type="submit">
-            {enquiryEmail ? "Prepare session enquiry" : "Copy preview enquiry"}<span>→</span>
+          <button className="primary-button wide-button enquiry-wide" type="submit" disabled={isSubmitting}>
+            {isSubmitting ? "Sending…" : "Send session enquiry"}<span>→</span>
           </button>
           {formState && <p className="form-status enquiry-wide" role="status">{formState}</p>}
-          {preparedEnquiry && !enquiryEmail && (
-            <label className="prepared-enquiry enquiry-wide">
-              <span>Prepared message</span>
-              <textarea readOnly rows={12} value={preparedEnquiry} onFocus={(event) => event.currentTarget.select()} />
-            </label>
-          )}
         </form>
       </section>
     </main>
