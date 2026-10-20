@@ -112,7 +112,7 @@ export default function GrindsPage() {
 
       <section className="starter-hero" aria-labelledby="offer-title">
         <div className="starter-hero-heading">
-          <p className="section-label">Limited introductory offer · North County Dublin</p>
+          <p className="section-label">Only 10 introductory places · North County Dublin</p>
           <h1 id="offer-title">The €3.14 Leaving Cert Maths Masterplan.</h1>
         </div>
         <div className="starter-hero-offer">
@@ -123,9 +123,10 @@ export default function GrindsPage() {
             <strong>€3.14</strong>
             <span>One 45-minute<br />at-home session</span>
           </div>
-          <p className="availability-line">
-            Available while I take on a small number of new weekly students locally.
-          </p>
+          <div className="availability-line">
+            <strong>Only 10 students can get this €3.14 session.</strong>
+            <span>Once those introductory places are taken, the offer ends. They could fill within weeks.</span>
+          </div>
           <div className="grinds-hero-actions">
             <a className="primary-button" href="#enquiry">Ask about the Maths Masterplan <span>↓</span></a>
             <button className="secondary-button" type="button" onClick={shareWithParent}>Send this to a parent</button>
@@ -241,16 +242,16 @@ export default function GrindsPage() {
 
       <section className="intro-reason" aria-labelledby="price-reason-title">
         <div>
-          <p className="section-label dark-label">Why €3.14?</p>
-          <h2 id="price-reason-title">Low commitment by design.</h2>
+          <p className="section-label dark-label">Why is it €3.14?</p>
+          <h2 id="price-reason-title">I’m getting started.</h2>
         </div>
         <div className="intro-reason-copy">
           <p>
-            The maths-themed introductory price lets a local family try tutoring without committing to a programme. The first session sets the student up for future self-study; afterward, you can decide whether weekly help would be useful.
+            I’m starting Easy Maths with my first 10 students, and I want local families to see how I teach. That’s why this first session is just €3.14. You get a practical way to study and three printed tools to keep, with no commitment to weekly tuition.
           </p>
           <div className="scarcity-note">
-            <strong>Limited introductory availability</strong>
-            <p>This offer runs only while I’m taking on a small number of new weekly students in North County Dublin. When those places are filled, the €3.14 offer closes.</p>
+            <strong>10 introductory places, then the offer ends</strong>
+            <p>I’m making this price available to only my first 10 students in North County Dublin. Once those places are taken, the €3.14 session is no longer available. That could be within a few weeks.</p>
           </div>
           <a className="primary-button" href="#enquiry">Ask while places are available <span>↓</span></a>
         </div>
@@ -281,7 +282,7 @@ export default function GrindsPage() {
 
       <section className="enquiry-section starter-enquiry" id="enquiry" aria-labelledby="enquiry-title">
         <div className="enquiry-heading">
-          <p className="section-label">Limited introductory offer</p>
+          <p className="section-label">Only 10 introductory places</p>
           <h2 id="enquiry-title">Ask about the Maths Masterplan.</h2>
           <p>
             Leave your details and I’ll contact you by your preferred method. We’ll talk about what you’re looking for and whether the at-home session is a good fit before anything is arranged.
@@ -327,8 +328,8 @@ export default function GrindsPage() {
           <label>
             <span>Student level</span>
             <select name="studentLevel" defaultValue="Leaving Cert — Higher Level" required>
-              <option>Leaving Cert — Higher Level</option>
-              <option>Leaving Cert — Ordinary Level</option>
+              <option value="Leaving Cert — Higher Level">Leaving Cert Higher</option>
+              <option value="Leaving Cert — Ordinary Level">Leaving Cert Ordinary</option>
               <option>Not sure yet</option>
             </select>
           </label>

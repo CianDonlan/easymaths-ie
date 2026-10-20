@@ -41,7 +41,9 @@ test("server-renders the shareable grinds and enquiry page", async () => {
   assert.match(html, /<title>The €3\.14 Leaving Cert Maths Masterplan \| Easy Maths/);
   assert.match(html, /The €3\.14 Leaving Cert Maths Masterplan\./);
   assert.match(html, /One 45-minute/);
-  assert.match(html, /Limited introductory offer/);
+  assert.match(html, /Only 10 introductory places/);
+  assert.match(html, /Once those introductory places are taken, the offer ends/);
+  assert.match(html, /I’m starting Easy Maths with my first 10 students/);
   assert.match(html, /The Easy Maths Study System/);
   assert.match(html, /Where the Marks Are/);
   assert.match(html, /Past-Paper Study Trackers/);
