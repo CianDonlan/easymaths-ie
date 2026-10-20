@@ -42,11 +42,11 @@ export default function GrindsPage() {
   async function shareWithParent() {
     const url = new URL(window.location.href);
     url.searchParams.set("shared", "student");
-    const text = "I tried this Easy Maths challenge and liked how it explained the problem. Could we look at the €25 Clarity Session?";
+    const text = "I found the €3.14 Leaving Cert Maths Masterplan from Easy Maths. It’s a 45-minute at-home session with three printed study tools. Could we look at it?";
 
     try {
       if (navigator.share) {
-        await navigator.share({ title: "Easy Maths Clarity Session", text, url: url.href });
+        await navigator.share({ title: "The €3.14 Leaving Cert Maths Masterplan", text, url: url.href });
         setShareState("Shared");
       } else {
         await navigator.clipboard.writeText(`${text} ${url.href}`);
@@ -87,7 +87,7 @@ export default function GrindsPage() {
       if (!response.ok) throw new Error(`Form submission failed: ${response.status}`);
 
       form.reset();
-      setFormState("Thanks — your enquiry has been sent. I’ll contact you shortly.");
+      setFormState("Thanks — I’ll contact you to talk through the session and see if it is a good fit.");
     } catch {
       setFormState("That didn’t send. Please check your connection and try again.");
     } finally {
@@ -96,87 +96,182 @@ export default function GrindsPage() {
   }
 
   return (
-    <main className="grinds-v1">
+    <main className="grinds-v2">
       <header className="grinds-nav">
         <Link href="/">← Maths challenge</Link>
         <span>Easy Maths</span>
-        <a href="#enquiry">Ask about a session</a>
+        <a href="#enquiry">Ask about the offer</a>
       </header>
 
       {sharedByStudent && (
         <aside className="shared-intro" aria-label="Shared by a student">
-          <span>Sent from the maths challenge</span>
-          <p>A student shared this page because they would like to talk about one-to-one maths help.</p>
+          <span>Sent by a student</span>
+          <p>They shared this page because they would like to try the Leaving Cert Maths Masterplan.</p>
         </aside>
       )}
 
-      <section className="grinds-v1-hero">
-        <div>
-          <p className="section-label">Leaving Cert Higher Level focus</p>
-          <h1>Maths, made clear one step at a time.</h1>
+      <section className="starter-hero" aria-labelledby="offer-title">
+        <div className="starter-hero-heading">
+          <p className="section-label">Limited introductory offer · North County Dublin</p>
+          <h1 id="offer-title">The €3.14 Leaving Cert Maths Masterplan.</h1>
         </div>
-        <div className="grinds-hero-copy">
-          <p>
-            Bring the topic, test or exam question that is causing difficulty. We’ll find the sticking point,
-            work through it clearly and decide what to tackle next.
+        <div className="starter-hero-offer">
+          <p className="starter-lede">
+            In 45 minutes, I’ll show your child a practical way to study Leaving Cert maths with real exam questions, then leave them with three printed tools to keep using.
           </p>
-          <div className="intro-price" aria-label="Introductory price">
-            <strong>€25</strong>
-            <span>60-minute Clarity Session<br />First five students</span>
+          <div className="starter-price" aria-label="Introductory price of three euro and fourteen cent">
+            <strong>€3.14</strong>
+            <span>One 45-minute<br />at-home session</span>
           </div>
+          <p className="availability-line">
+            Available while I take on a small number of new weekly students locally.
+          </p>
           <div className="grinds-hero-actions">
-            <a className="primary-button" href="#enquiry">Ask about a €25 session <span>↓</span></a>
+            <a className="primary-button" href="#enquiry">Ask about the Maths Masterplan <span>↓</span></a>
             <button className="secondary-button" type="button" onClick={shareWithParent}>Send this to a parent</button>
             {shareState && <p className="share-state" role="status">{shareState}</p>}
           </div>
-          <p className="hero-minor-note">No commitment to continue. No payment is taken until a time and format are agreed.</p>
+          <p className="hero-minor-note">
+            Higher or Ordinary Level. A parent or guardian arranges the visit. No commitment to weekly tuition.
+          </p>
         </div>
       </section>
 
-      <section className="lesson-options" aria-labelledby="session-includes-title">
-        <div className="lesson-options-heading">
-          <p className="section-label dark-label">The Clarity Session</p>
-          <h2 id="session-includes-title">One useful session. A clear next step.</h2>
+      <section className="study-toolkit" aria-labelledby="toolkit-title">
+        <div className="toolkit-heading">
+          <p className="section-label dark-label">Included · printed and theirs to keep</p>
+          <h2 id="toolkit-title">The session ends. The system stays.</h2>
+          <p>
+            We set each sheet up together and use it on real exam questions. The student leaves knowing where to start, what to do when stuck, and how to see progress.
+          </p>
         </div>
-        <div className="lesson-option-list">
+        <div className="toolkit-list">
           <article>
-            <span>01 · Before</span>
-            <h3>Bring the real problem</h3>
-            <p>Share a difficult topic, recent test or exam question so the session begins with what matters now.</p>
+            <div className="toolkit-preview toolkit-preview-system" aria-hidden="true">
+              <span>01</span>
+              <div className="resource-sheet">
+                <div className="resource-sheet-brand"><b>EASYMATHS.IE</b><i>LEAVING CERT MATHS</i></div>
+                <p>YOUR STUDY SYSTEM</p>
+                <strong>A CLEAR WAY<br />FORWARD.</strong>
+                <div className="system-glimpse">
+                  <i /><i /><i /><i /><i />
+                </div>
+                <small>EXPLAINED AND SET UP IN THE SESSION</small>
+              </div>
+            </div>
+            <div className="toolkit-copy">
+              <div className="toolkit-facts" aria-label="Two-page guide with five support levels">
+                <span>2-page guide</span>
+                <span>5 support levels</span>
+              </div>
+              <p className="tool-type">The Easy Maths Study System</p>
+              <h3>Know what to do when you get stuck.</h3>
+              <p>A clear five-stage method for getting unstuck and working towards confident, timed answers. Students learn how to use the right amount of help without giving up or becoming reliant on solutions.</p>
+            </div>
           </article>
           <article>
-            <span>02 · During</span>
-            <h3>Work until it clicks</h3>
-            <p>We identify the sticking point, explain the method clearly and use a similar question to check understanding.</p>
+            <div className="toolkit-preview toolkit-preview-priorities" aria-hidden="true">
+              <span>02</span>
+              <div className="resource-sheet">
+                <div className="resource-sheet-brand"><b>EASYMATHS.IE</b><i>LEAVING CERT MATHS</i></div>
+                <p>YOUR REVISION PRIORITIES</p>
+                <strong>WHERE THE<br />MARKS ARE.</strong>
+                <div className="priority-glimpse">
+                  <i /><i /><i /><i /><i /><i />
+                </div>
+                <small>YOUR PRIORITIES, MADE CLEAR</small>
+              </div>
+            </div>
+            <div className="toolkit-copy">
+              <div className="toolkit-facts" aria-label="One-page priorities map based on papers from 2018 to 2025">
+                <span>1-page priorities map</span>
+                <span>2018–2025 papers</span>
+              </div>
+              <p className="tool-type">Where the Marks Are</p>
+              <h3>Put revision time where it counts.</h3>
+              <p>A marks-weighted view of the biggest Higher Level topic areas on Paper 1 and Paper 2. It turns “revise maths” into a clearer decision about what deserves regular practice.</p>
+            </div>
           </article>
           <article>
-            <span>03 · After</span>
-            <h3>Know what comes next</h3>
-            <p>Leave with priority areas, a seven-day direction and relevant practice—not another vague instruction to study more.</p>
+            <div className="toolkit-preview toolkit-preview-tracker" aria-hidden="true">
+              <span>03</span>
+              <div className="resource-sheet">
+                <div className="resource-sheet-brand"><b>EASYMATHS.IE</b><i>LEAVING CERT MATHS</i></div>
+                <p>YOUR STUDY TRACKER</p>
+                <strong>TRACK.<br />IMPROVE.</strong>
+                <div className="tracker-glimpse">
+                  {Array.from({ length: 24 }, (_, index) => <i key={index} />)}
+                </div>
+                <small>KEEP EVERY ATTEMPT VISIBLE</small>
+              </div>
+            </div>
+            <div className="toolkit-copy">
+              <div className="toolkit-facts" aria-label="Eight paper trackers covering 2023 to 2026">
+                <span>8 paper trackers</span>
+                <span>2023–2026</span>
+              </div>
+              <p className="tool-type">Past-Paper Study Trackers</p>
+              <h3>Make every attempt visible.</h3>
+              <p>Separate Paper 1 and Paper 2 sheets list every question part across four exam years. The student records up to three attempts and the level of help used, so improvement is easy to spot.</p>
+            </div>
           </article>
         </div>
-        <p className="lesson-options-note">
-          Each session includes a concise personalised Maths Clarity Map: priority areas, a seven-day direction and relevant practice.
-        </p>
       </section>
 
-      <section className="tutor-profile" aria-labelledby="tutor-title">
-        <div className="tutor-profile-intro">
-          <p className="section-label">Your tutor</p>
-          <h2 id="tutor-title">Complex maths should not need a complicated explanation.</h2>
+      <section className="session-outline" aria-labelledby="session-title">
+        <div className="session-outline-heading">
+          <p className="section-label">The 45-minute visit</p>
+          <h2 id="session-title">A practical start—not another lecture.</h2>
+        </div>
+        <ol>
+          <li>
+            <span>01</span>
+            <div><h3>Talk about studying</h3><p>We briefly look at how the student approaches maths now and what tends to get in the way.</p></div>
+          </li>
+          <li>
+            <span>02</span>
+            <div><h3>Set up the three sheets</h3><p>I introduce the printed resources and show how they work together.</p></div>
+          </li>
+          <li>
+            <span>03</span>
+            <div><h3>Use real exam questions</h3><p>We work step by step through questions so the student practises the study approach rather than only hearing about it.</p></div>
+          </li>
+        </ol>
+      </section>
+
+      <section className="intro-reason" aria-labelledby="price-reason-title">
+        <div>
+          <p className="section-label dark-label">Why €3.14?</p>
+          <h2 id="price-reason-title">Low commitment by design.</h2>
+        </div>
+        <div className="intro-reason-copy">
+          <p>
+            The maths-themed introductory price lets a local family try tutoring without committing to a programme. The first session sets the student up for future self-study; afterward, you can decide whether weekly help would be useful.
+          </p>
+          <div className="scarcity-note">
+            <strong>Limited introductory availability</strong>
+            <p>This offer runs only while I’m taking on a small number of new weekly students in North County Dublin. When those places are filled, the €3.14 offer closes.</p>
+          </div>
+          <a className="primary-button" href="#enquiry">Ask while places are available <span>↓</span></a>
+        </div>
+      </section>
+
+      <section className="home-trust" aria-labelledby="tutor-title">
+        <div className="home-trust-photo">
           <Image
-            className="tutor-photo"
             src={tutorPhoto}
-            alt="Easy Maths tutor"
-            sizes="(max-width: 760px) 100vw, 48vw"
+            alt="Cian, the Easy Maths tutor"
+            sizes="(max-width: 760px) 100vw, 42vw"
             unoptimized
           />
         </div>
-        <div className="tutor-profile-copy">
+        <div className="home-trust-copy">
+          <p className="section-label">Your tutor</p>
+          <h2 id="tutor-title">Meet the tutor behind Easy Maths.</h2>
           <p>
-            I’m Cian. I help students turn difficult questions into clear steps they can use again. The goal isn’t to watch me do maths—it’s to leave knowing how to make the next move yourself.
+            I’m Cian. I help Leaving Cert students break difficult maths into clear steps they can understand and use on their own. The aim is simple: give each student a practical way to study between lessons—not make them dependent on one.
           </p>
-          <dl className="credentials-list">
+          <dl className="credentials-list compact-credentials">
             <div><dt>Master’s</dt><dd><span>Financial Mathematics</span><span className="credential-place">UCD</span></dd></div>
             <div><dt>Bachelor’s</dt><dd><span>Mathematical Sciences</span><span className="credential-place">TUD</span></dd></div>
             <div><dt>Current work</dt><dd><span>Quantitative Analyst</span><span className="credential-place">Forvis Mazars</span></dd></div>
@@ -184,44 +279,17 @@ export default function GrindsPage() {
         </div>
       </section>
 
-      <section className="conversation-steps" aria-labelledby="conversation-title">
-        <p className="section-label">Booking without the back-and-forth</p>
-        <h2 id="conversation-title">Enquire now. Pay only when the session is agreed.</h2>
-        <ol>
-          <li><span>01</span><div><h3>Send the short form</h3><p>Tell me who the session is for, their stage and the topic that is causing difficulty.</p></div></li>
-          <li><span>02</span><div><h3>I contact you</h3><p>We agree a suitable time and whether the session will be online or in person around North Fingal.</p></div></li>
-          <li><span>03</span><div><h3>Confirm and pay</h3><p>Once the details are right, payment confirms the session. Sending the form alone does not commit you.</p></div></li>
-        </ol>
-      </section>
-
-      <section className="offer-foundation" aria-labelledby="continuing-title">
-        <div>
-          <p className="section-label dark-label">If it is a good fit</p>
-          <h2 id="continuing-title">The first session can become week one.</h2>
-        </div>
-        <div className="continuing-offer">
-          <p>
-            There is no hard sell after the Clarity Session. If weekly tuition would help, the session can become the first week of a four-week plan and the €25 already paid counts toward the total.
-          </p>
-          <dl className="price-options">
-            <div><dt>Online</dt><dd>€195 for four weeks</dd></div>
-            <div><dt>In person</dt><dd>€230 for four weeks</dd></div>
-          </dl>
-          <p className="service-area">Online throughout Ireland. Limited in-person availability in Donabate and selected North Fingal areas.</p>
-        </div>
-      </section>
-
-      <section className="enquiry-section" id="enquiry" aria-labelledby="enquiry-title">
+      <section className="enquiry-section starter-enquiry" id="enquiry" aria-labelledby="enquiry-title">
         <div className="enquiry-heading">
-          <p className="section-label">First five students · €25</p>
-          <h2 id="enquiry-title">Ask about a session.</h2>
+          <p className="section-label">Limited introductory offer</p>
+          <h2 id="enquiry-title">Ask about the Maths Masterplan.</h2>
           <p>
-            Send the essentials now. I’ll contact you to agree the time, format and payment details. This form does not make a booking or take payment.
+            Leave your details and I’ll contact you by your preferred method. We’ll talk about what you’re looking for and whether the at-home session is a good fit before anything is arranged.
           </p>
         </div>
 
         <form
-          className="enquiry-form enquiry-form-v1"
+          className="enquiry-form enquiry-form-v2"
           name="session-enquiry"
           method="POST"
           data-netlify="true"
@@ -229,61 +297,55 @@ export default function GrindsPage() {
           onSubmit={submitEnquiry}
         >
           <input type="hidden" name="form-name" value="session-enquiry" />
-          <input type="hidden" name="subject" value="New €25 Maths Clarity Session enquiry" />
+          <input type="hidden" name="subject" value="New €3.14 Leaving Cert Maths Masterplan enquiry" />
           <input type="hidden" name="attribution" value="" />
           <div className="netlify-honeypot" aria-hidden="true">
             <label>Leave this field empty <input name="bot-field" tabIndex={-1} autoComplete="off" /></label>
           </div>
 
           <label>
-            <span>Your name</span>
+            <span>Parent or guardian name</span>
             <input type="text" name="name" autoComplete="name" required />
           </label>
           <label>
-            <span>I am a…</span>
-            <select name="role" defaultValue="Parent or guardian" required>
-              <option>Parent or guardian</option>
-              <option>Student aged 18 or over</option>
-              <option>Student under 18</option>
+            <span>Mobile</span>
+            <input type="tel" name="mobile" autoComplete="tel" required />
+          </label>
+          <label>
+            <span>Preferred contact</span>
+            <select name="contactMethod" defaultValue="Text message" required>
+              <option>Text message</option>
+              <option>WhatsApp</option>
+              <option>Phone call</option>
+              <option>No preference</option>
             </select>
           </label>
           <label>
-            <span>Email</span>
-            <input type="email" name="email" autoComplete="email" required />
+            <span>Email <em>Optional</em></span>
+            <input type="email" name="email" autoComplete="email" />
           </label>
           <label>
-            <span>Mobile <em>Optional</em></span>
-            <input type="tel" name="mobile" autoComplete="tel" />
-          </label>
-          <label>
-            <span>Student stage</span>
-            <select name="studentStage" defaultValue="6th Year — Higher Level" required>
-              <option>6th Year — Higher Level</option>
-              <option>5th Year — Higher Level</option>
+            <span>Student level</span>
+            <select name="studentLevel" defaultValue="Leaving Cert — Higher Level" required>
+              <option>Leaving Cert — Higher Level</option>
               <option>Leaving Cert — Ordinary Level</option>
-              <option>Junior Cycle</option>
-              <option>Other / not sure</option>
+              <option>Not sure yet</option>
             </select>
           </label>
           <label>
-            <span>Preferred format</span>
-            <select name="lessonFormat" defaultValue="Open to either" required>
-              <option>Open to either</option>
-              <option>Online</option>
-              <option>In person</option>
-            </select>
+            <span>Town or area</span>
+            <input type="text" name="area" autoComplete="address-level2" placeholder="For example, Donabate" required />
           </label>
           <label className="enquiry-wide">
-            <span>What is causing difficulty? <em>Optional</em></span>
-            <textarea name="helpWanted" rows={4} placeholder="A topic, recent test, exam question or anything else useful…" />
+            <span>Anything useful to know? <em>Optional</em></span>
+            <textarea name="helpWanted" rows={4} placeholder="A difficult topic, recent test or anything you would like to discuss…" />
           </label>
-          <p className="minor-note enquiry-wide">For a student under 18, a parent or guardian will be involved before a session is arranged.</p>
           <label className="privacy-check enquiry-wide">
             <input type="checkbox" name="consent" value="Confirmed" required />
-            <span>I understand that this is an enquiry and that the session is only booked after the details and payment are confirmed.</span>
+            <span>I’m happy for Cian to contact me about this enquiry. I understand that nothing is booked and no payment is due yet.</span>
           </label>
           <button className="primary-button wide-button enquiry-wide" type="submit" disabled={isSubmitting}>
-            {isSubmitting ? "Sending…" : "Send session enquiry"}<span>→</span>
+            {isSubmitting ? "Sending…" : "Ask about the Maths Masterplan"}<span>→</span>
           </button>
           {formState && <p className="form-status enquiry-wide" role="status">{formState}</p>}
         </form>

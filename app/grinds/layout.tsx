@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "€25 Maths Clarity Session | Easy Maths",
+  title: "The €3.14 Leaving Cert Maths Masterplan | Easy Maths",
   description:
-    "A focused 60-minute Leaving Cert Maths Clarity Session. Bring the topic, test or exam question that is causing difficulty.",
+    "A limited 45-minute introductory session in North County Dublin that shows Leaving Cert students how to study maths independently.",
   openGraph: {
-    title: "€25 Maths Clarity Session | Easy Maths",
-    description: "One useful maths session and a clear next step. Online or in person around North Fingal.",
+    title: "The €3.14 Leaving Cert Maths Masterplan | Easy Maths",
+    description: "A practical 45-minute study session with three printed tools to keep.",
     type: "website",
     images: [],
   },
   twitter: {
     card: "summary",
-    title: "€25 Maths Clarity Session | Easy Maths",
-    description: "One useful maths session and a clear next step. Online or in person around North Fingal.",
+    title: "The €3.14 Leaving Cert Maths Masterplan | Easy Maths",
+    description: "A practical 45-minute study session with three printed tools to keep.",
     images: [],
   },
 };

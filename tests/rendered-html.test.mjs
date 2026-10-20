@@ -38,26 +38,38 @@ test("server-renders the shareable grinds and enquiry page", async () => {
   assert.equal(response.status, 200);
 
   const html = await response.text();
-  assert.match(html, /<title>€25 Maths Clarity Session \| Easy Maths/);
-  assert.match(html, /Maths, made clear one step at a time\./);
-  assert.match(html, /60-minute Clarity Session/);
-  assert.match(html, /First five students/);
+  assert.match(html, /<title>The €3\.14 Leaving Cert Maths Masterplan \| Easy Maths/);
+  assert.match(html, /The €3\.14 Leaving Cert Maths Masterplan\./);
+  assert.match(html, /One 45-minute/);
+  assert.match(html, /Limited introductory offer/);
+  assert.match(html, /The Easy Maths Study System/);
+  assert.match(html, /Where the Marks Are/);
+  assert.match(html, /Past-Paper Study Trackers/);
+  assert.match(html, /8 paper trackers/);
+  assert.match(html, /2023–2026/);
+  assert.match(html, /EXPLAINED AND SET UP IN THE SESSION/);
+  assert.match(html, /YOUR PRIORITIES, MADE CLEAR/);
+  assert.match(html, /KEEP EVERY ATTEMPT VISIBLE/);
+  assert.doesNotMatch(html, /\/masterplan\/(?:study-system|topic-priorities|study-tracker)\.png/);
+  assert.match(html, /Meet the tutor behind Easy Maths\./);
   assert.match(html, /I’m Cian/);
   assert.match(html, /Quantitative Analyst/);
   assert.match(html, /Financial Mathematics/);
   assert.match(html, /Forvis Mazars/);
   assert.match(html, /\/_next\/static\/media\/pic_of_me\.[a-f0-9]+\.png/);
   assert.doesNotMatch(html, /\/_next\/image\?/);
-  assert.doesNotMatch(html, /The main focus is Leaving Cert Higher Level/);
-  assert.match(html, /Donabate and selected North Fingal areas/);
-  assert.match(html, /No payment is taken until a time and format are agreed/);
-  assert.match(html, /Send session enquiry/);
+  assert.match(html, /North County Dublin/);
+  assert.match(html, /No commitment to weekly tuition/);
+  assert.match(html, /Ask about the Maths Masterplan/);
   assert.match(html, /name="session-enquiry"/);
   assert.match(html, /data-netlify="true"/);
   assert.match(html, /name="form-name" value="session-enquiry"/);
+  assert.match(html, /name="mobile"/);
+  assert.match(html, /name="contactMethod"/);
+  assert.match(html, /name="area"/);
   assert.match(html, /name="email"/);
-  assert.doesNotMatch(html, /Local preview: enquiry delivery has not been connected/);
-  assert.doesNotMatch(html, /request wasn’t sent|Add your real formats/);
+  assert.doesNotMatch(html, /inviting into your home/);
+  assert.doesNotMatch(html, /€25|Clarity Session|€195|€230/);
 });
 
 test("ships final metadata and removes the disposable starter", async () => {
@@ -68,7 +80,7 @@ test("ships final metadata and removes the disposable starter", async () => {
   ]);
 
   assert.match(page, /guideSteps/);
-  assert.match(page, /Ask about maths grinds/);
+  assert.match(page, /See the €3\.14 Maths Masterplan/);
   assert.match(page, /Send this to a parent/);
   assert.match(layout, /60 Second Maths Challenge/);
   assert.match(layout, /\/og\.png/);
