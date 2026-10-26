@@ -1,0 +1,1 @@
+ALTER TABLE `tracker_users` ADD `weekly_part_goal` integer DEFAULT 20 NOT NULL;

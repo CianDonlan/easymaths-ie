@@ -26,18 +26,24 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
 
 /dist/
+/.netlify/
 /.wrangler/
 /outputs/
 /work/
+*.tsbuildinfo
 
 # Private source material used to prepare the introductory session.
 /Intro lesson sheets/

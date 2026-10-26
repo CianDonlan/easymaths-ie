@@ -1,0 +1,26 @@
+.tracker-card form {
+  display: grid;
+  gap: 16px;
+}
+
+.tracker-card form label {
+  display: grid;
+  gap: 7px;
+  font-weight: 700;
+}
+
+.tracker-card form input {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.tracker-card form .primary {
+  justify-self: start;
+}
+
+.tracker-login-success {
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #e1f4dc;
+  color: #254c1a;
+}

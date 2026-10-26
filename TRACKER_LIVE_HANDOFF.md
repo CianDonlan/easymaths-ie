@@ -1,0 +1,23 @@
+# Next task: put `/tracker` on easymaths.ie
+
+## Corrected hosting picture
+
+The owner's Cloudflare DNS-import screenshot (26 October 2026) showed `easymaths.ie` pointing to `75.2.60.5` and `www` to a `*.netlify.app` address. These are Netlify's documented external-DNS targets. This **contradicts** the earlier assumption that GitHub Pages serves the live domain. The Netlify dashboard confirms a production deploy from this repository's `main` at commit `7e18200` on 20 October. This repository contains both `netlify.toml` and `.github/workflows/deploy-pages.yml`; Netlify is the active domain host. Do not tell the owner to update nameservers based on the old GitHub Pages assumption.
+
+The Cloudflare zone was added for exploration but its nameservers have not been switched. Leave the live DNS and Netlify site alone while preparing and testing the tracker.
+
+## Goal and preferred path
+
+The owner wants `https://easymaths.ie/tracker` to support tutor/admin sign-in and persistent attempts on a phone. **Keep the existing site on Netlify if a staging deploy confirms the app works there.** The current `netlify.toml` builds only prerendered static files, so `/api/tracker/*`, secure sessions, and database writes need a server runtime. This is an application/deployment change; it does not by itself require a Cloudflare DNS migration.
+
+The tracker implementation is in this repository under `app/tracker/`, `app/api/tracker/`, `db/`, and `drizzle/`. The separate ChatGPT Site and local preview use D1. The Netlify build aliases the D1 binding to a Firestore adapter. Current local tracker changes are uncommitted; inspect `git status` and preserve unrelated/untracked files.
+
+## Proposed sequence
+
+1. **Preserve the live Netlify deployment.** The dashboard confirms `main@7e18200` and active form submissions. Keep the current production deploy working while the tracker is tested on a deploy preview. The local `netlify.toml` has been changed to produce a dynamic server build, but nothing has been pushed.
+2. **Prepare a Netlify deploy preview.** The local branch has `vite.netlify.config.ts`, a Nitro server build, `netlify.toml` publishing `dist`, and `app/tracker/firestore-db.ts` using the Firebase Admin SDK. The Firestore adapter passed a local emulator test for tutor/student creation, sessions, attempts, duplicate submission, ownership, and password reset. A separate test invoked the built Netlify server function against the Firestore emulator and passed public pages, setup-key rejection, tutor creation, attempt persistence, and tracker page rendering. `dist/netlify-form.html` remains present. Test the same behavior on a hosted preview before production.
+3. **Configure Firestore.** The owner chose Firestore and does not want a paid database. Create or reuse a Firebase project, then create the default Firestore Standard database in production mode so browser clients are denied. Firestore's free quota applies to one database per project. Use `FIREBASE_PROJECT_ID` and a private `FIREBASE_SERVICE_ACCOUNT_JSON` in Netlify server environment variables. Never commit the service-account file or expose the JSON to the browser. The separate ChatGPT Site D1 and local D1 do not transfer automatically. A fresh production database is acceptable for the initial UX test unless the owner requests migration.
+4. **Provision the first tutor safely.** The local branch now supports a server-side `TRACKER_SETUP_KEY` of at least 32 characters for a one-time tutor setup on Netlify. The key must be configured in Netlify environment variables and given to the owner privately. The first-account form asks for it; an incorrect key is rejected. The existing Site identity gate remains for the separate ChatGPT Site. Do not expose the key in client code or `NEXT_PUBLIC_` variables.
+5. **Verify and release.** On an isolated deploy preview, test public pages, the Netlify form, tutor setup/login, student creation/login, attempt save/edit/delete/reload, access controls, and phone layout. Run `npm run build:netlify`, `npm test`, `npm run test:firestore`, `npm run test:firestore-runtime` (emulator tests need Java 21+ and localhost listener permission), `npm run lint`, and `npx tsc --noEmit`. Then deploy through the already connected Netlify site and smoke-test `easymaths.ie` without changing DNS. If the preview exposes a blocking adapter issue, fix it before production.
+
+The task is complete when the owner can sign in at `https://easymaths.ie/tracker`, save an attempt, reload, and see it persisted while existing public pages and forms still work. Nothing has been deployed from this handoff.

@@ -1,5 +1,7 @@
 # vinext-starter
 
+The Easy Maths study tracker lives at `/tracker`. See [TRACKER.md](TRACKER.md) for setup, catalogue coverage, access rules, calculations, and the current project state.
+
 A clean full-stack starter running on
 [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
 Drizzle support.

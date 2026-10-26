@@ -1,0 +1,125 @@
+{
+  "description": "PDF-text-checked corrections to workbook topic hints. These do not certify full paper structure.",
+  "referenceIssueFindings": {
+    "lc-hl-2018-normal-p1": {
+      "Q6(a,c)": "The PDF has Q6(a) and Q6(b)(i)(ii), with no Q6(c). The workbook reference is erroneous."
+    },
+    "lc-hl-2022-normal-p1": {
+      "Q2(ii)": "The PDF has Q2(b)(ii); its algebra topic is recorded in the 2bii correction."
+    },
+    "lc-hl-2024-normal-p2": {
+      "Q9(a)(i,ii,iv)": "Q9(a) ends at (iii); the workbook's (iv) does not exist.",
+      "Q10(a)(ii,iii,iv)": "Q10(a) ends at (iii); the workbook's (iv) does not exist."
+    }
+  },
+  "papers": {
+    "lc-hl-2018-normal-p1": {
+      "6bii": { "topicIds": ["p1-graphs"], "reason": "Draw the inverse graph; PDF page 11. The workbook groups all Q6(b) under Calculus." },
+      "7eii": { "topicIds": ["p1-calculus"], "reason": "Use calculus to maximise a difference between functions; PDF page 13. Workbook labels all Q7 as Graphs." },
+      "8a": { "topicIds": ["p1-graphs"], "reason": "Read the graph intercept; PDF page 14. Workbook labels all Q8 as Calculus." },
+      "8b": { "topicIds": ["p1-graphs"], "reason": "Find rectangle area from graph coordinates; PDF page 14. Workbook labels all Q8 as Calculus." }
+    },
+    "lc-hl-2018-normal-p2": {
+      "3ai": { "topicIds": ["p2-probability"], "reason": "Count six-digit security codes; PDF page 6. Workbook labels Q3 as Statistics." },
+      "3aii": { "topicIds": ["p2-probability"], "reason": "Count codes containing a consecutive digit pattern; PDF page 6. Workbook labels Q3 as Statistics." },
+      "3b": { "topicIds": ["p2-probability"], "reason": "Factorial/combinatoric identity; PDF page 6. Workbook labels Q3 as Statistics." }
+    },
+    "lc-hl-2019-normal-p2": {
+      "7ai": { "topicIds": ["p2-geometry"], "reason": "Pythagoras in a circular segment; PDF page 16. Workbook labels all Q7 as Trigonometry." },
+      "7aiii": { "topicIds": ["p2-geometry", "p2-trigonometry"], "reason": "Area of circular segment using its central angle; PDF page 17." },
+      "7aiv": { "topicIds": ["p2-geometry"], "reason": "Volume from the cross-sectional area; PDF page 17. Workbook labels all Q7 as Trigonometry." },
+      "7bi": { "topicIds": ["p2-geometry"], "reason": "Combined hemisphere, cylinder, and cone volume; PDF page 18. Workbook labels all Q7 as Trigonometry." },
+      "7bii": { "topicIds": ["p2-geometry"], "reason": "Similar cones and volume of remaining sand; PDF page 19. Workbook labels all Q7 as Trigonometry." }
+    },
+    "lc-hl-2020-normal-p1": {
+      "7d": { "topicIds": ["p1-sequences"], "reason": "Proof of the sum of the first n square numbers by induction; PDF page 19." }
+    },
+    "lc-hl-2020-normal-p2": {
+      "9c": { "topicIds": ["p2-geometry", "p1-calculus"], "reason": "Optimise the ships' geometric distance using calculus; PDF page 25. Workbook labels all Q9 as Geometry." }
+    },
+    "lc-hl-2021-normal-p1": {
+      "8c": { "topicIds": ["p1-calculus"], "reason": "Average height using integration; PDF page 22. Omitted from workbook." }
+    },
+    "lc-hl-2021-normal-p2": {
+      "5b": { "topicIds": ["p1-algebra"], "reason": "Solve the two-van speed and travel-time equation; PDF page 13. No geometry is involved, despite the workbook label." },
+      "7a": { "topicIds": ["p1-number"], "reason": "Add the three course-section lengths; PDF page 16. Workbook groups all Q7 as Trigonometry." },
+      "7b": { "topicIds": ["p1-algebra"], "reason": "Solve for swimming speed from time and speed ratios; PDF page 16. Workbook groups all Q7 as Trigonometry." },
+      "9bv": { "topicIds": ["p2-trigonometry", "p1-calculus"], "reason": "Differentiate a periodic voltage function; PDF page 24. Workbook labels all Q9 as Trigonometry." }
+    },
+    "lc-hl-2022-normal-p1": {
+      "2bii": { "topicIds": ["p1-algebra"], "reason": "Solve simultaneous equations; PDF page 7. Workbook shorthand Q2(ii) means Q2(b)(ii)." }
+    },
+    "lc-hl-2022-normal-p2": {
+      "1aii": { "topicIds": ["p2-probability"], "reason": "Test independence of events after selecting a student at random; PDF page 4. Workbook labels all Q1(a) as Statistics." },
+      "1b": { "topicIds": ["p2-probability"], "reason": "Probability that three birthdays fall on the same weekday; PDF page 5. Workbook labels Q1(b) as Statistics." },
+      "7e": { "topicIds": ["p2-geometry", "p2-trigonometry"], "reason": "Square/similar triangles, with trigonometry offered as a method; PDF page 19." }
+    },
+    "lc-hl-2022-deferred-p1": {
+      "6bi": { "topicIds": ["p1-graphs"], "reason": "Read where a plotted function is increasing; PDF page 15. Workbook groups all Q6 under Calculus." },
+      "6bii": { "topicIds": ["p1-graphs"], "reason": "Explain why a plotted function has no inverse on this domain; PDF page 15. Workbook groups all Q6 under Calculus." },
+      "8ai": { "topicIds": ["p2-geometry"], "reason": "Read box dimensions from its rectangular net; PDF page 20. Workbook groups Q8(a) under Calculus." },
+      "8aii": { "topicIds": ["p2-geometry", "p1-algebra"], "reason": "Form a cubic volume expression from the box dimensions; PDF page 20. Workbook groups Q8(a) under Calculus." },
+      "8cii": { "topicIds": ["p1-graphs"], "reason": "Sketch a cubic graph and mark its roots; PDF page 22. Workbook groups Q8(c) under Algebra." },
+      "10a": { "topicIds": ["p2-geometry"], "reason": "Volume of a cone; PDF page 28. Workbook labels all Q10 as Calculus." },
+      "10b": { "topicIds": ["p2-geometry"], "reason": "Volume and height of fallen sand cone; PDF page 28. Workbook labels all Q10 as Calculus." },
+      "10d": { "topicIds": ["p2-geometry"], "reason": "Similar cones give height in terms of radius; PDF page 29. Workbook labels all Q10 as Calculus." },
+      "10fi": { "topicIds": ["p2-geometry"], "reason": "Slant height of a cone using Pythagoras; PDF page 30. Workbook labels all Q10 as Calculus." },
+      "10fii": { "topicIds": ["p2-trigonometry"], "reason": "Angle in the cone net; PDF page 30. Workbook labels all Q10 as Calculus." }
+    },
+    "lc-hl-2023-normal-p2": {
+      "9bi": { "topicIds": ["p2-trigonometry"], "reason": "Cosine rule in a tiling diagram; PDF page 25. Workbook also labels it Statistics." },
+      "9bii": { "topicIds": ["p2-trigonometry"], "reason": "Area from angles in a tiling diagram; PDF page 25. Workbook also labels it Statistics." },
+      "10bi": { "topicIds": ["p2-probability"], "reason": "Count four-digit PIN codes; PDF page 30. Omitted from workbook." },
+      "10bii": { "topicIds": ["p2-probability"], "reason": "Count PIN codes containing a digit; PDF page 30. Omitted from workbook." },
+      "10biii": { "topicIds": ["p2-probability"], "reason": "Count PIN codes with a sum constraint; PDF page 30. Omitted from workbook." }
+    },
+    "lc-hl-2023-deferred-p1": {
+      "8ai": { "topicIds": ["p2-geometry"], "reason": "Area of a triangle inscribed in a semicircle; PDF page 20. Workbook labels all Q8 as Algebra." },
+      "8aiv": { "topicIds": ["p2-geometry"], "reason": "Radius of the semicircle from its triangle area and perimeter; PDF page 21. Workbook labels all Q8 as Algebra." },
+      "8bi": { "topicIds": ["p2-geometry", "p1-algebra"], "reason": "Use sector area and perimeter to derive and solve a radius equation; PDF page 22. Workbook labels all Q8 as Algebra." },
+      "8bii": { "topicIds": ["p2-geometry"], "reason": "Find the valid central angle of a sector; PDF page 23. Workbook labels all Q8 as Algebra." },
+      "10ai": { "topicIds": ["p2-geometry"], "reason": "Distance between tops of two vertical poles; PDF page 28. Workbook labels Q10(a) as Algebra." },
+      "10aii": { "topicIds": ["p2-geometry"], "reason": "Wire length as sum of two slanted segments; PDF page 28. Workbook labels Q10(a) as Algebra." },
+      "10aiii": { "topicIds": ["p2-geometry", "p1-algebra"], "reason": "Right-angle geometry leading to two solutions for x; PDF page 29." },
+      "10ci": { "topicIds": ["p2-geometry"], "reason": "Pythagoras for a cylinder inscribed in a sphere; PDF page 30. Workbook labels Q10(c) as Algebra." },
+      "10cii": { "topicIds": ["p1-calculus"], "reason": "Maximise the volume of an inscribed cylinder; PDF page 30. Workbook labels Q10(c) as Algebra." }
+    },
+    "lc-hl-2024-deferred-p1": {
+      "7bi": { "topicIds": ["p1-algebra"], "reason": "Check a root of a cubic function; PDF page 17. Workbook labels all Q7(a-c) as Graphs." },
+      "7bii": { "topicIds": ["p1-algebra"], "reason": "Solve for the other roots of a cubic function; PDF page 17. Workbook labels all Q7(a-c) as Graphs." },
+      "9ei": { "topicIds": ["p2-geometry"], "reason": "Derive the volume of a cone from its height and radius; PDF page 27. Workbook labels Q9(e) as Calculus." }
+    },
+    "lc-hl-2023-deferred-p2": {
+      "7av": { "topicIds": ["p2-line"], "reason": "Equations of three lines in a coordinate diagram; PDF page 19. Workbook groups it under Geometry." },
+      "7avi": { "topicIds": ["p2-circle"], "reason": "Equation of a circle; PDF page 19. Workbook also labels it Geometry." }
+    },
+    "lc-hl-2024-normal-p1": {
+      "5ci": { "topicIds": ["p1-calculus"], "reason": "Differentiate a function twice; PDF page 13. Workbook also labels it Sequences." },
+      "5cii": { "topicIds": ["p1-calculus"], "reason": "Repeated derivatives of a polynomial; PDF page 13. Workbook also labels it Sequences." },
+      "6a": { "topicIds": ["p1-algebra"], "reason": "Factor theorem; PDF page 14. Omitted from workbook." },
+      "6bi": { "topicIds": ["p1-calculus"], "reason": "Exponential function evaluation; PDF page 14. Omitted from workbook." },
+      "6bii": { "topicIds": ["p1-calculus"], "reason": "Logarithmic function equation; PDF page 15. Omitted from workbook." },
+      "6biii": { "topicIds": ["p1-calculus"], "reason": "Composition of exponential and logarithmic functions; PDF page 15. Omitted from workbook." },
+      "8ai": { "topicIds": ["p1-graphs"], "reason": "Function table for graph; PDF page 19. Omitted from workbook." },
+      "8aii": { "topicIds": ["p1-graphs"], "reason": "Draw the function graph; PDF page 19. Omitted from workbook." },
+      "8b": { "topicIds": ["p1-graphs"], "reason": "Read the maximum and minimum of a periodic function without differentiation; PDF page 20. Workbook labels it Calculus." },
+      "8c": { "topicIds": ["p1-graphs"], "reason": "Find where two sales functions agree; PDF page 20. Omitted from workbook." },
+      "8d": { "topicIds": ["p1-graphs"], "reason": "Match the function with its graph; PDF page 21. Omitted from workbook." }
+    },
+    "lc-hl-2024-normal-p2": {
+      "8b": { "topicIds": ["p2-geometry"], "reason": "Cylinder inside a sphere, using Pythagoras; PDF page 19. Workbook also labels it Trigonometry." },
+      "10b": { "topicIds": ["p2-trigonometry"], "reason": "Cosine rule in a wiper diagram; PDF page 28. Omitted from workbook." },
+      "10ci": { "topicIds": ["p2-probability"], "reason": "Count traffic-light colour patterns; PDF page 29. Omitted from workbook." },
+      "10cii": { "topicIds": ["p2-probability"], "reason": "Count colour patterns with fixed endpoints; PDF page 29. Omitted from workbook." },
+      "10ciii": { "topicIds": ["p2-probability"], "reason": "Count colour patterns with no repeated neighbours; PDF page 29. Omitted from workbook." }
+    },
+    "lc-hl-2024-deferred-p2": {
+      "3a": { "topicIds": ["p2-circle"], "reason": "Construct a tangent to a circle; PDF page 8. Workbook groups all Q3 under Geometry." },
+      "3b": { "topicIds": ["p2-circle"], "reason": "Area from a circle circumference; PDF page 8. Workbook groups all Q3 under Geometry." },
+      "3c": { "topicIds": ["p2-circle"], "reason": "Angle theorem in a circle; PDF page 9. Workbook groups all Q3 under Geometry." },
+      "6ai": { "topicIds": ["p2-probability"], "reason": "Count arrangements of a seven-letter code; PDF page 14. Workbook groups all Q6 under Statistics." },
+      "6aii": { "topicIds": ["p2-probability"], "reason": "Count arrangements with adjacent vowels; PDF page 14. Workbook groups all Q6 under Statistics." },
+      "8b": { "topicIds": ["p1-number"], "reason": "Convert 4800 metres at 8 km/hour into minutes; PDF page 21. Workbook groups Q8(b-e) under Geometry." }
+    }
+  }
+}

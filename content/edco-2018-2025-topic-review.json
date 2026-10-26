@@ -1,0 +1,3178 @@
+{
+  "status": "paper-review-controlled-by-catalogue",
+  "description": "Candidate part topics expanded from Edco workbook hints, with PDF-text-checked corrections. Only papers approved in catalogue.ts enter student topic statistics.",
+  "papers": [
+    {
+      "paperId": "lc-hl-2018-normal-p1",
+      "candidateTopicIdsByPart": {
+        "1a": [
+          "p1-algebra"
+        ],
+        "1b": [
+          "p1-algebra"
+        ],
+        "2a": [
+          "p1-sequences"
+        ],
+        "2b": [
+          "p1-sequences"
+        ],
+        "2c": [
+          "p1-sequences"
+        ],
+        "3a": [
+          "p1-calculus"
+        ],
+        "3b": [
+          "p1-calculus"
+        ],
+        "4a": [
+          "p1-complex"
+        ],
+        "4b": [
+          "p1-complex"
+        ],
+        "5ai": [
+          "p1-sequences"
+        ],
+        "5aii": [
+          "p1-sequences"
+        ],
+        "5b": [
+          "p1-sequences"
+        ],
+        "6a": [
+          "p1-graphs"
+        ],
+        "6bi": [
+          "p1-calculus"
+        ],
+        "6bii": [
+          "p1-graphs"
+        ],
+        "7a": [
+          "p1-graphs"
+        ],
+        "7b": [
+          "p1-graphs"
+        ],
+        "7c": [
+          "p1-graphs"
+        ],
+        "7d": [
+          "p1-graphs"
+        ],
+        "7ei": [
+          "p1-graphs"
+        ],
+        "7eii": [
+          "p1-calculus"
+        ],
+        "8a": [
+          "p1-graphs"
+        ],
+        "8b": [
+          "p1-graphs"
+        ],
+        "8c": [
+          "p1-calculus"
+        ],
+        "8d": [
+          "p1-calculus"
+        ],
+        "9a": [
+          "p1-sequences"
+        ],
+        "9bi": [
+          "p1-sequences"
+        ],
+        "9bii": [
+          "p1-sequences"
+        ],
+        "9ci": [
+          "p1-sequences"
+        ],
+        "9cii": [
+          "p1-sequences"
+        ],
+        "9di": [
+          "p1-sequences"
+        ],
+        "9dii": [
+          "p1-sequences"
+        ],
+        "9diii": [
+          "p1-sequences"
+        ]
+      },
+      "unmappedParts": [],
+      "overlappingTopicHints": {},
+      "unresolvedOverlappingTopicHints": {},
+      "referenceIssues": [
+        {
+          "kind": "missing-part",
+          "topic": "p1-graphs",
+          "reference": "Q6(a,c)",
+          "target": "6c"
+        }
+      ],
+      "unresolvedReferenceIssues": [],
+      "pdfTextCorrections": 4
+    },
+    {
+      "paperId": "lc-hl-2018-normal-p2",
+      "candidateTopicIdsByPart": {
+        "1a": [
+          "p2-probability"
+        ],
+        "1b": [
+          "p2-probability"
+        ],
+        "2a": [
+          "p2-statistics"
+        ],
+        "2bi": [
+          "p2-statistics"
+        ],
+        "2bii": [
+          "p2-statistics"
+        ],
+        "2biii": [
+          "p2-statistics"
+        ],
+        "3ai": [
+          "p2-probability"
+        ],
+        "3aii": [
+          "p2-probability"
+        ],
+        "3b": [
+          "p2-probability"
+        ],
+        "4a": [
+          "p2-trigonometry"
+        ],
+        "4b": [
+          "p2-trigonometry"
+        ],
+        "5a": [
+          "p2-line"
+        ],
+        "5b": [
+          "p2-line"
+        ],
+        "5c": [
+          "p2-circle"
+        ],
+        "6a": [
+          "p2-geometry"
+        ],
+        "6b": [
+          "p2-geometry"
+        ],
+        "7a": [
+          "p2-geometry"
+        ],
+        "7bi": [
+          "p2-geometry"
+        ],
+        "7bii": [
+          "p2-geometry"
+        ],
+        "7c": [
+          "p2-geometry"
+        ],
+        "7d": [
+          "p2-geometry"
+        ],
+        "8ai": [
+          "p2-statistics"
+        ],
+        "8aii": [
+          "p2-statistics"
+        ],
+        "8bi": [
+          "p2-statistics"
+        ],
+        "8bii": [
+          "p2-statistics"
+        ],
+        "8biii": [
+          "p2-statistics"
+        ],
+        "8c": [
+          "p2-statistics"
+        ],
+        "9a": [
+          "p2-trigonometry"
+        ],
+        "9bi": [
+          "p2-trigonometry"
+        ],
+        "9bii": [
+          "p2-trigonometry"
+        ],
+        "9biii": [
+          "p2-trigonometry"
+        ],
+        "9biv": [
+          "p2-trigonometry"
+        ],
+        "9c": [
+          "p2-trigonometry"
+        ]
+      },
+      "unmappedParts": [],
+      "overlappingTopicHints": {},
+      "unresolvedOverlappingTopicHints": {},
+      "referenceIssues": [],
+      "unresolvedReferenceIssues": [],
+      "pdfTextCorrections": 3
+    },
+    {
+      "paperId": "lc-hl-2019-normal-p1",
+      "candidateTopicIdsByPart": {
+        "1a": [
+          "p1-algebra"
+        ],
+        "1b": [
+          "p1-algebra"
+        ],
+        "2ai": [
+          "p1-graphs"
+        ],
+        "2aii": [
+          "p1-graphs"
+        ],
+        "2b": [
+          "p1-algebra"
+        ],
+        "3a": [
+          "p1-algebra"
+        ],
+        "3b": [
+          "p1-algebra"
+        ],
+        "3c": [
+          "p1-calculus"
+        ],
+        "4a": [
+          "p1-calculus"
+        ],
+        "4bi": [
+          "p1-calculus"
+        ],
+        "4bii": [
+          "p1-calculus"
+        ],
+        "5a": [
+          "p1-complex"
+        ],
+        "5bi": [
+          "p1-complex"
+        ],
+        "5bii": [
+          "p1-complex"
+        ],
+        "6ai": [
+          "p1-algebra"
+        ],
+        "6aii": [
+          "p1-algebra"
+        ],
+        "6b": [
+          "p1-number"
+        ],
+        "7ai": [
+          "p1-sequences"
+        ],
+        "7aii": [
+          "p1-sequences"
+        ],
+        "7aiii": [
+          "p1-sequences"
+        ],
+        "7bi": [
+          "p1-sequences"
+        ],
+        "7bii": [
+          "p1-sequences"
+        ],
+        "7biii": [
+          "p1-sequences"
+        ],
+        "8a": [
+          "p1-calculus"
+        ],
+        "8b": [
+          "p1-calculus"
+        ],
+        "8c": [
+          "p1-calculus"
+        ],
+        "8d": [
+          "p1-calculus"
+        ],
+        "8e": [
+          "p1-calculus"
+        ],
+        "9ai": [
+          "p1-algebra"
+        ],
+        "9aii": [
+          "p1-algebra"
+        ],
+        "9bi": [
+          "p1-graphs"
+        ],
+        "9bii": [
+          "p1-graphs"
+        ],
+        "9biii": [
+          "p1-graphs"
+        ],
+        "9ci": [
+          "p1-calculus"
+        ],
+        "9cii": [
+          "p1-calculus"
+        ],
+        "9ciii": [
+          "p1-calculus"
+        ]
+      },
+      "unmappedParts": [],
+      "overlappingTopicHints": {},
+      "unresolvedOverlappingTopicHints": {},
+      "referenceIssues": [],
+      "unresolvedReferenceIssues": [],
+      "pdfTextCorrections": 0
+    },
+    {
+      "paperId": "lc-hl-2019-normal-p2",
+      "candidateTopicIdsByPart": {
+        "1ai": [
+          "p2-probability"
+        ],
+        "1aii": [
+          "p2-probability"
+        ],
+        "1b": [
+          "p2-probability"
+        ],
+        "2a": [
+          "p2-line"
+        ],
+        "2bi": [
+          "p2-line"
+        ],
+        "2bii": [
+          "p2-line"
+        ],
+        "3a": [
+          "p2-circle"
+        ],
+        "3b": [
+          "p2-circle"
+        ],
+        "4a": [
+          "p2-trigonometry"
+        ],
+        "4b": [
+          "p2-trigonometry"
+        ],
+        "5a": [
+          "p2-circle"
+        ],
+        "5b": [
+          "p2-geometry"
+        ],
+        "6a": [
+          "p2-probability"
+        ],
+        "6b": [
+          "p2-probability"
+        ],
+        "7ai": [
+          "p2-geometry"
+        ],
+        "7aii": [
+          "p2-trigonometry"
+        ],
+        "7aiii": [
+          "p2-geometry",
+          "p2-trigonometry"
+        ],
+        "7aiv": [
+          "p2-geometry"
+        ],
+        "7bi": [
+          "p2-geometry"
+        ],
+        "7bii": [
+          "p2-geometry"
+        ],
+        "8ai": [
+          "p2-statistics"
+        ],
+        "8aii": [
+          "p2-statistics"
+        ],
+        "8aiii": [
+          "p2-statistics"
+        ],
+        "8bi": [
+          "p2-statistics"
+        ],
+        "8bii": [
+          "p2-statistics"
+        ],
+        "9a": [
+          "p2-trigonometry"
+        ],
+        "9b": [
+          "p2-trigonometry"
+        ],
+        "9c": [
+          "p2-trigonometry"
+        ],
+        "9di": [
+          "p2-trigonometry"
+        ],
+        "9dii": [
+          "p2-trigonometry"
+        ],
+        "9diii": [
+          "p2-trigonometry"
+        ],
+        "9e": [
+          "p2-trigonometry"
+        ]
+      },
+      "unmappedParts": [],
+      "overlappingTopicHints": {
+        "7aiii": [
+          "p2-geometry",
+          "p2-trigonometry"
+        ]
+      },
+      "unresolvedOverlappingTopicHints": {},
+      "referenceIssues": [],
+      "unresolvedReferenceIssues": [],
+      "pdfTextCorrections": 5
+    },
+    {
+      "paperId": "lc-hl-2020-normal-p1",
+      "candidateTopicIdsByPart": {
+        "1ai": [
+          "p1-algebra"
+        ],
+        "1aii": [
+          "p1-algebra"
+        ],
+        "1aiii": [
+          "p1-algebra"
+        ],
+        "1b": [
+          "p1-algebra"
+        ],
+        "2a": [
+          "p1-complex"
+        ],
+        "2bi": [
+          "p1-sequences"
+        ],
+        "2bii": [
+          "p1-sequences"
+        ],
+        "3a": [
+          "p1-graphs"
+        ],
+        "3bi": [
+          "p1-algebra"
+        ],
+        "3bii": [
+          "p1-algebra"
+        ],
+        "4a": [
+          "p1-calculus"
+        ],
+        "4b": [
+          "p1-calculus"
+        ],
+        "4c": [
+          "p1-calculus"
+        ],
+        "5a": [
+          "p1-number"
+        ],
+        "5b": [
+          "p1-number"
+        ],
+        "6a": [
+          "p1-calculus"
+        ],
+        "6bi": [
+          "p1-calculus"
+        ],
+        "6bii": [
+          "p1-calculus"
+        ],
+        "7ai": [
+          "p1-sequences"
+        ],
+        "7aii": [
+          "p1-sequences"
+        ],
+        "7bi": [
+          "p1-sequences"
+        ],
+        "7bii": [
+          "p1-sequences"
+        ],
+        "7biii": [
+          "p1-sequences"
+        ],
+        "7c": [
+          "p1-sequences"
+        ],
+        "7d": [
+          "p1-sequences"
+        ],
+        "8ai": [
+          "p1-graphs"
+        ],
+        "8aii": [
+          "p1-graphs"
+        ],
+        "8aiii": [
+          "p1-calculus"
+        ],
+        "8aiv": [
+          "p1-calculus"
+        ],
+        "8b": [
+          "p1-calculus"
+        ],
+        "9ai": [
+          "p1-number"
+        ],
+        "9aii": [
+          "p1-number"
+        ],
+        "9b": [
+          "p1-number"
+        ],
+        "9c": [
+          "p1-calculus"
+        ],
+        "9d": [
+          "p1-calculus"
+        ],
+        "9e": [
+          "p1-number"
+        ]
+      },
+      "unmappedParts": [],
+      "overlappingTopicHints": {},
+      "unresolvedOverlappingTopicHints": {},
+      "referenceIssues": [],
+      "unresolvedReferenceIssues": [],
+      "pdfTextCorrections": 1
+    },
+    {
+      "paperId": "lc-hl-2020-normal-p2",
+      "candidateTopicIdsByPart": {
+        "1a": [
+          "p2-line"
+        ],
+        "1b": [
+          "p2-line"
+        ],
+        "2a": [
+          "p2-circle"
+        ],
+        "2b": [
+          "p2-circle"
+        ],
+        "3a": [
+          "p2-trigonometry"
+        ],
+        "3b": [
+          "p2-circle"
+        ],
+        "4a": [
+          "p2-trigonometry"
+        ],
+        "4b": [
+          "p2-trigonometry"
+        ],
+        "5ai": [
+          "p2-probability"
+        ],
+        "5aii": [
+          "p2-probability"
+        ],
+        "5b": [
+          "p2-probability"
+        ],
+        "6a": [
+          "p2-probability"
+        ],
+        "6bi": [
+          "p2-probability"
+        ],
+        "6bii": [
+          "p2-probability"
+        ],
+        "7ai": [
+          "p2-geometry"
+        ],
+        "7aii": [
+          "p2-geometry"
+        ],
+        "7aiii": [
+          "p2-geometry"
+        ],
+        "7b": [
+          "p2-geometry"
+        ],
+        "7c": [
+          "p2-geometry"
+        ],
+        "7d": [
+          "p2-geometry"
+        ],
+        "8ai": [
+          "p2-statistics"
+        ],
+        "8aii": [
+          "p2-statistics"
+        ],
+        "8bi": [
+          "p2-statistics"
+        ],
+        "8bii": [
+          "p2-statistics"
+        ],
+        "8c": [
+          "p2-statistics"
+        ],
+        "8d": [
+          "p2-statistics"
+        ],
+        "8e": [
+          "p2-statistics"
+        ],
+        "9a": [
+          "p2-geometry"
+        ],
+        "9b": [
+          "p2-geometry"
+        ],
+        "9c": [
+          "p2-geometry",
+          "p1-calculus"
+        ]
+      },
+      "unmappedParts": [],
+      "overlappingTopicHints": {
+        "9c": [
+          "p2-geometry",
+          "p1-calculus"
+        ]
+      },
+      "unresolvedOverlappingTopicHints": {},
+      "referenceIssues": [],
+      "unresolvedReferenceIssues": [],
+      "pdfTextCorrections": 1
+    },
+    {
+      "paperId": "lc-hl-2021-normal-p1",
+      "candidateTopicIdsByPart": {
+        "10ai": [
+          "p1-calculus"
+        ],
+        "10aii": [
+          "p1-calculus"
+        ],
+        "10aiii": [
+          "p1-calculus"
+        ],
+        "10aiv": [
+          "p1-calculus"
+        ],
+        "10bi": [
+          "p1-sequences"
+        ],
+        "10bii": [
+          "p1-sequences"
+        ],
+        "10biii": [
+          "p1-sequences"
+        ],
+        "10biv": [
+          "p1-sequences"
+        ],
+        "1a": [
+          "p1-complex"
+        ],
+        "1b": [
+          "p1-complex"
+        ],
+        "1c": [
+          "p1-complex"
+        ],
+        "2a": [
+          "p1-algebra"
+        ],
+        "2b": [
+          "p1-algebra"
+        ],
+        "3a": [
+          "p1-algebra"
+        ],
+        "3bi": [
+          "p1-algebra"
+        ],
+        "3bii": [
+          "p1-algebra"
+        ],
+        "4a": [
+          "p1-number"
+        ],
+        "4bi": [
+          "p1-sequences"
+        ],
+        "4bii": [
+          "p1-sequences"
+        ],
+        "5ai": [
+          "p1-calculus"
+        ],
+        "5aii": [
+          "p1-calculus"
+        ],
+        "5b": [
+          "p1-calculus"
+        ],
+        "6a": [
+          "p1-calculus"
+        ],
+        "6b": [
+          "p1-calculus"
+        ],
+        "6c": [
+          "p1-calculus"
+        ],
+        "7ai": [
+          "p1-sequences"
+        ],
+        "7aii": [
+          "p1-sequences"
+        ],
+        "7aiii": [
+          "p1-sequences"
+        ],
+        "7aiv": [
+          "p1-sequences"
+        ],
+        "7bi": [
+          "p1-sequences"
+        ],
+        "7bii": [
+          "p1-sequences"
+        ],
+        "7biii": [
+          "p1-sequences"
+        ],
+        "8ai": [
+          "p1-graphs"
+        ],
+        "8aii": [
+          "p1-graphs"
+        ],
+        "8bi": [
+          "p1-calculus"
+        ],
+        "8bii": [
+          "p1-calculus"
+        ],
+        "8biii": [
+          "p1-calculus"
+        ],
+        "9ai": [
+          "p1-algebra"
+        ],
+        "9aii": [
+          "p1-algebra"
+        ],
+        "9aiii": [
+          "p1-algebra"
+        ],
+        "9b": [
+          "p1-algebra"
+        ],
+        "9c": [
+          "p1-calculus"
+        ],
+        "9d": [
+          "p1-calculus"
+        ],
+        "8c": [
+          "p1-calculus"
+        ]
+      },
+      "unmappedParts": [],
+      "overlappingTopicHints": {},
+      "unresolvedOverlappingTopicHints": {},
+      "referenceIssues": [],
+      "unresolvedReferenceIssues": [],
+      "pdfTextCorrections": 1
+    },
+    {
+      "paperId": "lc-hl-2021-normal-p2",
+      "candidateTopicIdsByPart": {
+        "10ai": [
+          "p2-probability"
+        ],
+        "10aii": [
+          "p2-probability"
+        ],
+        "10aiii": [
+          "p2-probability"
+        ],
+        "10b": [
+          "p2-probability"
+        ],
+        "10c": [
+          "p2-probability"
+        ],
+        "1a": [
+          "p2-probability"
+        ],
+        "1b": [
+          "p2-probability"
+        ],
+        "1c": [
+          "p2-probability"
+        ],
+        "2a": [
+          "p2-line"
+        ],
+        "2b": [
+          "p2-line"
+        ],
+        "2ci": [
+          "p2-line"
+        ],
+        "2cii": [
+          "p2-line"
+        ],
+        "3a": [
+          "p2-circle"
+        ],
+        "3bi": [
+          "p2-circle"
+        ],
+        "3bii": [
+          "p2-circle"
+        ],
+        "4ai": [
+          "p2-trigonometry"
+        ],
+        "4aii": [
+          "p2-trigonometry"
+        ],
+        "4b": [
+          "p2-trigonometry"
+        ],
+        "5ai": [
+          "p2-geometry"
+        ],
+        "5aii": [
+          "p2-geometry"
+        ],
+        "5b": [
+          "p1-algebra"
+        ],
+        "6a": [
+          "p2-geometry"
+        ],
+        "6b": [
+          "p2-geometry"
+        ],
+        "7a": [
+          "p1-number"
+        ],
+        "7b": [
+          "p1-algebra"
+        ],
+        "7c": [
+          "p2-trigonometry"
+        ],
+        "7d": [
+          "p2-trigonometry"
+        ],
+        "7e": [
+          "p2-trigonometry"
+        ],
+        "7f": [
+          "p2-trigonometry"
+        ],
+        "8ai": [
+          "p2-statistics"
+        ],
+        "8aii": [
+          "p2-statistics"
+        ],
+        "8bi": [
+          "p2-statistics"
+        ],
+        "8bii": [
+          "p2-statistics"
+        ],
+        "8ci": [
+          "p2-probability"
+        ],
+        "8cii": [
+          "p2-probability"
+        ],
+        "9ai": [
+          "p2-trigonometry"
+        ],
+        "9aii": [
+          "p2-trigonometry"
+        ],
+        "9bi": [
+          "p2-trigonometry"
+        ],
+        "9bii": [
+          "p2-trigonometry"
+        ],
+        "9biii": [
+          "p2-trigonometry"
+        ],
+        "9biv": [
+          "p2-trigonometry"
+        ],
+        "9bv": [
+          "p2-trigonometry",
+          "p1-calculus"
+        ]
+      },
+      "unmappedParts": [],
+      "overlappingTopicHints": {
+        "9bv": [
+          "p2-trigonometry",
+          "p1-calculus"
+        ]
+      },
+      "unresolvedOverlappingTopicHints": {},
+      "referenceIssues": [],
+      "unresolvedReferenceIssues": [],
+      "pdfTextCorrections": 4
+    },
+    {
+      "paperId": "lc-hl-2022-normal-p1",
+      "candidateTopicIdsByPart": {
+        "10a": [
+          "p1-algebra"
+        ],
+        "10b": [
+          "p1-algebra"
+        ],
+        "10ci": [
+          "p1-calculus"
+        ],
+        "10cii": [
+          "p1-calculus"
+        ],
+        "10d": [
+          "p1-calculus"
+        ],
+        "10ei": [
+          "p1-algebra"
+        ],
+        "10eii": [
+          "p1-algebra"
+        ],
+        "1a": [
+          "p1-algebra"
+        ],
+        "1b": [
+          "p1-algebra"
+        ],
+        "1ci": [
+          "p1-algebra"
+        ],
+        "1cii": [
+          "p1-algebra"
+        ],
+        "2a": [
+          "p1-calculus"
+        ],
+        "2bi": [
+          "p1-calculus"
+        ],
+        "2bii": [
+          "p1-algebra"
+        ],
+        "3ai": [
+          "p1-complex"
+        ],
+        "3aii": [
+          "p1-complex"
+        ],
+        "3aiii": [
+          "p1-complex"
+        ],
+        "3b": [
+          "p1-complex"
+        ],
+        "4a": [
+          "p1-sequences"
+        ],
+        "4bi": [
+          "p1-sequences"
+        ],
+        "4bii": [
+          "p1-algebra"
+        ],
+        "5a": [
+          "p1-calculus"
+        ],
+        "5bi": [
+          "p1-algebra"
+        ],
+        "5bii": [
+          "p1-calculus"
+        ],
+        "6a": [
+          "p1-calculus"
+        ],
+        "6b": [
+          "p1-calculus"
+        ],
+        "6c": [
+          "p1-calculus"
+        ],
+        "7a": [
+          "p1-calculus"
+        ],
+        "7b": [
+          "p1-calculus"
+        ],
+        "7c": [
+          "p1-calculus"
+        ],
+        "7d": [
+          "p1-calculus"
+        ],
+        "7e": [
+          "p1-calculus"
+        ],
+        "7fi": [
+          "p1-calculus"
+        ],
+        "7fii": [
+          "p1-calculus"
+        ],
+        "7g": [
+          "p1-graphs"
+        ],
+        "8a": [
+          "p1-graphs"
+        ],
+        "8b": [
+          "p1-graphs"
+        ],
+        "8c": [
+          "p1-graphs"
+        ],
+        "8d": [
+          "p1-graphs"
+        ],
+        "8e": [
+          "p1-graphs"
+        ],
+        "8f": [
+          "p1-calculus"
+        ],
+        "9a": [
+          "p1-algebra"
+        ],
+        "9b": [
+          "p1-algebra"
+        ],
+        "9c": [
+          "p1-sequences"
+        ],
+        "9d": [
+          "p1-sequences"
+        ],
+        "9e": [
+          "p1-sequences"
+        ],
+        "9fi": [
+          "p1-sequences"
+        ],
+        "9fii": [
+          "p1-sequences"
+        ]
+      },
+      "unmappedParts": [],
+      "overlappingTopicHints": {},
+      "unresolvedOverlappingTopicHints": {},
+      "referenceIssues": [
+        {
+          "kind": "invalid-reference",
+          "topic": "p1-algebra",
+          "reference": "Q2(ii)",
+          "detail": "Roman numeral ii has no letter"
+        }
+      ],
+      "unresolvedReferenceIssues": [],
+      "pdfTextCorrections": 1
+    },
+    {
+      "paperId": "lc-hl-2022-normal-p2",
+      "candidateTopicIdsByPart": {
+        "10ai": [
+          "p2-statistics"
+        ],
+        "10aii": [
+          "p2-statistics"
+        ],
+        "10b": [
+          "p2-probability"
+        ],
+        "10c": [
+          "p2-probability"
+        ],
+        "10d": [
+          "p2-probability"
+        ],
+        "10e": [
+          "p2-statistics"
+        ],
+        "1ai": [
+          "p2-statistics"
+        ],
+        "1aii": [
+          "p2-probability"
+        ],
+        "1b": [
+          "p2-probability"
+        ],
+        "1c": [
+          "p2-probability"
+        ],
+        "2a": [
+          "p2-line"
+        ],
+        "2b": [
+          "p2-line"
+        ],
+        "2c": [
+          "p2-line"
+        ],
+        "3a": [
+          "p2-circle"
+        ],
+        "3b": [
+          "p2-circle"
+        ],
+        "3c": [
+          "p2-circle"
+        ],
+        "4ai": [
+          "p2-trigonometry"
+        ],
+        "4aii": [
+          "p2-trigonometry"
+        ],
+        "4b": [
+          "p2-trigonometry"
+        ],
+        "5ai": [
+          "p2-statistics"
+        ],
+        "5aii": [
+          "p2-statistics"
+        ],
+        "5aiii": [
+          "p2-statistics"
+        ],
+        "5b": [
+          "p2-statistics"
+        ],
+        "6a": [
+          "p2-circle"
+        ],
+        "6b": [
+          "p2-circle"
+        ],
+        "6c": [
+          "p2-circle"
+        ],
+        "7a": [
+          "p2-geometry"
+        ],
+        "7b": [
+          "p2-geometry"
+        ],
+        "7c": [
+          "p2-trigonometry"
+        ],
+        "7di": [
+          "p2-geometry"
+        ],
+        "7dii": [
+          "p2-geometry"
+        ],
+        "7e": [
+          "p2-geometry",
+          "p2-trigonometry"
+        ],
+        "8ai": [
+          "p2-statistics"
+        ],
+        "8aii": [
+          "p2-statistics"
+        ],
+        "8aiii": [
+          "p2-statistics"
+        ],
+        "8aiv": [
+          "p2-statistics"
+        ],
+        "8av": [
+          "p2-statistics"
+        ],
+        "8b": [
+          "p2-statistics"
+        ],
+        "8c": [
+          "p2-statistics"
+        ],
+        "8di": [
+          "p2-probability"
+        ],
+        "8dii": [
+          "p2-probability"
+        ],
+        "9a": [
+          "p2-trigonometry"
+        ],
+        "9b": [
+          "p2-trigonometry"
+        ],
+        "9ci": [
+          "p2-trigonometry"
+        ],
+        "9cii": [
+          "p2-trigonometry"
+        ],
+        "9di": [
+          "p2-trigonometry"
+        ],
+        "9dii": [
+          "p2-trigonometry"
+        ]
+      },
+      "unmappedParts": [],
+      "overlappingTopicHints": {
+        "7e": [
+          "p2-geometry",
+          "p2-trigonometry"
+        ]
+      },
+      "unresolvedOverlappingTopicHints": {},
+      "referenceIssues": [],
+      "unresolvedReferenceIssues": [],
+      "pdfTextCorrections": 3
+    },
+    {
+      "paperId": "lc-hl-2022-deferred-p1",
+      "candidateTopicIdsByPart": {
+        "10a": [
+          "p2-geometry"
+        ],
+        "10b": [
+          "p2-geometry"
+        ],
+        "10c": [
+          "p1-calculus"
+        ],
+        "10d": [
+          "p2-geometry"
+        ],
+        "10e": [
+          "p1-calculus"
+        ],
+        "10fi": [
+          "p2-geometry"
+        ],
+        "10fii": [
+          "p2-trigonometry"
+        ],
+        "1a": [
+          "p1-complex"
+        ],
+        "1b": [
+          "p1-complex"
+        ],
+        "1c": [
+          "p1-complex"
+        ],
+        "2ai": [
+          "p1-algebra"
+        ],
+        "2aii": [
+          "p1-algebra"
+        ],
+        "2aiii": [
+          "p1-algebra"
+        ],
+        "2b": [
+          "p1-algebra"
+        ],
+        "3a": [
+          "p1-algebra"
+        ],
+        "3b": [
+          "p1-algebra"
+        ],
+        "3c": [
+          "p1-algebra"
+        ],
+        "4a": [
+          "p1-algebra"
+        ],
+        "4b": [
+          "p1-graphs"
+        ],
+        "4c": [
+          "p1-graphs"
+        ],
+        "5a": [
+          "p1-calculus"
+        ],
+        "5b": [
+          "p1-calculus"
+        ],
+        "5c": [
+          "p1-calculus"
+        ],
+        "5d": [
+          "p1-calculus"
+        ],
+        "6ai": [
+          "p1-calculus"
+        ],
+        "6aii": [
+          "p1-calculus"
+        ],
+        "6aiii": [
+          "p1-calculus"
+        ],
+        "6bi": [
+          "p1-graphs"
+        ],
+        "6bii": [
+          "p1-graphs"
+        ],
+        "7ai": [
+          "p1-number"
+        ],
+        "7aii": [
+          "p1-number"
+        ],
+        "7aiii": [
+          "p1-number"
+        ],
+        "7aiv": [
+          "p1-sequences"
+        ],
+        "7b": [
+          "p1-calculus"
+        ],
+        "7c": [
+          "p1-number"
+        ],
+        "7di": [
+          "p1-number"
+        ],
+        "7dii": [
+          "p1-number"
+        ],
+        "8ai": [
+          "p2-geometry"
+        ],
+        "8aii": [
+          "p2-geometry",
+          "p1-algebra"
+        ],
+        "8b": [
+          "p1-calculus"
+        ],
+        "8ci": [
+          "p1-algebra"
+        ],
+        "8cii": [
+          "p1-graphs"
+        ],
+        "8ciii": [
+          "p1-algebra"
+        ],
+        "8d": [
+          "p1-calculus"
+        ],
+        "9ai": [
+          "p1-graphs"
+        ],
+        "9aii": [
+          "p1-graphs"
+        ],
+        "9aiii": [
+          "p1-graphs"
+        ],
+        "9b": [
+          "p1-algebra"
+        ],
+        "9ci": [
+          "p1-calculus"
+        ],
+        "9cii": [
+          "p1-calculus"
+        ],
+        "9ciii": [
+          "p1-calculus"
+        ],
+        "9civ": [
+          "p1-calculus"
+        ]
+      },
+      "unmappedParts": [],
+      "overlappingTopicHints": {
+        "8aii": [
+          "p2-geometry",
+          "p1-algebra"
+        ]
+      },
+      "unresolvedOverlappingTopicHints": {},
+      "referenceIssues": [],
+      "unresolvedReferenceIssues": [],
+      "pdfTextCorrections": 10
+    },
+    {
+      "paperId": "lc-hl-2022-deferred-p2",
+      "candidateTopicIdsByPart": {
+        "10a": [
+          "p2-line"
+        ],
+        "10b": [
+          "p2-line"
+        ],
+        "10c": [
+          "p2-circle"
+        ],
+        "10di": [
+          "p2-geometry"
+        ],
+        "10dii": [
+          "p2-geometry"
+        ],
+        "10diii": [
+          "p2-geometry"
+        ],
+        "10div": [
+          "p2-geometry"
+        ],
+        "1a": [
+          "p2-statistics"
+        ],
+        "1b": [
+          "p2-statistics"
+        ],
+        "1c": [
+          "p2-statistics"
+        ],
+        "2ai": [
+          "p2-probability"
+        ],
+        "2aii": [
+          "p2-probability"
+        ],
+        "2aiii": [
+          "p2-probability"
+        ],
+        "2b": [
+          "p2-probability"
+        ],
+        "3ai": [
+          "p2-line"
+        ],
+        "3aii": [
+          "p2-line"
+        ],
+        "3aiii": [
+          "p2-line"
+        ],
+        "3b": [
+          "p2-line"
+        ],
+        "4ai": [
+          "p2-circle"
+        ],
+        "4aii": [
+          "p2-circle"
+        ],
+        "4b": [
+          "p2-circle"
+        ],
+        "5ai": [
+          "p2-trigonometry"
+        ],
+        "5aii": [
+          "p2-trigonometry"
+        ],
+        "5b": [
+          "p2-trigonometry"
+        ],
+        "6a": [
+          "p2-geometry"
+        ],
+        "6bi": [
+          "p2-geometry"
+        ],
+        "6bii": [
+          "p2-geometry"
+        ],
+        "7a": [
+          "p2-statistics"
+        ],
+        "7b": [
+          "p2-statistics"
+        ],
+        "7ci": [
+          "p2-statistics"
+        ],
+        "7cii": [
+          "p2-statistics"
+        ],
+        "7di": [
+          "p2-statistics"
+        ],
+        "7dii": [
+          "p2-statistics"
+        ],
+        "7ei": [
+          "p2-statistics"
+        ],
+        "7eii": [
+          "p2-statistics"
+        ],
+        "7eiii": [
+          "p2-statistics"
+        ],
+        "8a": [
+          "p2-probability"
+        ],
+        "8b": [
+          "p2-probability"
+        ],
+        "8c": [
+          "p2-probability"
+        ],
+        "8di": [
+          "p2-probability"
+        ],
+        "8dii": [
+          "p2-probability"
+        ],
+        "8diii": [
+          "p2-probability"
+        ],
+        "9ai": [
+          "p2-trigonometry"
+        ],
+        "9aii": [
+          "p2-trigonometry"
+        ],
+        "9aiii": [
+          "p2-trigonometry"
+        ],
+        "9b": [
+          "p2-trigonometry"
+        ],
+        "9ci": [
+          "p2-trigonometry"
+        ],
+        "9cii": [
+          "p2-trigonometry"
+        ]
+      },
+      "unmappedParts": [],
+      "overlappingTopicHints": {},
+      "unresolvedOverlappingTopicHints": {},
+      "referenceIssues": [],
+      "unresolvedReferenceIssues": [],
+      "pdfTextCorrections": 0
+    },
+    {
+      "paperId": "lc-hl-2023-normal-p1",
+      "candidateTopicIdsByPart": {
+        "10a": [
+          "p1-sequences"
+        ],
+        "10b": [
+          "p1-sequences"
+        ],
+        "10c": [
+          "p1-sequences"
+        ],
+        "10d": [
+          "p1-sequences"
+        ],
+        "10ei": [
+          "p1-calculus"
+        ],
+        "10eii": [
+          "p1-calculus"
+        ],
+        "1a": [
+          "p1-algebra"
+        ],
+        "1b": [
+          "p1-algebra"
+        ],
+        "1c": [
+          "p1-algebra"
+        ],
+        "2a": [
+          "p1-calculus"
+        ],
+        "2b": [
+          "p1-number"
+        ],
+        "2ci": [
+          "p1-graphs"
+        ],
+        "2cii": [
+          "p1-graphs"
+        ],
+        "3a": [
+          "p1-number"
+        ],
+        "3b": [
+          "p1-number"
+        ],
+        "3ci": [
+          "p1-number"
+        ],
+        "3cii": [
+          "p1-number"
+        ],
+        "4a": [
+          "p1-complex"
+        ],
+        "4b": [
+          "p1-complex"
+        ],
+        "4ci": [
+          "p1-complex"
+        ],
+        "4cii": [
+          "p1-complex"
+        ],
+        "4ciii": [
+          "p1-complex"
+        ],
+        "5a": [
+          "p1-calculus"
+        ],
+        "5b": [
+          "p1-calculus"
+        ],
+        "5ci": [
+          "p1-graphs"
+        ],
+        "5cii": [
+          "p1-graphs"
+        ],
+        "6ai": [
+          "p1-calculus"
+        ],
+        "6aii": [
+          "p1-calculus"
+        ],
+        "6b": [
+          "p1-calculus"
+        ],
+        "7a": [
+          "p1-calculus"
+        ],
+        "7b": [
+          "p1-calculus"
+        ],
+        "7c": [
+          "p1-calculus"
+        ],
+        "7d": [
+          "p1-calculus"
+        ],
+        "7e": [
+          "p1-calculus"
+        ],
+        "7f": [
+          "p1-calculus"
+        ],
+        "7g": [
+          "p1-calculus"
+        ],
+        "8a": [
+          "p1-number"
+        ],
+        "8bi": [
+          "p1-number"
+        ],
+        "8bii": [
+          "p1-number"
+        ],
+        "8c": [
+          "p1-number"
+        ],
+        "8di": [
+          "p1-number"
+        ],
+        "8dii": [
+          "p1-number"
+        ],
+        "8e": [
+          "p1-number"
+        ],
+        "8f": [
+          "p1-number"
+        ],
+        "9ai": [
+          "p1-number"
+        ],
+        "9aii": [
+          "p1-number"
+        ],
+        "9aiii": [
+          "p1-number"
+        ],
+        "9bi": [
+          "p1-graphs"
+        ],
+        "9bii": [
+          "p1-graphs"
+        ],
+        "9biii": [
+          "p1-graphs"
+        ],
+        "9ci": [
+          "p1-graphs"
+        ],
+        "9cii": [
+          "p1-graphs"
+        ]
+      },
+      "unmappedParts": [],
+      "overlappingTopicHints": {},
+      "unresolvedOverlappingTopicHints": {},
+      "referenceIssues": [],
+      "unresolvedReferenceIssues": [],
+      "pdfTextCorrections": 0
+    },
+    {
+      "paperId": "lc-hl-2023-normal-p2",
+      "candidateTopicIdsByPart": {
+        "10ai": [
+          "p2-geometry"
+        ],
+        "10aii": [
+          "p2-geometry"
+        ],
+        "10aiii": [
+          "p2-geometry"
+        ],
+        "1a": [
+          "p2-probability"
+        ],
+        "1b": [
+          "p2-probability"
+        ],
+        "1c": [
+          "p2-probability"
+        ],
+        "2a": [
+          "p2-trigonometry"
+        ],
+        "2b": [
+          "p2-trigonometry"
+        ],
+        "2c": [
+          "p2-trigonometry"
+        ],
+        "3a": [
+          "p2-geometry"
+        ],
+        "3bi": [
+          "p2-line"
+        ],
+        "3bii": [
+          "p2-line"
+        ],
+        "4ai": [
+          "p2-circle"
+        ],
+        "4aii": [
+          "p2-circle"
+        ],
+        "4b": [
+          "p2-circle"
+        ],
+        "5ai": [
+          "p2-statistics"
+        ],
+        "5aii": [
+          "p2-statistics"
+        ],
+        "5aiii": [
+          "p2-statistics"
+        ],
+        "5b": [
+          "p2-statistics"
+        ],
+        "6a": [
+          "p2-geometry"
+        ],
+        "6bi": [
+          "p2-geometry"
+        ],
+        "6bii": [
+          "p2-geometry"
+        ],
+        "7a": [
+          "p2-trigonometry"
+        ],
+        "7b": [
+          "p2-trigonometry"
+        ],
+        "7c": [
+          "p2-trigonometry"
+        ],
+        "7d": [
+          "p2-trigonometry"
+        ],
+        "7ei": [
+          "p2-trigonometry"
+        ],
+        "7eii": [
+          "p2-trigonometry"
+        ],
+        "7f": [
+          "p2-trigonometry"
+        ],
+        "8a": [
+          "p2-statistics"
+        ],
+        "8bi": [
+          "p2-statistics"
+        ],
+        "8bii": [
+          "p2-statistics"
+        ],
+        "8c": [
+          "p2-statistics"
+        ],
+        "8di": [
+          "p2-probability"
+        ],
+        "8dii": [
+          "p2-probability"
+        ],
+        "9ai": [
+          "p2-geometry"
+        ],
+        "9aii": [
+          "p2-geometry"
+        ],
+        "9bi": [
+          "p2-trigonometry"
+        ],
+        "9bii": [
+          "p2-trigonometry"
+        ],
+        "9ci": [
+          "p2-circle"
+        ],
+        "9cii": [
+          "p2-circle"
+        ],
+        "10bi": [
+          "p2-probability"
+        ],
+        "10bii": [
+          "p2-probability"
+        ],
+        "10biii": [
+          "p2-probability"
+        ]
+      },
+      "unmappedParts": [],
+      "overlappingTopicHints": {},
+      "unresolvedOverlappingTopicHints": {},
+      "referenceIssues": [],
+      "unresolvedReferenceIssues": [],
+      "pdfTextCorrections": 5
+    },
+    {
+      "paperId": "lc-hl-2023-deferred-p1",
+      "candidateTopicIdsByPart": {
+        "10ai": [
+          "p2-geometry"
+        ],
+        "10aii": [
+          "p2-geometry"
+        ],
+        "10aiii": [
+          "p2-geometry",
+          "p1-algebra"
+        ],
+        "10b": [
+          "p1-calculus"
+        ],
+        "10ci": [
+          "p2-geometry"
+        ],
+        "10cii": [
+          "p1-calculus"
+        ],
+        "1a": [
+          "p1-algebra"
+        ],
+        "1bi": [
+          "p1-algebra"
+        ],
+        "1bii": [
+          "p1-algebra"
+        ],
+        "2a": [
+          "p1-algebra"
+        ],
+        "2bi": [
+          "p1-algebra"
+        ],
+        "2bii": [
+          "p1-algebra"
+        ],
+        "2biii": [
+          "p1-algebra"
+        ],
+        "3a": [
+          "p1-complex"
+        ],
+        "3b": [
+          "p1-complex"
+        ],
+        "3c": [
+          "p1-complex"
+        ],
+        "4a": [
+          "p1-algebra"
+        ],
+        "4bi": [
+          "p1-calculus"
+        ],
+        "4bii": [
+          "p1-calculus"
+        ],
+        "5ai": [
+          "p1-sequences"
+        ],
+        "5aii": [
+          "p1-sequences"
+        ],
+        "5aiii": [
+          "p1-sequences"
+        ],
+        "5b": [
+          "p1-sequences"
+        ],
+        "6a": [
+          "p1-calculus"
+        ],
+        "6bi": [
+          "p1-calculus"
+        ],
+        "6bii": [
+          "p1-calculus"
+        ],
+        "7a": [
+          "p1-number"
+        ],
+        "7b": [
+          "p1-number"
+        ],
+        "7c": [
+          "p1-number"
+        ],
+        "7di": [
+          "p1-number"
+        ],
+        "7dii": [
+          "p1-number"
+        ],
+        "7e": [
+          "p1-number"
+        ],
+        "8ai": [
+          "p2-geometry"
+        ],
+        "8aii": [
+          "p1-algebra"
+        ],
+        "8aiii": [
+          "p1-algebra"
+        ],
+        "8aiv": [
+          "p2-geometry"
+        ],
+        "8bi": [
+          "p2-geometry",
+          "p1-algebra"
+        ],
+        "8bii": [
+          "p2-geometry"
+        ],
+        "9ai": [
+          "p1-calculus"
+        ],
+        "9aii": [
+          "p1-calculus"
+        ],
+        "9aiii": [
+          "p1-calculus"
+        ],
+        "9aiv": [
+          "p1-calculus"
+        ],
+        "9av": [
+          "p1-calculus"
+        ],
+        "9bi": [
+          "p1-graphs"
+        ],
+        "9bii": [
+          "p1-graphs"
+        ],
+        "9biii": [
+          "p1-graphs"
+        ]
+      },
+      "unmappedParts": [],
+      "overlappingTopicHints": {
+        "8bi": [
+          "p2-geometry",
+          "p1-algebra"
+        ],
+        "10aiii": [
+          "p2-geometry",
+          "p1-algebra"
+        ]
+      },
+      "unresolvedOverlappingTopicHints": {},
+      "referenceIssues": [],
+      "unresolvedReferenceIssues": [],
+      "pdfTextCorrections": 9
+    },
+    {
+      "paperId": "lc-hl-2023-deferred-p2",
+      "candidateTopicIdsByPart": {
+        "10ai": [
+          "p2-probability"
+        ],
+        "10aii": [
+          "p2-probability"
+        ],
+        "10aiii": [
+          "p2-probability"
+        ],
+        "10bi": [
+          "p2-statistics"
+        ],
+        "10bii": [
+          "p2-statistics"
+        ],
+        "10c": [
+          "p2-statistics"
+        ],
+        "1a": [
+          "p2-line"
+        ],
+        "1b": [
+          "p2-line"
+        ],
+        "1c": [
+          "p2-circle"
+        ],
+        "2ai": [
+          "p2-circle"
+        ],
+        "2aii": [
+          "p2-circle"
+        ],
+        "2b": [
+          "p2-circle"
+        ],
+        "3a": [
+          "p2-geometry"
+        ],
+        "3b": [
+          "p2-geometry"
+        ],
+        "3c": [
+          "p2-geometry"
+        ],
+        "3d": [
+          "p2-geometry"
+        ],
+        "4ai": [
+          "p2-trigonometry"
+        ],
+        "4aii": [
+          "p2-trigonometry"
+        ],
+        "4bi": [
+          "p2-trigonometry"
+        ],
+        "4bii": [
+          "p2-trigonometry"
+        ],
+        "5ai": [
+          "p2-probability"
+        ],
+        "5aii": [
+          "p2-probability"
+        ],
+        "5b": [
+          "p2-probability"
+        ],
+        "5c": [
+          "p2-probability"
+        ],
+        "6ai": [
+          "p2-statistics"
+        ],
+        "6aii": [
+          "p2-statistics"
+        ],
+        "6aiii": [
+          "p2-statistics"
+        ],
+        "6bi": [
+          "p2-statistics"
+        ],
+        "6bii": [
+          "p2-probability"
+        ],
+        "7ai": [
+          "p2-geometry"
+        ],
+        "7aii": [
+          "p2-geometry"
+        ],
+        "7aiii": [
+          "p2-geometry"
+        ],
+        "7aiv": [
+          "p2-circle"
+        ],
+        "7av": [
+          "p2-line"
+        ],
+        "7avi": [
+          "p2-circle"
+        ],
+        "7b": [
+          "p2-circle"
+        ],
+        "8ai": [
+          "p2-trigonometry"
+        ],
+        "8aii": [
+          "p2-trigonometry"
+        ],
+        "8aiii": [
+          "p2-trigonometry"
+        ],
+        "8bi": [
+          "p2-trigonometry"
+        ],
+        "8bii": [
+          "p2-trigonometry"
+        ],
+        "8biii": [
+          "p2-trigonometry"
+        ],
+        "9a": [
+          "p2-statistics"
+        ],
+        "9b": [
+          "p2-statistics"
+        ],
+        "9ci": [
+          "p2-probability"
+        ],
+        "9cii": [
+          "p2-probability"
+        ],
+        "9d": [
+          "p2-statistics"
+        ]
+      },
+      "unmappedParts": [],
+      "overlappingTopicHints": {},
+      "unresolvedOverlappingTopicHints": {},
+      "referenceIssues": [],
+      "unresolvedReferenceIssues": [],
+      "pdfTextCorrections": 2
+    },
+    {
+      "paperId": "lc-hl-2024-normal-p1",
+      "candidateTopicIdsByPart": {
+        "10ai": [
+          "p1-algebra"
+        ],
+        "10aii": [
+          "p1-calculus"
+        ],
+        "10b": [
+          "p1-algebra"
+        ],
+        "10ci": [
+          "p1-calculus"
+        ],
+        "10cii": [
+          "p1-calculus"
+        ],
+        "10d": [
+          "p1-number"
+        ],
+        "1a": [
+          "p1-algebra"
+        ],
+        "1b": [
+          "p1-algebra"
+        ],
+        "1c": [
+          "p1-algebra"
+        ],
+        "2a": [
+          "p1-complex"
+        ],
+        "2b": [
+          "p1-complex"
+        ],
+        "2ci": [
+          "p1-complex"
+        ],
+        "2cii": [
+          "p1-complex"
+        ],
+        "3a": [
+          "p1-calculus"
+        ],
+        "3bi": [
+          "p1-calculus"
+        ],
+        "3bii": [
+          "p1-calculus"
+        ],
+        "3c": [
+          "p1-calculus"
+        ],
+        "4a": [
+          "p1-calculus"
+        ],
+        "4b": [
+          "p1-calculus"
+        ],
+        "4c": [
+          "p1-calculus"
+        ],
+        "5a": [
+          "p1-sequences"
+        ],
+        "5b": [
+          "p1-sequences"
+        ],
+        "5ci": [
+          "p1-calculus"
+        ],
+        "5cii": [
+          "p1-calculus"
+        ],
+        "7a": [
+          "p1-number"
+        ],
+        "7bi": [
+          "p1-number"
+        ],
+        "7bii": [
+          "p1-number"
+        ],
+        "7ci": [
+          "p1-number"
+        ],
+        "7cii": [
+          "p1-number"
+        ],
+        "7ciii": [
+          "p1-number"
+        ],
+        "8b": [
+          "p1-graphs"
+        ],
+        "8e": [
+          "p1-calculus"
+        ],
+        "9a": [
+          "p1-algebra"
+        ],
+        "9bi": [
+          "p1-algebra"
+        ],
+        "9bii": [
+          "p1-algebra"
+        ],
+        "9c": [
+          "p1-algebra"
+        ],
+        "9d": [
+          "p1-calculus"
+        ],
+        "9e": [
+          "p1-algebra"
+        ],
+        "6a": [
+          "p1-algebra"
+        ],
+        "6bi": [
+          "p1-calculus"
+        ],
+        "6bii": [
+          "p1-calculus"
+        ],
+        "6biii": [
+          "p1-calculus"
+        ],
+        "8ai": [
+          "p1-graphs"
+        ],
+        "8aii": [
+          "p1-graphs"
+        ],
+        "8c": [
+          "p1-graphs"
+        ],
+        "8d": [
+          "p1-graphs"
+        ]
+      },
+      "unmappedParts": [],
+      "overlappingTopicHints": {},
+      "unresolvedOverlappingTopicHints": {},
+      "referenceIssues": [],
+      "unresolvedReferenceIssues": [],
+      "pdfTextCorrections": 11
+    },
+    {
+      "paperId": "lc-hl-2024-normal-p2",
+      "candidateTopicIdsByPart": {
+        "10ai": [
+          "p2-geometry"
+        ],
+        "10aii": [
+          "p2-trigonometry"
+        ],
+        "10aiii": [
+          "p2-trigonometry"
+        ],
+        "1ai": [
+          "p2-statistics"
+        ],
+        "1aii": [
+          "p2-statistics"
+        ],
+        "1aiii": [
+          "p2-statistics"
+        ],
+        "1b": [
+          "p2-statistics"
+        ],
+        "1c": [
+          "p2-statistics"
+        ],
+        "2a": [
+          "p2-probability"
+        ],
+        "2b": [
+          "p2-probability"
+        ],
+        "2c": [
+          "p2-probability"
+        ],
+        "2d": [
+          "p2-probability"
+        ],
+        "3a": [
+          "p2-trigonometry"
+        ],
+        "3b": [
+          "p2-trigonometry"
+        ],
+        "3c": [
+          "p2-trigonometry"
+        ],
+        "4a": [
+          "p2-geometry"
+        ],
+        "4b": [
+          "p2-geometry"
+        ],
+        "5ai": [
+          "p2-circle"
+        ],
+        "5aii": [
+          "p2-circle"
+        ],
+        "5b": [
+          "p2-circle"
+        ],
+        "6a": [
+          "p2-line"
+        ],
+        "6b": [
+          "p2-line"
+        ],
+        "6ci": [
+          "p2-line"
+        ],
+        "6cii": [
+          "p2-probability"
+        ],
+        "7ai": [
+          "p2-probability"
+        ],
+        "7aii": [
+          "p2-probability"
+        ],
+        "7bi": [
+          "p2-probability"
+        ],
+        "7bii": [
+          "p2-probability"
+        ],
+        "7c": [
+          "p2-probability"
+        ],
+        "7d": [
+          "p2-statistics"
+        ],
+        "8a": [
+          "p2-geometry"
+        ],
+        "8b": [
+          "p2-geometry"
+        ],
+        "8ci": [
+          "p2-geometry"
+        ],
+        "8cii": [
+          "p2-geometry"
+        ],
+        "8ciii": [
+          "p2-geometry"
+        ],
+        "8civ": [
+          "p2-geometry"
+        ],
+        "9ai": [
+          "p2-circle"
+        ],
+        "9aii": [
+          "p2-circle"
+        ],
+        "9aiii": [
+          "p2-line"
+        ],
+        "9b": [
+          "p2-line"
+        ],
+        "9c": [
+          "p2-line"
+        ],
+        "9d": [
+          "p2-line"
+        ],
+        "10b": [
+          "p2-trigonometry"
+        ],
+        "10ci": [
+          "p2-probability"
+        ],
+        "10cii": [
+          "p2-probability"
+        ],
+        "10ciii": [
+          "p2-probability"
+        ]
+      },
+      "unmappedParts": [],
+      "overlappingTopicHints": {},
+      "unresolvedOverlappingTopicHints": {},
+      "referenceIssues": [
+        {
+          "kind": "missing-part",
+          "topic": "p2-circle",
+          "reference": "Q9(a)(i,ii,iv)",
+          "target": "9aiv"
+        },
+        {
+          "kind": "missing-part",
+          "topic": "p2-trigonometry",
+          "reference": "Q10(a)(ii,iii,iv)",
+          "target": "10aiv"
+        }
+      ],
+      "unresolvedReferenceIssues": [],
+      "pdfTextCorrections": 5
+    },
+    {
+      "paperId": "lc-hl-2024-deferred-p1",
+      "candidateTopicIdsByPart": {
+        "10a": [
+          "p1-sequences"
+        ],
+        "10b": [
+          "p1-sequences"
+        ],
+        "10c": [
+          "p1-sequences"
+        ],
+        "10di": [
+          "p1-sequences"
+        ],
+        "10dii": [
+          "p1-sequences"
+        ],
+        "10e": [
+          "p1-number"
+        ],
+        "1a": [
+          "p1-algebra"
+        ],
+        "1b": [
+          "p1-algebra"
+        ],
+        "1c": [
+          "p1-algebra"
+        ],
+        "2ai": [
+          "p1-sequences"
+        ],
+        "2aii": [
+          "p1-sequences"
+        ],
+        "2b": [
+          "p1-sequences"
+        ],
+        "3a": [
+          "p1-calculus"
+        ],
+        "3b": [
+          "p1-number"
+        ],
+        "3c": [
+          "p1-algebra"
+        ],
+        "4a": [
+          "p1-complex"
+        ],
+        "4b": [
+          "p1-complex"
+        ],
+        "4c": [
+          "p1-complex"
+        ],
+        "5a": [
+          "p1-calculus"
+        ],
+        "5bi": [
+          "p1-calculus"
+        ],
+        "5bii": [
+          "p1-calculus"
+        ],
+        "6ai": [
+          "p1-calculus"
+        ],
+        "6aii": [
+          "p1-calculus"
+        ],
+        "6bi": [
+          "p1-calculus"
+        ],
+        "6bii": [
+          "p1-calculus"
+        ],
+        "7ai": [
+          "p1-graphs"
+        ],
+        "7aii": [
+          "p1-graphs"
+        ],
+        "7bi": [
+          "p1-algebra"
+        ],
+        "7bii": [
+          "p1-algebra"
+        ],
+        "7c": [
+          "p1-graphs"
+        ],
+        "7d": [
+          "p1-number"
+        ],
+        "8a": [
+          "p1-number"
+        ],
+        "8b": [
+          "p1-number"
+        ],
+        "8c": [
+          "p1-calculus"
+        ],
+        "8d": [
+          "p1-calculus"
+        ],
+        "8ei": [
+          "p1-graphs"
+        ],
+        "8eii": [
+          "p1-graphs"
+        ],
+        "8f": [
+          "p1-number"
+        ],
+        "9a": [
+          "p1-graphs"
+        ],
+        "9b": [
+          "p1-calculus"
+        ],
+        "9c": [
+          "p1-calculus"
+        ],
+        "9d": [
+          "p1-calculus"
+        ],
+        "9ei": [
+          "p2-geometry"
+        ],
+        "9eii": [
+          "p1-calculus"
+        ]
+      },
+      "unmappedParts": [],
+      "overlappingTopicHints": {},
+      "unresolvedOverlappingTopicHints": {},
+      "referenceIssues": [],
+      "unresolvedReferenceIssues": [],
+      "pdfTextCorrections": 3
+    },
+    {
+      "paperId": "lc-hl-2024-deferred-p2",
+      "candidateTopicIdsByPart": {
+        "10ai": [
+          "p2-trigonometry"
+        ],
+        "10aii": [
+          "p2-trigonometry"
+        ],
+        "10b": [
+          "p2-trigonometry"
+        ],
+        "10ci": [
+          "p2-geometry"
+        ],
+        "10cii": [
+          "p2-geometry"
+        ],
+        "10di": [
+          "p2-trigonometry"
+        ],
+        "10dii": [
+          "p2-trigonometry"
+        ],
+        "1ai": [
+          "p2-line"
+        ],
+        "1aii": [
+          "p2-line"
+        ],
+        "1aiii": [
+          "p2-circle"
+        ],
+        "1b": [
+          "p2-line"
+        ],
+        "2a": [
+          "p2-circle"
+        ],
+        "2b": [
+          "p2-circle"
+        ],
+        "2c": [
+          "p2-circle"
+        ],
+        "3a": [
+          "p2-circle"
+        ],
+        "3b": [
+          "p2-circle"
+        ],
+        "3c": [
+          "p2-circle"
+        ],
+        "4a": [
+          "p2-trigonometry"
+        ],
+        "4bi": [
+          "p2-trigonometry"
+        ],
+        "4bii": [
+          "p2-trigonometry"
+        ],
+        "5ai": [
+          "p2-statistics"
+        ],
+        "5aii": [
+          "p2-statistics"
+        ],
+        "5bi": [
+          "p2-probability"
+        ],
+        "5bii": [
+          "p2-probability"
+        ],
+        "5biii": [
+          "p2-probability"
+        ],
+        "6ai": [
+          "p2-probability"
+        ],
+        "6aii": [
+          "p2-probability"
+        ],
+        "6b": [
+          "p2-statistics"
+        ],
+        "7ai": [
+          "p2-statistics"
+        ],
+        "7aii": [
+          "p2-statistics"
+        ],
+        "7b": [
+          "p2-statistics"
+        ],
+        "7ci": [
+          "p2-statistics"
+        ],
+        "7cii": [
+          "p2-statistics"
+        ],
+        "7di": [
+          "p2-statistics"
+        ],
+        "7dii": [
+          "p2-statistics"
+        ],
+        "8ai": [
+          "p2-trigonometry"
+        ],
+        "8aii": [
+          "p2-trigonometry"
+        ],
+        "8b": [
+          "p1-number"
+        ],
+        "8c": [
+          "p2-geometry"
+        ],
+        "8d": [
+          "p2-geometry"
+        ],
+        "8e": [
+          "p2-geometry"
+        ],
+        "9ai": [
+          "p2-statistics"
+        ],
+        "9aii": [
+          "p2-statistics"
+        ],
+        "9bi": [
+          "p2-probability"
+        ],
+        "9bii": [
+          "p2-probability"
+        ],
+        "9c": [
+          "p2-probability"
+        ],
+        "9di": [
+          "p2-probability"
+        ],
+        "9dii": [
+          "p2-probability"
+        ]
+      },
+      "unmappedParts": [],
+      "overlappingTopicHints": {},
+      "unresolvedOverlappingTopicHints": {},
+      "referenceIssues": [],
+      "unresolvedReferenceIssues": [],
+      "pdfTextCorrections": 6
+    },
+    {
+      "paperId": "lc-hl-2025-normal-p1",
+      "candidateTopicIdsByPart": {
+        "10a": [
+          "p1-sequences"
+        ],
+        "10b": [
+          "p1-sequences"
+        ],
+        "10c": [
+          "p1-sequences"
+        ],
+        "10di": [
+          "p1-algebra"
+        ],
+        "10dii": [
+          "p1-algebra"
+        ],
+        "10diii": [
+          "p1-number"
+        ],
+        "10ei": [
+          "p1-number"
+        ],
+        "10eii": [
+          "p1-number"
+        ],
+        "1a": [
+          "p1-algebra"
+        ],
+        "1b": [
+          "p1-algebra"
+        ],
+        "1c": [
+          "p1-algebra"
+        ],
+        "2ai": [
+          "p1-calculus"
+        ],
+        "2aii": [
+          "p1-calculus"
+        ],
+        "2bi": [
+          "p1-calculus"
+        ],
+        "2bii": [
+          "p1-calculus"
+        ],
+        "2biii": [
+          "p1-calculus"
+        ],
+        "3a": [
+          "p1-calculus"
+        ],
+        "3b": [
+          "p1-calculus"
+        ],
+        "3c": [
+          "p1-calculus"
+        ],
+        "4a": [
+          "p1-complex"
+        ],
+        "4b": [
+          "p1-complex"
+        ],
+        "4c": [
+          "p1-complex"
+        ],
+        "5a": [
+          "p1-algebra"
+        ],
+        "5b": [
+          "p1-number"
+        ],
+        "5c": [
+          "p1-algebra"
+        ],
+        "6a": [
+          "p1-algebra"
+        ],
+        "6bi": [
+          "p1-algebra"
+        ],
+        "6bii": [
+          "p1-algebra"
+        ],
+        "7ai": [
+          "p1-sequences"
+        ],
+        "7aii": [
+          "p1-sequences"
+        ],
+        "7aiii": [
+          "p1-sequences"
+        ],
+        "7aiv": [
+          "p1-sequences"
+        ],
+        "7av": [
+          "p1-sequences"
+        ],
+        "7bi": [
+          "p1-sequences"
+        ],
+        "7bii": [
+          "p1-sequences"
+        ],
+        "7biii": [
+          "p1-sequences"
+        ],
+        "8a": [
+          "p1-number"
+        ],
+        "8b": [
+          "p1-number"
+        ],
+        "8c": [
+          "p1-number"
+        ],
+        "8d": [
+          "p1-number"
+        ],
+        "8ei": [
+          "p1-calculus"
+        ],
+        "8eii": [
+          "p1-calculus"
+        ],
+        "8eiii": [
+          "p1-calculus"
+        ],
+        "9ai": [
+          "p1-calculus"
+        ],
+        "9aii": [
+          "p1-calculus"
+        ],
+        "9aiii": [
+          "p1-calculus"
+        ],
+        "9aiv": [
+          "p1-calculus"
+        ],
+        "9av": [
+          "p1-calculus"
+        ],
+        "9bi": [
+          "p1-graphs"
+        ],
+        "9bii": [
+          "p1-graphs"
+        ],
+        "9biii": [
+          "p1-calculus"
+        ]
+      },
+      "unmappedParts": [],
+      "overlappingTopicHints": {},
+      "unresolvedOverlappingTopicHints": {},
+      "referenceIssues": [],
+      "unresolvedReferenceIssues": [],
+      "pdfTextCorrections": 0
+    },
+    {
+      "paperId": "lc-hl-2025-normal-p2",
+      "candidateTopicIdsByPart": {
+        "10ai": [
+          "p2-statistics"
+        ],
+        "10aii": [
+          "p2-statistics"
+        ],
+        "10b": [
+          "p2-statistics"
+        ],
+        "10ci": [
+          "p2-statistics"
+        ],
+        "10cii": [
+          "p2-statistics"
+        ],
+        "10d": [
+          "p2-statistics"
+        ],
+        "10e": [
+          "p2-statistics"
+        ],
+        "1a": [
+          "p2-line"
+        ],
+        "1b": [
+          "p2-line"
+        ],
+        "1c": [
+          "p2-line"
+        ],
+        "2ai": [
+          "p2-circle"
+        ],
+        "2aii": [
+          "p2-circle"
+        ],
+        "2b": [
+          "p2-circle"
+        ],
+        "3ai": [
+          "p2-probability"
+        ],
+        "3aii": [
+          "p2-probability"
+        ],
+        "3aiii": [
+          "p2-probability"
+        ],
+        "3b": [
+          "p2-probability"
+        ],
+        "4ai": [
+          "p2-statistics"
+        ],
+        "4aii": [
+          "p2-statistics"
+        ],
+        "4b": [
+          "p2-statistics"
+        ],
+        "4c": [
+          "p2-statistics"
+        ],
+        "5a": [
+          "p2-geometry"
+        ],
+        "5bi": [
+          "p2-geometry"
+        ],
+        "5bii": [
+          "p2-geometry"
+        ],
+        "6a": [
+          "p2-trigonometry"
+        ],
+        "6b": [
+          "p2-trigonometry"
+        ],
+        "6c": [
+          "p2-trigonometry"
+        ],
+        "7ai": [
+          "p2-geometry"
+        ],
+        "7aii": [
+          "p2-geometry"
+        ],
+        "7b": [
+          "p2-geometry"
+        ],
+        "7ci": [
+          "p2-circle"
+        ],
+        "7cii": [
+          "p2-circle"
+        ],
+        "7ciii": [
+          "p2-geometry"
+        ],
+        "7civ": [
+          "p2-trigonometry"
+        ],
+        "7cv": [
+          "p2-trigonometry"
+        ],
+        "8ai": [
+          "p2-geometry"
+        ],
+        "8aii": [
+          "p2-geometry"
+        ],
+        "8aiii": [
+          "p2-geometry"
+        ],
+        "8b": [
+          "p2-trigonometry"
+        ],
+        "8ci": [
+          "p2-trigonometry"
+        ],
+        "8cii": [
+          "p2-trigonometry"
+        ],
+        "9ai": [
+          "p2-probability"
+        ],
+        "9aii": [
+          "p2-probability"
+        ],
+        "9aiii": [
+          "p2-probability"
+        ],
+        "9aiv": [
+          "p2-probability"
+        ],
+        "9b": [
+          "p2-probability"
+        ],
+        "9ci": [
+          "p2-probability"
+        ],
+        "9cii": [
+          "p2-probability"
+        ],
+        "9d": [
+          "p2-probability"
+        ]
+      },
+      "unmappedParts": [],
+      "overlappingTopicHints": {},
+      "unresolvedOverlappingTopicHints": {},
+      "referenceIssues": [],
+      "unresolvedReferenceIssues": [],
+      "pdfTextCorrections": 0
+    }
+  ]
+}
