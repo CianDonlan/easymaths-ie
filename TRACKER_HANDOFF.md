@@ -1,5 +1,7 @@
 # Tracker handoff — 25 October 2026
 
+**Historical notes:** this file describes the local D1/content work before deployment. The tracker is now live on the existing Netlify site with Firestore; see `TRACKER_LIVE_HANDOFF.md` for the current state.
+
 - Run `npm run tracker:db:local`, then `npm run dev` in `easymaths-ie`. Open `/tracker/login` and create your tutor account; `/tracker` now uses local D1. Browser-only demo remains at `/tracker?demo=1`.
 - The owner's Edco contents photos confirm all 22 book papers. The catalogue now has 1049 reviewed parts: 95 in 2026 and all 954 Edco parts. `scripts/check_tracker_structure.py` matches all 954 Edco part IDs to raw PDF extraction; `scripts/map_tracker_topics.py` maps all 954 with 74 PDF-text-checked corrections. Seven deliberate multi-topic parts and four erroneous workbook references are recorded. The six formerly provisional papers are now included in topic stats after PDF text review. This does not certify every page visually or allocate marks to leaves. See `TRACKER.md` and the JSON files in `content/`.
 - The study app's `data/papers/` now has all 75 PDFs in its manifest. The restored 2019 papers and 2023 normal Paper 2 are ignored by that repository's Git rules, so keep the local files when moving workspaces.
