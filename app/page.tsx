@@ -299,7 +299,7 @@ export default function Home() {
     const topicCopy = prioritySkills.length
       ? prioritySkills.join(", ")
       : "a strong start across the sample topics";
-    const text = `I tried a short maths check-up and got ${score}/5. It suggested: ${topicCopy}. Could we look at the €3.14 Leaving Cert Maths Masterplan?`;
+    const text = `I tried a short maths check-up and got ${score}/5. It suggested: ${topicCopy}. Could we look at the free introductory maths session from Easy Maths?`;
     const url = new URL(grindsHref, window.location.origin);
     url.searchParams.set("shared", "student");
 
@@ -319,7 +319,7 @@ export default function Home() {
   async function shareWithParent() {
     const url = new URL(grindsHref, window.location.origin);
     url.searchParams.set("shared", "student");
-    const text = "I tried this Easy Maths challenge. There’s a €3.14 Leaving Cert Maths Masterplan that shows students how to study maths—could we look at it?";
+    const text = "I tried this Easy Maths challenge. There’s a free introductory maths session with three study tools to keep—could we look at it?";
 
     try {
       if (navigator.share) {
@@ -375,7 +375,7 @@ export default function Home() {
         <footer className="challenge-footer">
           <p>No sign-up. Help at your pace.</p>
           <a className="text-link" href={grindsHref}>
-            Looking for maths help? <span>See the €3.14 Maths Masterplan</span>
+            Looking for maths help? <span>See the free introductory session</span>
           </a>
         </footer>
       </main>
@@ -446,7 +446,7 @@ export default function Home() {
               <h2>That’s 7.</h2>
               <p>Squaring made the equation look like the question. The only extra part was 2, so the answer is 9 − 2.</p>
               <div className="action-stack">
-                <a className="primary-button" href={grindsHref}>See the €3.14 Maths Masterplan <span>→</span></a>
+                <a className="primary-button" href={grindsHref}>See the free introductory session <span>→</span></a>
                 <button className="secondary-button" type="button" onClick={shareWithParent}>Send this to a parent</button>
                 <button className="secondary-button" type="button" onClick={() => goTo("challenge")}>Try the question again</button>
                 {parentShareState && <p className="share-state compact-share-state" role="status">{parentShareState}</p>}
@@ -456,7 +456,7 @@ export default function Home() {
         </section>
         <footer className="challenge-footer">
           <p>Take your time. Every step counts.</p>
-          <a className="text-link" href={grindsHref}>Looking for maths help? <span>See the €3.14 Maths Masterplan</span></a>
+          <a className="text-link" href={grindsHref}>Looking for maths help? <span>See the free introductory session</span></a>
         </footer>
       </main>
     );
@@ -491,10 +491,10 @@ export default function Home() {
           <div>
             <p className="section-label">Keep the clarity going</p>
             <h2>Want a better way to study maths?</h2>
-            <p>Try the €3.14 Leaving Cert Maths Masterplan: a 45-minute session at home with three printed tools for future study.</p>
+            <p>Try a free 45-minute introductory session, at home or remote, with three study tools to keep using afterwards.</p>
           </div>
           <div className="action-stack">
-            <a className="primary-button" href={grindsHref}>See the €3.14 Maths Masterplan <span>→</span></a>
+            <a className="primary-button" href={grindsHref}>See the free introductory session <span>→</span></a>
             <button className="secondary-button" type="button" onClick={shareWithParent}>Send this to a parent</button>
             <button className="secondary-button" type="button" onClick={() => goTo("challenge")}>Try the question again</button>
             {parentShareState && <p className="share-state compact-share-state" role="status">{parentShareState}</p>}
@@ -585,7 +585,7 @@ export default function Home() {
         </section>
 
         <section className="result-actions">
-          <a className="primary-button" href={grindsHref}>See the €3.14 Maths Masterplan <span>→</span></a>
+          <a className="primary-button" href={grindsHref}>See the free introductory session <span>→</span></a>
           <button className="secondary-button" type="button" onClick={shareResult}>Send this to a parent</button>
           {shareState && <p className="share-state" role="status">{shareState}</p>}
         </section>

@@ -1159,6 +1159,14 @@ textarea:focus-visible {
   text-transform: uppercase;
 }
 
+.toolkit-list .toolkit-problem {
+  margin: 0 0 14px;
+  color: var(--paper);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
 .toolkit-list h3 { font-size: clamp(30px, 2.7vw, 42px); }
 .toolkit-copy > p:last-child { margin: 17px 0 0; color: rgba(244,239,227,.7); font-size: 16px; line-height: 1.6; }
 

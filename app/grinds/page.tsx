@@ -42,11 +42,11 @@ export default function GrindsPage() {
   async function shareWithParent() {
     const url = new URL(window.location.href);
     url.searchParams.set("shared", "student");
-    const text = "I found the €3.14 Leaving Cert Maths Masterplan from Easy Maths. It’s a 45-minute at-home session with three printed study tools. Could we look at it?";
+    const text = "I found a free 45-minute introductory Leaving Cert maths session from Easy Maths. It includes three study tools to keep, and can be at home or remote. Could we look at it?";
 
     try {
       if (navigator.share) {
-        await navigator.share({ title: "The €3.14 Leaving Cert Maths Masterplan", text, url: url.href });
+        await navigator.share({ title: "Free introductory maths session | Easy Maths", text, url: url.href });
         setShareState("Shared");
       } else {
         await navigator.clipboard.writeText(`${text} ${url.href}`);
@@ -112,20 +112,20 @@ export default function GrindsPage() {
 
       <section className="starter-hero" aria-labelledby="offer-title">
         <div className="starter-hero-heading">
-          <p className="section-label">Only 10 introductory places · North County Dublin</p>
-          <h1 id="offer-title">The €3.14 Leaving Cert Maths Masterplan.</h1>
+          <p className="section-label">Free introductory session · At home or remote</p>
+          <h1 id="offer-title">A free start to studying Leaving Cert maths.</h1>
         </div>
         <div className="starter-hero-offer">
           <p className="starter-lede">
-            In 45 minutes, I’ll show your child a practical way to study Leaving Cert maths with real exam questions, then leave them with three printed tools to keep using.
+            In 45 minutes, we’ll use real exam questions to give your child a clearer way to study. They’ll leave with three free tools to keep using between sessions.
           </p>
-          <div className="starter-price" aria-label="Introductory price of three euro and fourteen cent">
-            <strong>€3.14</strong>
-            <span>One 45-minute<br />at-home session</span>
+          <div className="starter-price" aria-label="Free 45-minute introductory session">
+            <strong>FREE</strong>
+            <span>One 45-minute<br />introductory session</span>
           </div>
           <div className="availability-line">
-            <strong>Only 10 students can get this €3.14 session.</strong>
-            <span>Once those introductory places are taken, the offer ends. They could fill within weeks.</span>
+            <strong>Available for a limited introductory period.</strong>
+            <span>I’m offering free first sessions while welcoming my first students. Ask about one while the offer is available.</span>
           </div>
           <div className="grinds-hero-actions">
             <a className="primary-button" href="#enquiry">Ask about the Maths Masterplan <span>↓</span></a>
@@ -133,17 +133,17 @@ export default function GrindsPage() {
             {shareState && <p className="share-state" role="status">{shareState}</p>}
           </div>
           <p className="hero-minor-note">
-            Higher or Ordinary Level. A parent or guardian arranges the visit. No commitment to weekly tuition.
+            Higher or Ordinary Level. At-home sessions in North County Dublin or remote sessions. A parent or guardian arranges the session. No commitment to weekly tuition.
           </p>
         </div>
       </section>
 
       <section className="study-toolkit" aria-labelledby="toolkit-title">
         <div className="toolkit-heading">
-          <p className="section-label dark-label">Included · printed and theirs to keep</p>
-          <h2 id="toolkit-title">The session ends. The system stays.</h2>
+          <p className="section-label dark-label">Three free gifts to keep</p>
+          <h2 id="toolkit-title">Three tools for three study problems.</h2>
           <p>
-            We set each sheet up together and use it on real exam questions. The student leaves knowing where to start, what to do when stuck, and how to see progress.
+            We set them up together during the session. At-home students get printed copies; remote students receive PDFs. Each tool gives your child something practical to use when studying alone.
           </p>
         </div>
         <div className="toolkit-list">
@@ -166,8 +166,9 @@ export default function GrindsPage() {
                 <span>5 support levels</span>
               </div>
               <p className="tool-type">The Easy Maths Study System</p>
-              <h3>Know what to do when you get stuck.</h3>
-              <p>A clear five-stage method for getting unstuck and working towards confident, timed answers. Students learn how to use the right amount of help without giving up or becoming reliant on solutions.</p>
+              <p className="toolkit-problem">The problem: “I don’t know how to study maths.”</p>
+              <h3>Follow a clear study structure.</h3>
+              <p>A five-stage method to follow during practice. It shows students what to do when stuck and how to use less help over time, so each study session has a purpose.</p>
             </div>
           </article>
           <article>
@@ -188,9 +189,10 @@ export default function GrindsPage() {
                 <span>1-page priorities map</span>
                 <span>2018–2025 papers</span>
               </div>
-              <p className="tool-type">Where the Marks Are</p>
-              <h3>Put revision time where it counts.</h3>
-              <p>A marks-weighted view of the biggest Higher Level topic areas on Paper 1 and Paper 2. It turns “revise maths” into a clearer decision about what deserves regular practice.</p>
+              <p className="tool-type">The Priorities Roadmap</p>
+              <p className="toolkit-problem">The problem: “There’s so much to study. Where do I start?”</p>
+              <h3>Know what deserves your time.</h3>
+              <p>A marks-weighted map of Higher Level topics on Paper 1 and Paper 2. It helps students choose where to focus first, instead of feeling overwhelmed by everything at once.</p>
             </div>
           </article>
           <article>
@@ -212,8 +214,9 @@ export default function GrindsPage() {
                 <span>2023–2026</span>
               </div>
               <p className="tool-type">Past-Paper Study Trackers</p>
-              <h3>Make every attempt visible.</h3>
-              <p>Separate Paper 1 and Paper 2 sheets list every question part across four exam years. The student records up to three attempts and the level of help used, so improvement is easy to spot.</p>
+              <p className="toolkit-problem">The problem: “I’m practising, but am I getting better?”</p>
+              <h3>See your progress build.</h3>
+              <p>These trackers work with the Study System. Students record the help they needed on each attempt, then see how their level changes as they practise. Their work becomes visible progress.</p>
             </div>
           </article>
         </div>
@@ -221,7 +224,7 @@ export default function GrindsPage() {
 
       <section className="session-outline" aria-labelledby="session-title">
         <div className="session-outline-heading">
-          <p className="section-label">The 45-minute visit</p>
+          <p className="section-label">The 45-minute session</p>
           <h2 id="session-title">A practical start—not another lecture.</h2>
         </div>
         <ol>
@@ -231,7 +234,7 @@ export default function GrindsPage() {
           </li>
           <li>
             <span>02</span>
-            <div><h3>Set up the three sheets</h3><p>I introduce the printed resources and show how they work together.</p></div>
+            <div><h3>Set up the three tools</h3><p>I introduce the study tools and show how they work together. You’ll get printed copies at home or PDFs for a remote session.</p></div>
           </li>
           <li>
             <span>03</span>
@@ -242,18 +245,18 @@ export default function GrindsPage() {
 
       <section className="intro-reason" aria-labelledby="price-reason-title">
         <div>
-          <p className="section-label dark-label">Why is it €3.14?</p>
-          <h2 id="price-reason-title">I’m getting started.</h2>
+          <p className="section-label dark-label">Why is the first session free?</p>
+          <h2 id="price-reason-title">See how I teach.</h2>
         </div>
         <div className="intro-reason-copy">
           <p>
-            I’m starting Easy Maths with my first 10 students, and I want local families to see how I teach. That’s why this first session is just €3.14. You get a practical way to study and three printed tools to keep, with no commitment to weekly tuition.
+            I’m welcoming my first students and want families to experience a practical way to study maths before deciding on further tuition. The introductory session and the three tools are free, with no commitment to weekly lessons.
           </p>
           <div className="scarcity-note">
-            <strong>10 introductory places, then the offer ends</strong>
-            <p>I’m making this price available to only my first 10 students in North County Dublin. Once those places are taken, the €3.14 session is no longer available. That could be within a few weeks.</p>
+            <strong>A limited introductory offer</strong>
+            <p>I’m offering these free first sessions for a limited time while getting Easy Maths started. At-home and remote tutoring are available now; sessions at third-party locations may be offered later.</p>
           </div>
-          <a className="primary-button" href="#enquiry">Ask while places are available <span>↓</span></a>
+          <a className="primary-button" href="#enquiry">Ask about a free session <span>↓</span></a>
         </div>
       </section>
 
@@ -282,10 +285,10 @@ export default function GrindsPage() {
 
       <section className="enquiry-section starter-enquiry" id="enquiry" aria-labelledby="enquiry-title">
         <div className="enquiry-heading">
-          <p className="section-label">Only 10 introductory places</p>
-          <h2 id="enquiry-title">Ask about the Maths Masterplan.</h2>
+          <p className="section-label">Free for a limited introductory period</p>
+          <h2 id="enquiry-title">Ask about a free first session.</h2>
           <p>
-            Leave your details and I’ll contact you by your preferred method. We’ll talk about what you’re looking for and whether the at-home session is a good fit before anything is arranged.
+            Leave your details and I’ll contact you by your preferred method. We’ll talk about what you’re looking for and whether an at-home or remote session suits you before arranging anything.
           </p>
         </div>
 
@@ -298,7 +301,7 @@ export default function GrindsPage() {
           onSubmit={submitEnquiry}
         >
           <input type="hidden" name="form-name" value="session-enquiry" />
-          <input type="hidden" name="subject" value="New €3.14 Leaving Cert Maths Masterplan enquiry" />
+          <input type="hidden" name="subject" value="New free introductory Leaving Cert maths session enquiry" />
           <input type="hidden" name="attribution" value="" />
           <div className="netlify-honeypot" aria-hidden="true">
             <label>Leave this field empty <input name="bot-field" tabIndex={-1} autoComplete="off" /></label>
@@ -334,8 +337,16 @@ export default function GrindsPage() {
             </select>
           </label>
           <label>
-            <span>Town or area</span>
-            <input type="text" name="area" autoComplete="address-level2" placeholder="For example, Donabate" required />
+            <span>Session preference</span>
+            <select name="sessionFormat" defaultValue="Not sure yet" required>
+              <option>At home</option>
+              <option>Remote</option>
+              <option>Not sure yet</option>
+            </select>
+          </label>
+          <label>
+            <span>Town or area <em>For at-home sessions</em></span>
+            <input type="text" name="area" autoComplete="address-level2" placeholder="For example, Donabate" />
           </label>
           <label className="enquiry-wide">
             <span>Anything useful to know? <em>Optional</em></span>
@@ -343,10 +354,10 @@ export default function GrindsPage() {
           </label>
           <label className="privacy-check enquiry-wide">
             <input type="checkbox" name="consent" value="Confirmed" required />
-            <span>I’m happy for Cian to contact me about this enquiry. I understand that nothing is booked and no payment is due yet.</span>
+            <span>I’m happy for Cian to contact me about this enquiry. I understand that nothing is booked yet and the introductory session is free.</span>
           </label>
           <button className="primary-button wide-button enquiry-wide" type="submit" disabled={isSubmitting}>
-            {isSubmitting ? "Sending…" : "Ask about the Maths Masterplan"}<span>→</span>
+            {isSubmitting ? "Sending…" : "Ask about a free session"}<span>→</span>
           </button>
           {formState && <p className="form-status enquiry-wide" role="status">{formState}</p>}
         </form>
