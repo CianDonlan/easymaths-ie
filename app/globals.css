@@ -886,7 +886,7 @@ textarea:focus-visible {
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(320px, .75fr);
   gap: clamp(48px, 8vw, 120px);
-  align-items: end;
+  align-items: start;
   padding: clamp(66px, 10vw, 132px) clamp(20px, 8vw, 120px);
 }
 

@@ -113,7 +113,7 @@ export default function GrindsPage() {
       <section className="starter-hero" aria-labelledby="offer-title">
         <div className="starter-hero-heading">
           <p className="section-label">Free introductory session · At home or remote</p>
-          <h1 id="offer-title">A free start to studying Leaving Cert maths.</h1>
+          <h1 id="offer-title">Make maths easier.</h1>
         </div>
         <div className="starter-hero-offer">
           <p className="starter-lede">
@@ -141,31 +141,12 @@ export default function GrindsPage() {
       <section className="study-toolkit" aria-labelledby="toolkit-title">
         <div className="toolkit-heading">
           <p className="section-label dark-label">Three free gifts to keep</p>
-          <h2 id="toolkit-title">Three problems. Three free tools.</h2>
+          <h2 id="toolkit-title">Three problems. Three solutions.</h2>
         </div>
         <div className="toolkit-list">
           <article>
             <div className="toolkit-copy">
-              <span className="toolkit-number">01 / THE PROBLEM</span>
-              <h3>How do I actually study maths?</h3>
-              <p className="toolkit-gift">The Study System</p>
-              <p className="toolkit-solution">I refined this five-level method over nearly a decade of studying maths, through my maths undergrad and top grades in my master’s. It gives each practice session a clear structure.</p>
-            </div>
-            <div className="toolkit-preview toolkit-preview-system" aria-hidden="true">
-              <div className="resource-sheet">
-                <div className="resource-sheet-brand"><b>EASYMATHS.IE</b><i>LEAVING CERT MATHS</i></div>
-                <p>YOUR STUDY SYSTEM</p>
-                <strong>A CLEAR WAY<br />FORWARD.</strong>
-                <div className="system-glimpse">
-                  <i /><i /><i /><i /><i />
-                </div>
-                <small>EXPLAINED AND SET UP IN THE SESSION</small>
-              </div>
-            </div>
-          </article>
-          <article>
-            <div className="toolkit-copy">
-              <span className="toolkit-number">02 / THE PROBLEM</span>
+              <span className="toolkit-number">01</span>
               <h3>Where do I even start?</h3>
               <p className="toolkit-gift">The Priorities Roadmap</p>
               <p className="toolkit-solution">See which topics deserve your attention first, using a roadmap based on Higher Level papers. Put limited study time where it counts instead of trying to cover everything at once.</p>
@@ -184,7 +165,26 @@ export default function GrindsPage() {
           </article>
           <article>
             <div className="toolkit-copy">
-              <span className="toolkit-number">03 / THE PROBLEM</span>
+              <span className="toolkit-number">02</span>
+              <h3>How do I actually study maths?</h3>
+              <p className="toolkit-gift">The Study System</p>
+              <p className="toolkit-solution">I refined this five-level method over nearly a decade of studying maths, through my maths undergrad and top grades in my master’s. It gives each practice session a clear structure.</p>
+            </div>
+            <div className="toolkit-preview toolkit-preview-system" aria-hidden="true">
+              <div className="resource-sheet">
+                <div className="resource-sheet-brand"><b>EASYMATHS.IE</b><i>LEAVING CERT MATHS</i></div>
+                <p>YOUR STUDY SYSTEM</p>
+                <strong>A CLEAR WAY<br />FORWARD.</strong>
+                <div className="system-glimpse">
+                  <i /><i /><i /><i /><i />
+                </div>
+                <small>EXPLAINED AND SET UP IN THE SESSION</small>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div className="toolkit-copy">
+              <span className="toolkit-number">03</span>
               <h3>Am I actually improving?</h3>
               <p className="toolkit-gift">The Study Trackers</p>
               <p className="toolkit-solution">Record each attempt and the help you needed. When you return to a question, you can see your level rise and know the practice is paying off.</p>
