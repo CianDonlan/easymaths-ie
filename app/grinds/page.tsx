@@ -60,6 +60,10 @@ export default function GrindsPage() {
 
   async function submitEnquiry(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+      setFormState("This form saves enquiries only on the live site. To test it, use easymaths.ie/grinds.");
+      return;
+    }
     const form = event.currentTarget;
     const data = new FormData(form);
     const attribution = getAttribution();
@@ -78,7 +82,7 @@ export default function GrindsPage() {
     setIsSubmitting(true);
     setFormState("Sending your enquiry…");
     try {
-      const response = await fetch("/", {
+      const response = await fetch(form.action, {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encoded.toString(),
@@ -279,6 +283,7 @@ export default function GrindsPage() {
           className="enquiry-form enquiry-form-v2"
           name="session-enquiry"
           method="POST"
+          action="/netlify-form.html"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           onSubmit={submitEnquiry}
