@@ -962,7 +962,7 @@ textarea:focus-visible {
 
 .toolkit-heading {
   display: grid;
-  grid-template-columns: .5fr 1.05fr .75fr;
+  grid-template-columns: .5fr 1.75fr;
   gap: clamp(28px, 5vw, 70px);
   align-items: start;
 }
@@ -976,7 +976,6 @@ textarea:focus-visible {
 }
 
 .toolkit-heading h2 { font-size: clamp(38px, 5vw, 68px); }
-.toolkit-heading > p:last-child { margin: 0; color: rgba(244,239,227,.72); font-size: 17px; line-height: 1.6; }
 
 .toolkit-list {
   display: grid;
@@ -986,14 +985,16 @@ textarea:focus-visible {
 }
 
 .toolkit-list article {
+  display: flex;
+  flex-direction: column;
   min-width: 0;
   border-top: 1px solid rgba(244,239,227,.38);
 }
 
 .toolkit-preview {
   position: relative;
-  height: clamp(330px, 33vw, 500px);
-  margin-top: 18px;
+  height: clamp(170px, 17vw, 220px);
+  margin-top: 20px;
   overflow: hidden;
   background: #cbc7bc;
 }
@@ -1007,21 +1008,6 @@ textarea:focus-visible {
   background: linear-gradient(transparent, rgba(17,16,13,.18));
   content: "";
   pointer-events: none;
-}
-
-.toolkit-preview > span {
-  position: absolute;
-  z-index: 2;
-  top: 14px;
-  left: 14px;
-  display: grid;
-  width: 38px;
-  height: 38px;
-  place-items: center;
-  background: var(--red);
-  color: #fff;
-  font-size: 11px;
-  font-weight: 900;
 }
 
 .resource-sheet {
@@ -1075,6 +1061,12 @@ textarea:focus-visible {
   font-weight: 900;
   letter-spacing: .08em;
 }
+
+.toolkit-preview .resource-sheet { width: calc(100% - 32px); margin-top: 14px; padding: 20px; }
+.toolkit-preview .resource-sheet-brand { padding-bottom: 8px; font-size: 7px; }
+.toolkit-preview .resource-sheet > p { margin: 16px 0 7px; font-size: 8px; }
+.toolkit-preview .resource-sheet > strong { font-size: clamp(28px, 2.2vw, 36px); }
+.toolkit-preview .resource-sheet > small { display: none; }
 
 .system-glimpse {
   display: grid;
@@ -1132,43 +1124,12 @@ textarea:focus-visible {
 .tracker-glimpse i:nth-child(-n+4) { background: var(--ink); }
 .tracker-glimpse i:nth-child(4n+1):not(:first-child) { background: rgba(17,16,13,.08); }
 
-.toolkit-copy { padding: 24px 2px 0; }
-
-.toolkit-facts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-}
-
-.toolkit-facts span {
-  padding: 7px 9px 6px;
-  border: 1px solid rgba(244,239,227,.32);
-  color: rgba(244,239,227,.75);
-  font-size: 9px;
-  font-weight: 900;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
-
-.toolkit-list .tool-type {
-  margin: 26px 0 10px;
-  color: var(--yellow);
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-}
-
-.toolkit-list .toolkit-problem {
-  margin: 0 0 14px;
-  color: var(--paper);
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 1.5;
-}
-
-.toolkit-list h3 { font-size: clamp(30px, 2.7vw, 42px); }
-.toolkit-copy > p:last-child { margin: 17px 0 0; color: rgba(244,239,227,.7); font-size: 16px; line-height: 1.6; }
+.toolkit-copy { flex: 1; padding: 24px 2px 0; }
+.toolkit-number { color: var(--yellow); font-size: 11px; font-weight: 900; letter-spacing: .12em; }
+.toolkit-list h3 { max-width: 430px; margin-top: 24px; font-size: clamp(30px, 3vw, 44px); }
+.toolkit-gift { margin: 28px 0 10px; color: var(--yellow); font-size: 17px; font-weight: 900; }
+.toolkit-copy > .toolkit-solution { margin: 0; color: rgba(244,239,227,.78); font-size: 16px; line-height: 1.6; }
+.toolkit-delivery { margin: 28px 0 0; color: rgba(244,239,227,.72); font-size: 14px; line-height: 1.5; }
 
 .session-outline {
   display: grid;
@@ -1442,11 +1403,10 @@ textarea:focus-visible {
   .home-trust,
   .starter-enquiry { gap: 26px; }
   .toolkit-heading h2 { font-size: clamp(36px, 9vw, 52px); }
-  .toolkit-heading > p:last-child { font-size: 16px; }
   .lesson-option-list { grid-template-columns: 1fr; }
   .toolkit-list { grid-template-columns: 1fr; }
   .toolkit-list { gap: 40px; margin-top: 32px; }
-  .toolkit-preview { height: clamp(258px, 82vw, 340px); }
+  .toolkit-preview { height: 180px; }
   .resource-sheet { width: calc(100% - 24px); min-height: calc(100% - 20px); margin-top: 12px; padding: 18px; }
   .resource-sheet > p { margin: 18px 0 9px; }
   .resource-sheet > strong { font-size: clamp(30px, 9vw, 40px); }
@@ -1463,7 +1423,7 @@ textarea:focus-visible {
   .priority-glimpse i { height: 7px; }
   .tracker-glimpse { margin-top: 14px; }
   .tracker-glimpse i { height: 15px; }
-  .toolkit-copy { padding-top: 18px; }
+  .toolkit-copy { padding-top: 20px; }
   .session-outline h2,
   .intro-reason h2,
   .home-trust h2 { font-size: clamp(38px, 10vw, 54px); line-height: 1; }

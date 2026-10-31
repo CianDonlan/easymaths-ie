@@ -141,15 +141,17 @@ export default function GrindsPage() {
       <section className="study-toolkit" aria-labelledby="toolkit-title">
         <div className="toolkit-heading">
           <p className="section-label dark-label">Three free gifts to keep</p>
-          <h2 id="toolkit-title">Three tools for three study problems.</h2>
-          <p>
-            We set them up together during the session. At-home students get printed copies; remote students receive PDFs. Each tool gives your child something practical to use when studying alone.
-          </p>
+          <h2 id="toolkit-title">Three problems. Three free tools.</h2>
         </div>
         <div className="toolkit-list">
           <article>
+            <div className="toolkit-copy">
+              <span className="toolkit-number">01 / THE PROBLEM</span>
+              <h3>How do I actually study maths?</h3>
+              <p className="toolkit-gift">The Study System</p>
+              <p className="toolkit-solution">I refined this five-level method over nearly a decade of studying maths, through my maths undergrad and top grades in my master’s. It gives each practice session a clear structure.</p>
+            </div>
             <div className="toolkit-preview toolkit-preview-system" aria-hidden="true">
-              <span>01</span>
               <div className="resource-sheet">
                 <div className="resource-sheet-brand"><b>EASYMATHS.IE</b><i>LEAVING CERT MATHS</i></div>
                 <p>YOUR STUDY SYSTEM</p>
@@ -160,20 +162,15 @@ export default function GrindsPage() {
                 <small>EXPLAINED AND SET UP IN THE SESSION</small>
               </div>
             </div>
-            <div className="toolkit-copy">
-              <div className="toolkit-facts" aria-label="Two-page guide with five support levels">
-                <span>2-page guide</span>
-                <span>5 support levels</span>
-              </div>
-              <p className="tool-type">The Easy Maths Study System</p>
-              <p className="toolkit-problem">The problem: “I don’t know how to study maths.”</p>
-              <h3>Follow a clear study structure.</h3>
-              <p>A five-stage method to follow during practice. It shows students what to do when stuck and how to use less help over time, so each study session has a purpose.</p>
-            </div>
           </article>
           <article>
+            <div className="toolkit-copy">
+              <span className="toolkit-number">02 / THE PROBLEM</span>
+              <h3>Where do I even start?</h3>
+              <p className="toolkit-gift">The Priorities Roadmap</p>
+              <p className="toolkit-solution">See which topics deserve your attention first, using a roadmap based on Higher Level papers. Put limited study time where it counts instead of trying to cover everything at once.</p>
+            </div>
             <div className="toolkit-preview toolkit-preview-priorities" aria-hidden="true">
-              <span>02</span>
               <div className="resource-sheet">
                 <div className="resource-sheet-brand"><b>EASYMATHS.IE</b><i>LEAVING CERT MATHS</i></div>
                 <p>YOUR REVISION PRIORITIES</p>
@@ -184,20 +181,15 @@ export default function GrindsPage() {
                 <small>YOUR PRIORITIES, MADE CLEAR</small>
               </div>
             </div>
-            <div className="toolkit-copy">
-              <div className="toolkit-facts" aria-label="One-page priorities map based on papers from 2018 to 2025">
-                <span>1-page priorities map</span>
-                <span>2018–2025 papers</span>
-              </div>
-              <p className="tool-type">The Priorities Roadmap</p>
-              <p className="toolkit-problem">The problem: “There’s so much to study. Where do I start?”</p>
-              <h3>Know what deserves your time.</h3>
-              <p>A marks-weighted map of Higher Level topics on Paper 1 and Paper 2. It helps students choose where to focus first, instead of feeling overwhelmed by everything at once.</p>
-            </div>
           </article>
           <article>
+            <div className="toolkit-copy">
+              <span className="toolkit-number">03 / THE PROBLEM</span>
+              <h3>Am I actually improving?</h3>
+              <p className="toolkit-gift">The Study Trackers</p>
+              <p className="toolkit-solution">Record each attempt and the help you needed. When you return to a question, you can see your level rise and know the practice is paying off.</p>
+            </div>
             <div className="toolkit-preview toolkit-preview-tracker" aria-hidden="true">
-              <span>03</span>
               <div className="resource-sheet">
                 <div className="resource-sheet-brand"><b>EASYMATHS.IE</b><i>LEAVING CERT MATHS</i></div>
                 <p>YOUR STUDY TRACKER</p>
@@ -208,18 +200,9 @@ export default function GrindsPage() {
                 <small>KEEP EVERY ATTEMPT VISIBLE</small>
               </div>
             </div>
-            <div className="toolkit-copy">
-              <div className="toolkit-facts" aria-label="Eight paper trackers covering 2023 to 2026">
-                <span>8 paper trackers</span>
-                <span>2023–2026</span>
-              </div>
-              <p className="tool-type">Past-Paper Study Trackers</p>
-              <p className="toolkit-problem">The problem: “I’m practising, but am I getting better?”</p>
-              <h3>See your progress build.</h3>
-              <p>These trackers work with the Study System. Students record the help they needed on each attempt, then see how their level changes as they practise. Their work becomes visible progress.</p>
-            </div>
           </article>
         </div>
+        <p className="toolkit-delivery">We set up all three together in the session. At-home students get printed copies; remote students receive PDFs.</p>
       </section>
 
       <section className="session-outline" aria-labelledby="session-title">
