@@ -47,3 +47,8 @@ ui-debug.log*
 
 # Private source material used to prepare the introductory session.
 /Intro lesson sheets/
+
+# Generated study preview and migration backups
+/public/study-preview/
+/.study-preview-build/
+/.study-app-migration-backup-*/
