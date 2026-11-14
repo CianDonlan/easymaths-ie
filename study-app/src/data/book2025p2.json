@@ -1,0 +1,552 @@
+{
+  "id": "lc-hl-2025-normal-p2",
+  "year": 2025,
+  "number": 2,
+  "sitting": "normal",
+  "level": "HL",
+  "sourceSha256": "97a7d90c0e81133588c5243731d7ffeeab46b7be6763dce324c165a5d2ae860b",
+  "questions": [
+    {
+      "number": 1,
+      "totalMarks": 30,
+      "sourcePage": 4
+    },
+    {
+      "number": 2,
+      "totalMarks": 30,
+      "sourcePage": 6
+    },
+    {
+      "number": 3,
+      "totalMarks": 30,
+      "sourcePage": 8
+    },
+    {
+      "number": 4,
+      "totalMarks": 30,
+      "sourcePage": 10
+    },
+    {
+      "number": 5,
+      "totalMarks": 30,
+      "sourcePage": 12
+    },
+    {
+      "number": 6,
+      "totalMarks": 30,
+      "sourcePage": 14
+    },
+    {
+      "number": 7,
+      "totalMarks": 50,
+      "sourcePage": 16
+    },
+    {
+      "number": 8,
+      "totalMarks": 50,
+      "sourcePage": 20
+    },
+    {
+      "number": 9,
+      "totalMarks": 50,
+      "sourcePage": 24
+    },
+    {
+      "number": 10,
+      "totalMarks": 50,
+      "sourcePage": 27
+    }
+  ],
+  "parts": [
+    {
+      "id": "lc-hl-2025-normal-p2-1a",
+      "label": "Q1(a)",
+      "order": 1,
+      "sourcePage": 4,
+      "topicIds": [
+        "p2-line"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-1b",
+      "label": "Q1(b)",
+      "order": 2,
+      "sourcePage": 4,
+      "topicIds": [
+        "p2-line"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-1c",
+      "label": "Q1(c)",
+      "order": 3,
+      "sourcePage": 5,
+      "topicIds": [
+        "p2-line"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-2ai",
+      "label": "Q2(a)(i)",
+      "order": 5,
+      "sourcePage": 6,
+      "topicIds": [
+        "p2-circle"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-2aii",
+      "label": "Q2(a)(ii)",
+      "order": 6,
+      "sourcePage": 6,
+      "topicIds": [
+        "p2-circle"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-2b",
+      "label": "Q2(b)",
+      "order": 7,
+      "sourcePage": 7,
+      "topicIds": [
+        "p2-circle"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-3ai",
+      "label": "Q3(a)(i)",
+      "order": 9,
+      "sourcePage": 8,
+      "topicIds": [
+        "p2-probability"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-3aii",
+      "label": "Q3(a)(ii)",
+      "order": 10,
+      "sourcePage": 8,
+      "topicIds": [
+        "p2-probability"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-3aiii",
+      "label": "Q3(a)(iii)",
+      "order": 11,
+      "sourcePage": 9,
+      "topicIds": [
+        "p2-probability"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-3b",
+      "label": "Q3(b)",
+      "order": 12,
+      "sourcePage": 9,
+      "topicIds": [
+        "p2-probability"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-4ai",
+      "label": "Q4(a)(i)",
+      "order": 14,
+      "sourcePage": 10,
+      "topicIds": [
+        "p2-statistics"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-4aii",
+      "label": "Q4(a)(ii)",
+      "order": 15,
+      "sourcePage": 10,
+      "topicIds": [
+        "p2-statistics"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-4b",
+      "label": "Q4(b)",
+      "order": 16,
+      "sourcePage": 10,
+      "topicIds": [
+        "p2-statistics"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-4c",
+      "label": "Q4(c)",
+      "order": 17,
+      "sourcePage": 11,
+      "topicIds": [
+        "p2-statistics"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-5a",
+      "label": "Q5(a)",
+      "order": 18,
+      "sourcePage": 12,
+      "topicIds": [
+        "p2-geometry"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-5bi",
+      "label": "Q5(b)(i)",
+      "order": 20,
+      "sourcePage": 13,
+      "topicIds": [
+        "p2-geometry"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-5bii",
+      "label": "Q5(b)(ii)",
+      "order": 21,
+      "sourcePage": 13,
+      "topicIds": [
+        "p2-geometry"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-6a",
+      "label": "Q6(a)",
+      "order": 22,
+      "sourcePage": 14,
+      "topicIds": [
+        "p2-trigonometry"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-6b",
+      "label": "Q6(b)",
+      "order": 23,
+      "sourcePage": 14,
+      "topicIds": [
+        "p2-trigonometry"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-6c",
+      "label": "Q6(c)",
+      "order": 24,
+      "sourcePage": 15,
+      "topicIds": [
+        "p2-trigonometry"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-7ai",
+      "label": "Q7(a)(i)",
+      "order": 26,
+      "sourcePage": 16,
+      "topicIds": [
+        "p2-geometry"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-7aii",
+      "label": "Q7(a)(ii)",
+      "order": 27,
+      "sourcePage": 16,
+      "topicIds": [
+        "p2-geometry"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-7b",
+      "label": "Q7(b)",
+      "order": 28,
+      "sourcePage": 17,
+      "topicIds": [
+        "p2-geometry"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-7ci",
+      "label": "Q7(c)(i)",
+      "order": 30,
+      "sourcePage": 18,
+      "topicIds": [
+        "p2-circle"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-7cii",
+      "label": "Q7(c)(ii)",
+      "order": 31,
+      "sourcePage": 18,
+      "topicIds": [
+        "p2-circle"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-7ciii",
+      "label": "Q7(c)(iii)",
+      "order": 32,
+      "sourcePage": 19,
+      "topicIds": [
+        "p2-geometry"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-7civ",
+      "label": "Q7(c)(iv)",
+      "order": 33,
+      "sourcePage": 19,
+      "topicIds": [
+        "p2-trigonometry"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-7cv",
+      "label": "Q7(c)(v)",
+      "order": 34,
+      "sourcePage": 19,
+      "topicIds": [
+        "p2-trigonometry"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-8ai",
+      "label": "Q8(a)(i)",
+      "order": 36,
+      "sourcePage": 20,
+      "topicIds": [
+        "p2-geometry"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-8aii",
+      "label": "Q8(a)(ii)",
+      "order": 37,
+      "sourcePage": 20,
+      "topicIds": [
+        "p2-geometry"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-8aiii",
+      "label": "Q8(a)(iii)",
+      "order": 38,
+      "sourcePage": 21,
+      "topicIds": [
+        "p2-geometry"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-8b",
+      "label": "Q8(b)",
+      "order": 39,
+      "sourcePage": 22,
+      "topicIds": [
+        "p2-trigonometry"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-8ci",
+      "label": "Q8(c)(i)",
+      "order": 41,
+      "sourcePage": 23,
+      "topicIds": [
+        "p2-trigonometry"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-8cii",
+      "label": "Q8(c)(ii)",
+      "order": 42,
+      "sourcePage": 23,
+      "topicIds": [
+        "p2-trigonometry"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-9ai",
+      "label": "Q9(a)(i)",
+      "order": 44,
+      "sourcePage": 24,
+      "topicIds": [
+        "p2-probability"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-9aii",
+      "label": "Q9(a)(ii)",
+      "order": 45,
+      "sourcePage": 24,
+      "topicIds": [
+        "p2-probability"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-9aiii",
+      "label": "Q9(a)(iii)",
+      "order": 46,
+      "sourcePage": 25,
+      "topicIds": [
+        "p2-probability"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-9aiv",
+      "label": "Q9(a)(iv)",
+      "order": 47,
+      "sourcePage": 25,
+      "topicIds": [
+        "p2-probability"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-9b",
+      "label": "Q9(b)",
+      "order": 48,
+      "sourcePage": 25,
+      "topicIds": [
+        "p2-probability"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-9ci",
+      "label": "Q9(c)(i)",
+      "order": 50,
+      "sourcePage": 26,
+      "topicIds": [
+        "p2-probability"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-9cii",
+      "label": "Q9(c)(ii)",
+      "order": 51,
+      "sourcePage": 26,
+      "topicIds": [
+        "p2-probability"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-9d",
+      "label": "Q9(d)",
+      "order": 52,
+      "sourcePage": 26,
+      "topicIds": [
+        "p2-probability"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-10ai",
+      "label": "Q10(a)(i)",
+      "order": 54,
+      "sourcePage": 27,
+      "topicIds": [
+        "p2-statistics"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-10aii",
+      "label": "Q10(a)(ii)",
+      "order": 55,
+      "sourcePage": 27,
+      "topicIds": [
+        "p2-statistics"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-10b",
+      "label": "Q10(b)",
+      "order": 56,
+      "sourcePage": 28,
+      "topicIds": [
+        "p2-statistics"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-10ci",
+      "label": "Q10(c)(i)",
+      "order": 58,
+      "sourcePage": 28,
+      "topicIds": [
+        "p2-statistics"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-10cii",
+      "label": "Q10(c)(ii)",
+      "order": 59,
+      "sourcePage": 29,
+      "topicIds": [
+        "p2-statistics"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-10d",
+      "label": "Q10(d)",
+      "order": 60,
+      "sourcePage": 29,
+      "topicIds": [
+        "p2-statistics"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p2-10e",
+      "label": "Q10(e)",
+      "order": 61,
+      "sourcePage": 30,
+      "topicIds": [
+        "p2-statistics"
+      ],
+      "maximumMarks": null
+    }
+  ]
+}

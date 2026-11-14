@@ -8,14 +8,18 @@
   "scripts": {
     "dev": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext dev",
     "build": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext build",
-    "build:netlify": "NITRO_PRESET=netlify vite build --config vite.netlify.config.ts",
+    "build:netlify": "npm run build:study && NITRO_PRESET=netlify vite build --config vite.netlify.config.ts",
     "test:firestore": "FIREBASE_PROJECT_ID=demo-easymaths-tracker firebase emulators:exec --only firestore --project demo-easymaths-tracker 'node --experimental-strip-types --test tests/tracker-firestore.test.mjs'",
     "test:firestore-runtime": "npm run build:netlify && FIREBASE_PROJECT_ID=demo-easymaths-tracker firebase emulators:exec --only firestore --project demo-easymaths-tracker 'node --test tests/tracker-firestore-runtime.test.mjs'",
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
     "test": "npm run build && node --experimental-strip-types --test tests/rendered-html.test.mjs tests/tracker-model.test.mjs tests/tracker-demo.test.mjs tests/tracker-goals.test.mjs tests/tracker-progress.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern .netlify",
     "db:generate": "drizzle-kit generate",
-    "tracker:db:local": "WRANGLER_WRITE_LOGS=false wrangler d1 migrations apply DB --local --config wrangler.local.jsonc --persist-to .wrangler/state"
+    "tracker:db:local": "WRANGLER_WRITE_LOGS=false wrangler d1 migrations apply DB --local --config wrangler.local.jsonc --persist-to .wrangler/state",
+    "build:study": "node scripts/build-study-preview.mjs",
+    "dev:study": "npm --prefix study-app run dev -- --host 0.0.0.0 --base=/study-preview/",
+    "check:study": "npm --prefix study-app run check",
+    "test:study": "npm --prefix study-app test"
   },
   "dependencies": {
     "drizzle-orm": "0.45.2",

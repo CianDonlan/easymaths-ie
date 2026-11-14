@@ -1,0 +1,120 @@
+.pilot-page { padding-block: 24px 48px; }
+.pilot-heading { display: flex; align-items: center; justify-content: space-between; gap: 30px; margin: 20px 0 26px; }
+.pilot-heading h1 { font-size: clamp(30px, 4vw, 46px); letter-spacing: -.045em; line-height: 1.1; margin: 12px 0; }
+.pilot-heading p { max-width: 650px; color: var(--muted); line-height: 1.65; margin: 0; }
+.pilot-count { flex-shrink: 0; font-size: 30px; font-weight: 700; color: var(--green-dark); text-align: center; padding: 18px 23px; border-radius: 18px; background: var(--green-soft); }
+.pilot-count small { display: block; font-size: 11px; font-weight: 500; margin-top: 5px; }
+.pilot-testing { border: 1px solid var(--line); border-radius: 12px; background: #f9f8f2; margin-bottom: 24px; font-size: 14px; }
+.pilot-testing summary { cursor: pointer; padding: 14px 20px; font-weight: 650; }
+.pilot-testing-content { padding: 0 20px 20px; }
+.pilot-testing p { line-height: 1.6; max-width: 860px; }
+.pilot-testing label { display: block; font-weight: 650; margin-bottom: 8px; }
+.pilot-page textarea, .pilot-page input:not([type="radio"]) { font: inherit; color: var(--ink); width: 100%; border: 1px solid #bfc9c1; border-radius: 10px; background: #fffdf7; padding: 13px 15px; }
+.pilot-page textarea:focus-visible, .pilot-page input:focus-visible { outline: 3px solid #bd1b2455; outline-offset: 2px; }
+.pilot-page textarea { resize: vertical; line-height: 1.7; }
+.pilot-page button:disabled { opacity: .5; cursor: not-allowed; }
+.pilot-page h2:focus { outline: none; }
+.pilot-button-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+.pilot-confirm { border-top: 1px solid var(--line); margin-top: 18px; padding-top: 5px; }
+.pilot-task-nav { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 9px; margin-bottom: 24px; }
+.pilot-task-nav button { border: 1px solid var(--line); border-radius: 12px; background: #fffdf7; padding: 14px 10px; cursor: pointer; display: flex; flex-wrap: wrap; gap: 7px; align-items: center; justify-content: center; }
+.pilot-task-nav button > span { font-size: 11px; width: 22px; height: 22px; border-radius: 50%; background: #efefe6; display: grid; place-items: center; }
+.pilot-task-nav button > strong { font-size: 13px; }
+.pilot-task-nav button > small { font-size: 10px; width: 100%; color: var(--green-dark); }
+.pilot-task-nav button[aria-current="step"] { background: var(--green-soft); border-color: var(--green); box-shadow: 0 0 0 1px var(--green); }
+.pilot-workspace { display: grid; grid-template-columns: minmax(0, 760px); justify-content: center; align-items: start; gap: 24px; }
+.pilot-workspace.help-is-open { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.pilot-question { min-width: 0; background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 30px; box-shadow: 0 12px 35px #22332f08; }
+.pilot-question-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+.pilot-question h2 { font-size: 27px; letter-spacing: -.035em; line-height: 1.2; margin-bottom: 14px; }
+.pilot-source { font-size: 12px; color: var(--muted); }
+.pilot-prompt { font-family: Cambria, Georgia, serif; font-size: 22px; line-height: 1.6; margin-block: 20px; }
+.pilot-help-button { width: 100%; display: flex; justify-content: space-between; margin-bottom: 25px; }
+.pilot-field-label { display: block; font-weight: 650; margin: 20px 0 9px; font-size: 14px; }
+.pilot-field-label small { display: block; color: var(--muted); font-size: 12px; font-weight: 400; margin-top: 5px; }
+.pilot-page .pilot-workings { font-family: Cambria, Georgia, serif; font-size: 18px; background: repeating-linear-gradient(#fffdf7, #fffdf7 32px, #e4ddce 33px, #fffdf7 34px); min-height: 235px; }
+.pilot-format { font-size: 12px; color: var(--muted); line-height: 1.6; }
+.pilot-feedback { border-radius: 10px; padding: 13px; font-size: 14px; line-height: 1.5; background: #f5eedc; }
+.pilot-feedback.correct { background: var(--green-soft); color: var(--green-dark); }
+.pilot-feedback.unreadable { background: #eef0eb; }
+.pilot-solution { border-block: 1px solid var(--line); margin: 26px 0; }
+.pilot-reveal { display: flex; width: 100%; justify-content: space-between; align-items: center; gap: 15px; padding: 20px 0; background: none; border: none; text-align: left; font-weight: 650; cursor: pointer; }
+.pilot-solution > div { padding-bottom: 20px; line-height: 1.7; }
+.pilot-solution h3 { font-family: Cambria, Georgia, serif; font-size: 23px; }
+.pilot-solution li { padding-left: 3px; margin-bottom: 10px; }
+.pilot-solution-notice, .pilot-use-note { padding: 13px 15px; border-radius: 9px; background: #f5eedc; font-size: 12px; line-height: 1.65; }
+.pilot-log h3 { margin-bottom: 8px; }
+.pilot-log p { font-size: 13px; line-height: 1.65; }
+.pilot-log fieldset { border: 0; padding: 0; margin: 20px 0; display: grid; gap: 7px; }
+.pilot-log legend { font-size: 12px; color: var(--muted); margin-bottom: 9px; }
+.pilot-log fieldset label { display: flex; align-items: center; gap: 11px; padding: 11px 13px; border: 1px solid var(--line); border-radius: 10px; cursor: pointer; }
+.pilot-log fieldset label.selected { background: var(--green-soft); border-color: var(--green); }
+.pilot-log input { flex-shrink: 0; accent-color: var(--green); }
+.pilot-log fieldset strong { display: block; font-size: 13px; }
+.pilot-log fieldset small { display: block; font-size: 11px; color: var(--muted); margin-top: 4px; line-height: 1.5; }
+.pilot-log details { font-size: 12px; line-height: 1.7; margin-block: 16px; }
+.pilot-log summary { cursor: pointer; font-weight: 650; }
+.pilot-log li { margin-bottom: 10px; }
+.pilot-question-footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; border-top: 1px solid var(--line); margin-top: 24px; padding-top: 22px; }
+.pilot-source-link { display: block; font-size: 12px; color: var(--green-dark); margin-top: 20px; }
+.pilot-help { position: sticky; top: 18px; max-height: calc(100dvh - 36px); overflow-y: auto; min-width: 0; padding: 26px; background: #f0e9dc; border: 1px solid #b8b0a2; border-radius: 18px; scrollbar-gutter: stable; }
+.pilot-help-heading { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.pilot-help-heading h2 { margin: 8px 0; font-size: 27px; letter-spacing: -.035em; }
+.pilot-close { border: 1px solid #b8b0a2; background: #fffdf7; border-radius: 50%; width: 40px; height: 40px; font-size: 25px; flex-shrink: 0; cursor: pointer; }
+.pilot-help > p { font-size: 13px; color: #59544c; line-height: 1.65; }
+.pilot-help-choices { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 20px 0; }
+.pilot-help-choices button { border: 1px solid #b8b0a2; border-radius: 10px; background: #faf7ef; padding: 12px; cursor: pointer; text-align: left; }
+.pilot-help-choices button:last-child { grid-column: 1 / -1; }
+.pilot-help-choices small { display: block; font-size: 10px; color: #59544c; margin-bottom: 5px; }
+.pilot-help-choices strong { display: block; font-size: 12px; }
+.pilot-help-choices button[aria-pressed="true"] { background: #fffdf7; border-color: var(--green); box-shadow: inset 3px 0 var(--green); }
+.pilot-help-content { background: var(--paper); border-radius: 12px; padding: 22px; }
+.pilot-note { line-height: 1.7; font-size: 14px; }
+.pilot-note h3 { font-size: 22px; line-height: 1.25; margin: 12px 0 18px; letter-spacing: -.025em; }
+.pilot-note h4 { margin-bottom: 5px; font-size: 15px; }
+.pilot-note p { margin-block: 10px 16px; }
+.pilot-formula { font-family: Cambria, Georgia, serif; font-size: 22px; line-height: 1.65; overflow-wrap: anywhere; padding: 14px; background: #f4f3eb; border-radius: 8px; margin: 16px 0; }
+.pilot-inline-maths { font-family: Cambria, Georgia, serif; white-space: nowrap; }
+.pilot-method-list { padding-left: 20px; }
+.pilot-method-list li { padding-left: 3px; margin-bottom: 18px; }
+.pilot-callout { border-left: 3px solid #d7ac43; background: #faf4e0; padding: 15px; border-radius: 0 8px 8px 0; margin-block: 18px; }
+.pilot-callout p:last-child { margin-bottom: 0; }
+.pilot-figure { margin: 12px 0 18px; }
+.pilot-figure svg { width: 100%; display: block; border: 1px solid var(--line); border-radius: 8px; background: #fffdf7; }
+.pilot-figure text { font: 15px Cambria, Georgia, serif; fill: var(--ink); }
+.pilot-figure figcaption { color: var(--muted); font-size: 11px; text-align: center; margin-top: 8px; }
+.pilot-example-steps { padding: 0; list-style: none; }
+.pilot-example-steps li { border-top: 1px solid var(--line); margin-top: 20px; padding-top: 16px; }
+.pilot-example-steps small { font-weight: 700; color: var(--green-dark); }
+.pilot-example-steps .pilot-formula { margin-top: 8px; }
+.pilot-text-button { display: block; background: none; border: none; text-decoration: underline; padding: 15px 0 0; font-size: 12px; cursor: pointer; }
+.pilot-return { width: 100%; margin-top: 18px; }
+.pilot-device-note { text-align: center; color: var(--muted); font-size: 12px; line-height: 1.6; margin-top: 25px; }
+.pilot-storage-error { background: #fff0d0; padding: 16px; border-radius: 10px; font-size: 14px; }
+.pilot-launch { display: flex; justify-content: space-between; align-items: center; gap: 20px; border: 1px solid #b8b0a2; background: var(--green-soft); padding: 24px; border-radius: 16px; margin: 22px auto; text-decoration: none; }
+.pilot-launch strong { display: block; font-size: 20px; margin: 7px 0; }
+.pilot-launch p { margin: 0; font-size: 14px; line-height: 1.6; color: #59544c; }
+@media (max-width: 950px) {
+  .pilot-workspace.help-is-open { grid-template-columns: minmax(0, 760px); }
+  .pilot-workspace.help-is-open .pilot-help { grid-row: 1; position: static; max-height: none; overflow: visible; }
+  .pilot-workspace.help-is-open .pilot-question { grid-row: 2; }
+}
+@media (max-width: 600px) {
+  .pilot-page { width: calc(100% - 28px); padding-top: 18px; }
+  .pilot-heading { gap: 15px; align-items: flex-start; }
+  .pilot-heading h1 { font-size: 31px; }
+  .pilot-heading p { font-size: 13px; }
+  .pilot-count { font-size: 21px; padding: 12px; }
+  .pilot-count small { font-size: 9px; max-width: 60px; }
+  .pilot-task-nav { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .pilot-task-nav button { padding: 11px 7px; }
+  .pilot-task-nav button > strong { font-size: 12px; }
+  .pilot-question, .pilot-help { padding: 20px 17px; border-radius: 14px; }
+  .pilot-help-content { padding: 18px 14px; }
+  .pilot-question h2 { font-size: 25px; }
+  .pilot-prompt { font-size: 21px; }
+  .pilot-formula { font-size: 21px; padding: 12px; }
+  .pilot-button-row { flex-direction: column; }
+  .pilot-question-footer .button { font-size: 12px; padding-inline: 13px; }
+  .pilot-launch { margin-inline: 14px; width: calc(100% - 28px); padding: 20px; }
+}

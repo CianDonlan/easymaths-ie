@@ -4,3 +4,19 @@
 
 [build.environment]
   NODE_VERSION = "22.13.0"
+
+# The hash-routed study app is an isolated static document.
+[[redirects]]
+  from = "/study-preview"
+  to = "/study-preview/"
+  status = 301
+
+[[headers]]
+  for = "/study-preview/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/study-preview/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

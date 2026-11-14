@@ -1,0 +1,572 @@
+{
+  "id": "lc-hl-2025-normal-p1",
+  "year": 2025,
+  "number": 1,
+  "sitting": "normal",
+  "level": "HL",
+  "sourceSha256": "3c15ee1315f9ba1361beb82828fa41fdad72ca36b5dc28105fd5f7c1e1179b2a",
+  "questions": [
+    {
+      "number": 1,
+      "totalMarks": 30,
+      "sourcePage": 4
+    },
+    {
+      "number": 2,
+      "totalMarks": 30,
+      "sourcePage": 6
+    },
+    {
+      "number": 3,
+      "totalMarks": 30,
+      "sourcePage": 8
+    },
+    {
+      "number": 4,
+      "totalMarks": 30,
+      "sourcePage": 10
+    },
+    {
+      "number": 5,
+      "totalMarks": 30,
+      "sourcePage": 12
+    },
+    {
+      "number": 6,
+      "totalMarks": 30,
+      "sourcePage": 14
+    },
+    {
+      "number": 7,
+      "totalMarks": 50,
+      "sourcePage": 16
+    },
+    {
+      "number": 8,
+      "totalMarks": 50,
+      "sourcePage": 19
+    },
+    {
+      "number": 9,
+      "totalMarks": 50,
+      "sourcePage": 22
+    },
+    {
+      "number": 10,
+      "totalMarks": 50,
+      "sourcePage": 26
+    }
+  ],
+  "parts": [
+    {
+      "id": "lc-hl-2025-normal-p1-1a",
+      "label": "Q1(a)",
+      "order": 1,
+      "sourcePage": 4,
+      "topicIds": [
+        "p1-algebra"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-1b",
+      "label": "Q1(b)",
+      "order": 2,
+      "sourcePage": 4,
+      "topicIds": [
+        "p1-algebra"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-1c",
+      "label": "Q1(c)",
+      "order": 3,
+      "sourcePage": 5,
+      "topicIds": [
+        "p1-algebra"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-2ai",
+      "label": "Q2(a)(i)",
+      "order": 5,
+      "sourcePage": 6,
+      "topicIds": [
+        "p1-calculus"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-2aii",
+      "label": "Q2(a)(ii)",
+      "order": 6,
+      "sourcePage": 6,
+      "topicIds": [
+        "p1-calculus"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-2bi",
+      "label": "Q2(b)(i)",
+      "order": 8,
+      "sourcePage": 7,
+      "topicIds": [
+        "p1-calculus"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-2bii",
+      "label": "Q2(b)(ii)",
+      "order": 9,
+      "sourcePage": 7,
+      "topicIds": [
+        "p1-calculus"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-2biii",
+      "label": "Q2(b)(iii)",
+      "order": 10,
+      "sourcePage": 7,
+      "topicIds": [
+        "p1-calculus"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-3a",
+      "label": "Q3(a)",
+      "order": 11,
+      "sourcePage": 8,
+      "topicIds": [
+        "p1-calculus"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-3b",
+      "label": "Q3(b)",
+      "order": 12,
+      "sourcePage": 8,
+      "topicIds": [
+        "p1-calculus"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-3c",
+      "label": "Q3(c)",
+      "order": 13,
+      "sourcePage": 9,
+      "topicIds": [
+        "p1-calculus"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-4a",
+      "label": "Q4(a)",
+      "order": 14,
+      "sourcePage": 10,
+      "topicIds": [
+        "p1-complex"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-4b",
+      "label": "Q4(b)",
+      "order": 15,
+      "sourcePage": 10,
+      "topicIds": [
+        "p1-complex"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-4c",
+      "label": "Q4(c)",
+      "order": 16,
+      "sourcePage": 11,
+      "topicIds": [
+        "p1-complex"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-5a",
+      "label": "Q5(a)",
+      "order": 17,
+      "sourcePage": 12,
+      "topicIds": [
+        "p1-algebra"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-5b",
+      "label": "Q5(b)",
+      "order": 18,
+      "sourcePage": 12,
+      "topicIds": [
+        "p1-number"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-5c",
+      "label": "Q5(c)",
+      "order": 19,
+      "sourcePage": 13,
+      "topicIds": [
+        "p1-algebra"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-6a",
+      "label": "Q6(a)",
+      "order": 20,
+      "sourcePage": 14,
+      "topicIds": [
+        "p1-algebra"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-6bi",
+      "label": "Q6(b)(i)",
+      "order": 22,
+      "sourcePage": 15,
+      "topicIds": [
+        "p1-algebra"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-6bii",
+      "label": "Q6(b)(ii)",
+      "order": 23,
+      "sourcePage": 15,
+      "topicIds": [
+        "p1-algebra"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-7ai",
+      "label": "Q7(a)(i)",
+      "order": 25,
+      "sourcePage": 16,
+      "topicIds": [
+        "p1-sequences"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-7aii",
+      "label": "Q7(a)(ii)",
+      "order": 26,
+      "sourcePage": 16,
+      "topicIds": [
+        "p1-sequences"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-7aiii",
+      "label": "Q7(a)(iii)",
+      "order": 27,
+      "sourcePage": 17,
+      "topicIds": [
+        "p1-sequences"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-7aiv",
+      "label": "Q7(a)(iv)",
+      "order": 28,
+      "sourcePage": 17,
+      "topicIds": [
+        "p1-sequences"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-7av",
+      "label": "Q7(a)(v)",
+      "order": 29,
+      "sourcePage": 17,
+      "topicIds": [
+        "p1-sequences"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-7bi",
+      "label": "Q7(b)(i)",
+      "order": 31,
+      "sourcePage": 18,
+      "topicIds": [
+        "p1-sequences"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-7bii",
+      "label": "Q7(b)(ii)",
+      "order": 32,
+      "sourcePage": 18,
+      "topicIds": [
+        "p1-sequences"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-7biii",
+      "label": "Q7(b)(iii)",
+      "order": 33,
+      "sourcePage": 18,
+      "topicIds": [
+        "p1-sequences"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-8a",
+      "label": "Q8(a)",
+      "order": 34,
+      "sourcePage": 19,
+      "topicIds": [
+        "p1-number"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-8b",
+      "label": "Q8(b)",
+      "order": 35,
+      "sourcePage": 19,
+      "topicIds": [
+        "p1-number"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-8c",
+      "label": "Q8(c)",
+      "order": 36,
+      "sourcePage": 20,
+      "topicIds": [
+        "p1-number"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-8d",
+      "label": "Q8(d)",
+      "order": 37,
+      "sourcePage": 20,
+      "topicIds": [
+        "p1-number"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-8ei",
+      "label": "Q8(e)(i)",
+      "order": 39,
+      "sourcePage": 20,
+      "topicIds": [
+        "p1-calculus"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-8eii",
+      "label": "Q8(e)(ii)",
+      "order": 40,
+      "sourcePage": 21,
+      "topicIds": [
+        "p1-calculus"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-8eiii",
+      "label": "Q8(e)(iii)",
+      "order": 41,
+      "sourcePage": 21,
+      "topicIds": [
+        "p1-calculus"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-9ai",
+      "label": "Q9(a)(i)",
+      "order": 43,
+      "sourcePage": 22,
+      "topicIds": [
+        "p1-calculus"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-9aii",
+      "label": "Q9(a)(ii)",
+      "order": 44,
+      "sourcePage": 22,
+      "topicIds": [
+        "p1-calculus"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-9aiii",
+      "label": "Q9(a)(iii)",
+      "order": 45,
+      "sourcePage": 23,
+      "topicIds": [
+        "p1-calculus"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-9aiv",
+      "label": "Q9(a)(iv)",
+      "order": 46,
+      "sourcePage": 23,
+      "topicIds": [
+        "p1-calculus"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-9av",
+      "label": "Q9(a)(v)",
+      "order": 47,
+      "sourcePage": 23,
+      "topicIds": [
+        "p1-calculus"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-9bi",
+      "label": "Q9(b)(i)",
+      "order": 49,
+      "sourcePage": 24,
+      "topicIds": [
+        "p1-graphs"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-9bii",
+      "label": "Q9(b)(ii)",
+      "order": 50,
+      "sourcePage": 24,
+      "topicIds": [
+        "p1-graphs"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-9biii",
+      "label": "Q9(b)(iii)",
+      "order": 51,
+      "sourcePage": 25,
+      "topicIds": [
+        "p1-calculus"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-10a",
+      "label": "Q10(a)",
+      "order": 52,
+      "sourcePage": 26,
+      "topicIds": [
+        "p1-sequences"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-10b",
+      "label": "Q10(b)",
+      "order": 53,
+      "sourcePage": 27,
+      "topicIds": [
+        "p1-sequences"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-10c",
+      "label": "Q10(c)",
+      "order": 54,
+      "sourcePage": 27,
+      "topicIds": [
+        "p1-sequences"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-10di",
+      "label": "Q10(d)(i)",
+      "order": 56,
+      "sourcePage": 28,
+      "topicIds": [
+        "p1-algebra"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-10dii",
+      "label": "Q10(d)(ii)",
+      "order": 57,
+      "sourcePage": 28,
+      "topicIds": [
+        "p1-algebra"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-10diii",
+      "label": "Q10(d)(iii)",
+      "order": 58,
+      "sourcePage": 28,
+      "topicIds": [
+        "p1-number"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-10ei",
+      "label": "Q10(e)(i)",
+      "order": 60,
+      "sourcePage": 29,
+      "topicIds": [
+        "p1-number"
+      ],
+      "maximumMarks": null
+    },
+    {
+      "id": "lc-hl-2025-normal-p1-10eii",
+      "label": "Q10(e)(ii)",
+      "order": 61,
+      "sourcePage": 29,
+      "topicIds": [
+        "p1-number"
+      ],
+      "maximumMarks": null
+    }
+  ]
+}
