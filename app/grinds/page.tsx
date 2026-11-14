@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FormEvent, useState, useSyncExternalStore } from "react";
 import tutorPhoto from "../../pic_of_me.png";
+import "./grinds.css";
 
 const attributionKeys = [
   "source",
@@ -104,7 +105,7 @@ export default function GrindsPage() {
       <header className="grinds-nav">
         <Link href="/">← Maths challenge</Link>
         <span>Easy Maths</span>
-        <a href="#enquiry">Ask about the offer</a>
+        <a href="#enquiry">Enquire <span aria-hidden="true">↓</span></a>
       </header>
 
       {sharedByStudent && (
@@ -116,36 +117,33 @@ export default function GrindsPage() {
 
       <section className="starter-hero" aria-labelledby="offer-title">
         <div className="starter-hero-heading">
-          <p className="section-label">Free introductory session · At home or remote</p>
+          <p className="section-label">Leaving Cert maths · Higher & Ordinary</p>
           <h1 id="offer-title">Make maths easier.</h1>
         </div>
         <div className="starter-hero-offer">
           <p className="starter-lede">
-            In 45 minutes, we’ll use real exam questions to give your child a clearer way to study. They’ll leave with three free tools to keep using between sessions.
+            A free 45-minute session using real exam questions, with three study tools your child can keep.
           </p>
           <div className="starter-price" aria-label="Free 45-minute introductory session">
             <strong>FREE</strong>
             <span>One 45-minute<br />introductory session</span>
           </div>
-          <div className="availability-line">
-            <strong>Available for a limited introductory period.</strong>
-            <span>I’m offering free first sessions while welcoming my first students. Ask about one while the offer is available.</span>
-          </div>
           <div className="grinds-hero-actions">
-            <a className="primary-button" href="#enquiry">Ask about the Maths Masterplan <span>↓</span></a>
+            <a className="primary-button" href="#enquiry">Ask about a free session <span aria-hidden="true">↓</span></a>
             <button className="secondary-button" type="button" onClick={shareWithParent}>Send this to a parent</button>
             {shareState && <p className="share-state" role="status">{shareState}</p>}
           </div>
           <p className="hero-minor-note">
-            Higher or Ordinary Level. At-home sessions in North County Dublin or remote sessions. A parent or guardian arranges the session. No commitment to weekly tuition.
+            At home in North County Dublin or remote. Arranged by a parent or guardian. No commitment to weekly tuition.
           </p>
+          <p className="offer-availability">Free for a limited introductory period while I welcome my first students.</p>
         </div>
       </section>
 
       <section className="study-toolkit" aria-labelledby="toolkit-title">
         <div className="toolkit-heading">
-          <p className="section-label dark-label">Three free gifts to keep</p>
-          <h2 id="toolkit-title">Three problems. Three solutions.</h2>
+          <p className="section-label dark-label">Included in your session</p>
+          <h2 id="toolkit-title">Three tools to make studying easier.</h2>
         </div>
         <div className="toolkit-list">
           <article>
@@ -153,7 +151,7 @@ export default function GrindsPage() {
               <span className="toolkit-number">01</span>
               <h3>Where do I even start?</h3>
               <p className="toolkit-gift">The Priorities Roadmap</p>
-              <p className="toolkit-solution">See which topics deserve your attention first, using a roadmap based on Higher Level papers. Put limited study time where it counts instead of trying to cover everything at once.</p>
+              <p className="toolkit-solution">Choose what to study first with a topic roadmap based on Higher Level papers.</p>
             </div>
             <div className="toolkit-preview toolkit-preview-priorities" aria-hidden="true">
               <div className="resource-sheet">
@@ -172,7 +170,7 @@ export default function GrindsPage() {
               <span className="toolkit-number">02</span>
               <h3>How do I actually study maths?</h3>
               <p className="toolkit-gift">The Study System</p>
-              <p className="toolkit-solution">I refined this five-level method over nearly a decade of studying maths, through my maths undergrad and top grades in my master’s. It gives each practice session a clear structure.</p>
+              <p className="toolkit-solution">Give each practice session a clear structure with a five-level method I refined through my maths degrees.</p>
             </div>
             <div className="toolkit-preview toolkit-preview-system" aria-hidden="true">
               <div className="resource-sheet">
@@ -191,7 +189,7 @@ export default function GrindsPage() {
               <span className="toolkit-number">03</span>
               <h3>Am I actually improving?</h3>
               <p className="toolkit-gift">The Study Trackers</p>
-              <p className="toolkit-solution">Record each attempt and the help you needed. When you return to a question, you can see your level rise and know the practice is paying off.</p>
+              <p className="toolkit-solution">Record each attempt and the help you needed. Revisit questions to see how your approach develops.</p>
             </div>
             <div className="toolkit-preview toolkit-preview-tracker" aria-hidden="true">
               <div className="resource-sheet">
@@ -212,39 +210,22 @@ export default function GrindsPage() {
       <section className="session-outline" aria-labelledby="session-title">
         <div className="session-outline-heading">
           <p className="section-label">The 45-minute session</p>
-          <h2 id="session-title">A practical start—not another lecture.</h2>
+          <h2 id="session-title">What we’ll do together.</h2>
         </div>
         <ol>
           <li>
             <span>01</span>
-            <div><h3>Talk about studying</h3><p>We briefly look at how the student approaches maths now and what tends to get in the way.</p></div>
+            <div><h3>Talk about studying</h3><p>Find out how your child studies now and where they get stuck.</p></div>
           </li>
           <li>
             <span>02</span>
-            <div><h3>Set up the three tools</h3><p>I introduce the study tools and show how they work together. You’ll get printed copies at home or PDFs for a remote session.</p></div>
+            <div><h3>Set up the three tools</h3><p>Show your child how to use the roadmap, study system and trackers.</p></div>
           </li>
           <li>
             <span>03</span>
-            <div><h3>Use real exam questions</h3><p>We work step by step through questions so the student practises the study approach rather than only hearing about it.</p></div>
+            <div><h3>Use real exam questions</h3><p>Practise the approach together, step by step, on Leaving Cert questions.</p></div>
           </li>
         </ol>
-      </section>
-
-      <section className="intro-reason" aria-labelledby="price-reason-title">
-        <div>
-          <p className="section-label dark-label">Why is the first session free?</p>
-          <h2 id="price-reason-title">See how I teach.</h2>
-        </div>
-        <div className="intro-reason-copy">
-          <p>
-            I’m welcoming my first students and want families to experience a practical way to study maths before deciding on further tuition. The introductory session and the three tools are free, with no commitment to weekly lessons.
-          </p>
-          <div className="scarcity-note">
-            <strong>A limited introductory offer</strong>
-            <p>I’m offering these free first sessions for a limited time while getting Easy Maths started. At-home and remote tutoring are available now; sessions at third-party locations may be offered later.</p>
-          </div>
-          <a className="primary-button" href="#enquiry">Ask about a free session <span>↓</span></a>
-        </div>
       </section>
 
       <section className="home-trust" aria-labelledby="tutor-title">
@@ -252,15 +233,15 @@ export default function GrindsPage() {
           <Image
             src={tutorPhoto}
             alt="Cian, the Easy Maths tutor"
-            sizes="(max-width: 760px) 100vw, 42vw"
+            sizes="(max-width: 760px) 104px, 42vw"
             unoptimized
           />
         </div>
         <div className="home-trust-copy">
           <p className="section-label">Your tutor</p>
-          <h2 id="tutor-title">Meet the tutor behind Easy Maths.</h2>
+          <h2 id="tutor-title">Hi, I’m Cian.</h2>
           <p>
-            I’m Cian. I help Leaving Cert students break difficult maths into clear steps they can understand and use on their own. The aim is simple: give each student a practical way to study between lessons—not make them dependent on one.
+            I help Leaving Cert students break difficult maths into clear steps, so they can keep studying with confidence between lessons.
           </p>
           <dl className="credentials-list compact-credentials">
             <div><dt>Master’s</dt><dd><span>Financial Mathematics</span><span className="credential-place">UCD</span></dd></div>
@@ -272,10 +253,10 @@ export default function GrindsPage() {
 
       <section className="enquiry-section starter-enquiry" id="enquiry" aria-labelledby="enquiry-title">
         <div className="enquiry-heading">
-          <p className="section-label">Free for a limited introductory period</p>
+          <p className="section-label">Get in touch</p>
           <h2 id="enquiry-title">Ask about a free first session.</h2>
           <p>
-            Leave your details and I’ll contact you by your preferred method. We’ll talk about what you’re looking for and whether an at-home or remote session suits you before arranging anything.
+            Leave your details and I’ll get back to you to discuss a session. Nothing is booked until we’ve spoken.
           </p>
         </div>
 

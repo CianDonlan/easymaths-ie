@@ -38,23 +38,15 @@ test("server-renders the shareable grinds and enquiry page", async () => {
   assert.equal(response.status, 200);
 
   const html = await response.text();
-  assert.match(html, /<title>The €3\.14 Leaving Cert Maths Masterplan \| Easy Maths/);
-  assert.match(html, /The €3\.14 Leaving Cert Maths Masterplan\./);
+  assert.match(html, /<title>Free introductory Leaving Cert maths session \| Easy Maths/);
+  assert.match(html, /Make maths easier\./);
   assert.match(html, /One 45-minute/);
-  assert.match(html, /Only 10 introductory places/);
-  assert.match(html, /Once those introductory places are taken, the offer ends/);
-  assert.match(html, /I’m starting Easy Maths with my first 10 students/);
-  assert.match(html, /The Easy Maths Study System/);
-  assert.match(html, /Where the Marks Are/);
-  assert.match(html, /Past-Paper Study Trackers/);
-  assert.match(html, /8 paper trackers/);
-  assert.match(html, /2023–2026/);
-  assert.match(html, /EXPLAINED AND SET UP IN THE SESSION/);
-  assert.match(html, /YOUR PRIORITIES, MADE CLEAR/);
-  assert.match(html, /KEEP EVERY ATTEMPT VISIBLE/);
-  assert.doesNotMatch(html, /\/masterplan\/(?:study-system|topic-priorities|study-tracker)\.png/);
-  assert.match(html, /Meet the tutor behind Easy Maths\./);
-  assert.match(html, /I’m Cian/);
+  assert.match(html, /Free for a limited introductory period/);
+  assert.match(html, /The Study System/);
+  assert.match(html, /The Priorities Roadmap/);
+  assert.match(html, /The Study Trackers/);
+  assert.match(html, /What we’ll do together\./);
+  assert.match(html, /Hi, I’m Cian\./);
   assert.match(html, /Quantitative Analyst/);
   assert.match(html, /Financial Mathematics/);
   assert.match(html, /Forvis Mazars/);
@@ -62,7 +54,7 @@ test("server-renders the shareable grinds and enquiry page", async () => {
   assert.doesNotMatch(html, /\/_next\/image\?/);
   assert.match(html, /North County Dublin/);
   assert.match(html, /No commitment to weekly tuition/);
-  assert.match(html, /Ask about the Maths Masterplan/);
+  assert.match(html, /Ask about a free session/);
   assert.match(html, /name="session-enquiry"/);
   assert.match(html, /data-netlify="true"/);
   assert.match(html, /name="form-name" value="session-enquiry"/);
@@ -82,7 +74,7 @@ test("ships final metadata and removes the disposable starter", async () => {
   ]);
 
   assert.match(page, /guideSteps/);
-  assert.match(page, /See the €3\.14 Maths Masterplan/);
+  assert.match(page, /See the free introductory session/);
   assert.match(page, /Send this to a parent/);
   assert.match(layout, /60 Second Maths Challenge/);
   assert.match(layout, /\/og\.png/);
